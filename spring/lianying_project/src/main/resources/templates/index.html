@@ -1,0 +1,1576 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="/css/BigData.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/index01.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/jquery.js"></script>
+    <link href="/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/Security_operation.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="/css/mobile.css"/>
+    <script src="/js/laydate.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script src="/js/Home_page.js"></script>
+    <!--<link rel="icon" href="images/favicon.ico" type="images/x-icon" />-->
+    <link rel="icon" th:href="${logoUrl}" type="images/x-icon" />
+    <meta charset="UTF-8">
+    <title>设备实时监控</title>
+
+</head>
+<body>
+<div class="data_bodey">
+    <div class="index_nav">
+        <ul style="height: 30px; margin-bottom: 0px;">
+            <li class="l_left total_chose_fr nav_active">实时监测</li>
+            <!--<li class="l_left total_chose_pl" >统计分析一</li>-->
+            <!--<li class="l_left total_chose_pl">统计分析二</li>-->
+            <!--<li class="r_right total_chose_pl">统计分析三</li>-->
+            <!--<li class="r_right total_chose_pl">统计分析四</li>-->
+            <!--<li class="r_right total_chose_pl">统计分析五</li>-->
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="index_tabs">
+        <!--实时数据-->
+        <div class="inner" style="height: 109%;">
+            <!--实时数据-左侧-->
+            <div class="left_cage">
+                <div class="dataAllBorder01 cage_cl" style=" !important; height: 62.7%; position: relative;">
+                    <div class="dataAllBorder02" style="padding: 1.2%; overflow: hidden">
+                        <div class="message_scroll_box">
+                            <span></span>
+                            <!--<div class="message_scroll">-->
+                            <!--<div class="scroll_top">-->
+                            <!--<span class="scroll_title">水压测试仪</span>-->
+                            <!--<span class="scroll_level scroll_level02">关机</span>-->
+                            <!--<a class="localize"></a>-->
+                            <!--<span class="scroll_timer">LY·DE00012</span>-->
+                            <!--</div>-->
+                            <!--<div class="msg_cage">-->
+                            <!--<a class="localize_title">水压：xxx  流量：xxx</a>-->
+                            <!--</div>-->
+                            <!--<div class="msg_cage">-->
+                            <!--&lt;!&ndash;<a class="localize_msg">设备运行时长：342 分钟</a>&ndash;&gt;-->
+                            <!--<a class="localize_msg_2">19-02-26/11:28</a>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="message_scroll">-->
+                            <!--<div class="scroll_top">-->
+                            <!--<span class="scroll_title">热压机</span>-->
+                            <!--<span class="scroll_level scroll_level01">开机</span>-->
+                            <!--<a class="localize"></a>-->
+                            <!--<span class="scroll_timer">LY·DE00013</span>-->
+                            <!--</div>-->
+                            <!--<div class="msg_cage">-->
+                            <!--<a class="localize_title">温度：xxx 报警信号：xxx 温度阈值：xxx</a>-->
+                            <!--</div>-->
+                            <!--<div class="msg_cage">-->
+                            <!--<a class="localize_msg">设备运行时长：342 分钟</a>-->
+                            <!--<a class="localize_msg_2">19-02-26/11:28</a>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="message_scroll">-->
+                            <!--<div class="scroll_top">-->
+                            <!--<span class="scroll_title">直流电阻测试仪</span>-->
+                            <!--<span class="scroll_level scroll_level01">开机</span>-->
+                            <!--<a class="localize"></a>-->
+                            <!--<span class="scroll_timer">LY·DE00014</span>-->
+                            <!--</div>-->
+                            <!--<div class="msg_cage">-->
+                            <!--<a class="localize_title">电阻值：xxx</a>-->
+                            <!--</div>-->
+                            <!--<div class="msg_cage">-->
+                            <!--<a class="localize_msg">设备运行时长：342 分钟</a>-->
+                            <!--<a class="localize_msg_2">19-02-26/11:28</a>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="message_scroll">-->
+                            <!--<div class="scroll_top">-->
+                            <!--<span class="scroll_title">电热鼓风干燥箱</span>-->
+                            <!--<span class="scroll_level scroll_level01">开机</span>-->
+                            <!--<a class="localize"></a>-->
+                            <!--<span class="scroll_timer">LY·DE00015</span>-->
+                            <!--</div>-->
+                            <!--<div class="msg_cage">-->
+                            <!--<a class="localize_title">温度值：xxx 报警信号：xxx</a>-->
+                            <!--</div>-->
+                            <!--<div class="msg_cage">-->
+                            <!--<a class="localize_msg">设备运行时长：342 分钟</a>-->
+                            <!--<a class="localize_msg_2">19-02-26/11:28</a>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="message_scroll">-->
+                            <!--<div class="scroll_top">-->
+                            <!--<span class="scroll_title">折射仪</span>-->
+                            <!--<span class="scroll_level scroll_level02">关机</span>-->
+                            <!--<a class="localize"></a>-->
+                            <!--<span class="scroll_timer">2LY·DE00016</span>-->
+                            <!--</div>-->
+                            <!--<div class="msg_cage">-->
+                            <!--<a class="localize_title">淬体浓度值：xxx</a>-->
+                            <!--</div>-->
+                            <!--<div class="msg_cage">-->
+                            <!--<a class="localize_msg">设备运行时长：342 分钟</a>-->
+                            <!--<a class="localize_msg_2">19-02-26/11:28</a>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="message_scroll">-->
+                            <!--<div class="scroll_top">-->
+                            <!--<span class="scroll_title">绕线机</span>-->
+                            <!--<span class="scroll_level scroll_level02">关机</span>-->
+                            <!--<a class="localize"></a>-->
+                            <!--<span class="scroll_timer">LY·DE00017</span>-->
+                            <!--</div>-->
+                            <!--<div class="msg_cage">-->
+                            <!--<a class="localize_title">主轴转速：xxx 张力：xxx </a>-->
+                            <!--</div>-->
+                            <!--<div class="msg_cage">-->
+                            <!--<a class="localize_msg">设备运行时长：342 分钟</a>-->
+                            <!--<a class="localize_msg_2">19-02-26/11:28</a>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <div class="scroll_tool_outbox">
+                        <div class="scroll_tool_box">
+                            <a class="scroll_tool" href="#">查看历史推送</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 31.8%;">
+
+                    <div class="dataAllBorder02 over_hide" style="padding: 1.2%;">
+                        <div class="analysis">设备当前状态占比：</div>
+                        <div class="danger_contain_box">
+                            <div id="container_huan_l" style="height: 90%;width: 100%"></div>
+                        </div>
+                        <div class="danger_depart_box">
+                            <ul class="danger_depart">
+                                <li class="danger_ico"
+                                    style="background-image: url(/img/images/pic_ico_01.png); background-position-x: 0px"></li>
+                                <li class="data_name">开机数</li>
+                                <li class="data data01">28</li>
+                                <li class="data data02">↑&nbsp&nbsp3.2%</li>
+                            </ul>
+                            <ul class="danger_depart">
+                                <li class="danger_ico"
+                                    style="background-image: url(/img/images/pic_ico_02.png); background-position-x: 0px"></li>
+                                <li class="data_name">待机数</li>
+                                <li class="data data01">6</li>
+                                <li class="data data02" style="color: #ff2865;">↓&nbsp&nbsp0.3%</li>
+                            </ul>
+                            <ul class="danger_depart danger_depart01">
+                                <li class="danger_ico"
+                                    style="background-image: url(/img/images/pic_ico_03.png); background-position-x: 0px"></li>
+                                <li class="data_name">运行</li>
+                                <li class="data data01">23</li>
+                                <li class="data data02">↑&nbsp&nbsp1%</li>
+                            </ul>
+                            <ul class="danger_depart danger_depart01">
+                                <li class="danger_ico"
+                                    style="background-image: url(/img/images/pic_ico_01.png); background-position-x: 0px"></li>
+                                <li class="data_name">报警数</li>
+                                <li class="data data01">8</li>
+                                <li class="data data02">↑&nbsp&nbsp0.3%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--实时数据-中间-->
+            <div class="center_cage">
+                <div class="dataAllBorder01 cage_cl" style="!important; height: 62.7%; position: relative;">
+                    <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                        <!--标题栏-->
+                        <div class="map_title_box" style="height: 6%">
+                            <div class="map_title_innerbox">
+                                <div class="map_title">设备概况</div>
+                            </div>
+                        </div>
+                        <!--                         <table class="table_data02">
+                                                    <tr><td class="font07">设备总数</td><td class="font03">34</td><td class="font07">关机数量</td><td class="font02">4</td></tr>
+                                                    <tr><td class="font07">开机数量</td><td class="font01">30</td><td class="font07">开机率</td><td class="font01">88.24%</td></tr>
+                                                </table> -->
+                        <div class="timelin">
+                            <h2><strong>当前时间</strong><b class="logoline"></b><b class="logoline1"></b><b
+                                    class="logoline2"></b><b class="logoline3"></b><b class="logoline4"></b></h2>
+                            <div class="date-timer">
+                                <p>
+                                    <strong id="H"></strong>
+                                    <strong>:</strong>
+                                    <strong id="M"></strong>
+                                    <strong id="S" class="hide"></strong>
+                                </p>
+                                <em id="D"></em>
+                                <ul>
+                                    <li id="Y"></li>
+                                    <li id="MH"></li>
+                                    <li id="TD"></li>
+                                </ul>
+                            </div>
+
+
+                            <div class="big-index-1">
+                                <ul>
+                                    <li>
+                                        <b class="animation-1"></b><b class="animation-2"></b><b
+                                            class="animation-3"></b>
+                                        <p>设备总数</p>
+                                        <strong>34</strong>
+                                    </li>
+                                    <li>
+                                        <b class="animation-1"></b><b class="animation-2"></b><b
+                                            class="animation-3"></b>
+                                        <p>关机数量</p>
+                                        <strong>4</strong>
+                                    </li>
+                                    <li>
+                                        <b class="animation-1"></b><b class="animation-2"></b><b
+                                            class="animation-3"></b>
+                                        <p>开机数量</p>
+                                        <strong>30</strong>
+                                    </li>
+                                    <li>
+                                        <b class="animation-1"></b><b class="animation-2"></b><b
+                                            class="animation-3"></b>
+                                        <p>开机率</p>
+                                        <strong>88.24%</strong>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <h1>联影 - 明匠 - </h1>
+
+
+                        </div>
+
+                        <p>
+                            <!--  <div class="zhanmid"  id="mid01"></div> -->
+                        <div class="zhanmid" id="mid02"></div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 0.6% !important; height: 32.1%;">
+                    <div class="dataAllBorder02" id="map_title_innerbox">
+                        <div class="map_title_box">
+                            <div class="map_title_innerbox">
+                                <div class="map_title" style="background-image: url(/img/second_title.png);">24小时设备监控
+                                </div>
+                            </div>
+
+                            <div>
+                                <li id="selLayer" style="width:100px;">
+                                    单位：台/小时
+                                </li>
+                            </div>
+                        </div>
+                        <p class="zhanbottom" id="actionBook24" style="width: 100%"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right_cage">
+                <!--顶部切换位置-->
+                <div class="dataAllBorder01 cage_cl" style="!important; height: 24%">
+                    <div class="dataAllBorder02" id="cage_cl">
+                        <div class="analysis">总设备数量：</div>
+                        <ul class="data_show_box">
+                            <li class="data_cage">0</li>
+                            <li class="data_cage">3</li>
+                            <li class="data_cage">2</li>
+                        </ul>
+                        <div class="depart_number_box">
+                            <ul class="depart_number_cage">
+                                <li class="depart_name">开机数：</li>
+                                <li class="depart_number">20</li>
+                            </ul>
+                            <ul class="depart_number_cage">
+                                <li class="depart_name">关机数：</li>
+                                <li class="depart_number">12</li>
+                            </ul>
+                            <!--<ul class="depart_number_cage" style="margin-bottom: 0px;">-->
+                            <!--<li class="depart_name">离线数：</li>-->
+                            <!--<li class="depart_number">3</li>-->
+                            <!--</ul>-->
+                            <!--<ul class="depart_number_cage" style="margin-bottom: 0px;">-->
+                            <!--<li class="depart_name">未知数：</li>-->
+                            <!--<li class="depart_number">3</li>-->
+                            <!--</ul>-->
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dataAllBorder01 cage_cl check_increase" style=" margin-top: 1.5% !important;">
+
+                    <!--车辆检索切换06-->
+                    <div class="dataAllBorder02 over_hide dataAllBorder20" id="over_hide">
+                        <div class="analysis" style="height: 34px;">设备开机列表：</div>
+                        <!--检索结果板块-->
+                        <div class="search_sesult_box open">
+                            <!--<ul  class="search_result">-->
+                            <!--<li class="search_result_add">LY·DE00012（热压机）</li>-->
+                            <!--<li class="search_location" title="定位"></li>-->
+                            <!--<li class="search_guiji"  title="轨迹回放"></li>-->
+                            <!--<li class="search_result_car car_personal">关机时刻（2019-02-27 09:24）</li>-->
+                            <!--&lt;!&ndash;<li class="search_result_car car_time">关机总时长（324分/天)</li>&ndash;&gt;-->
+                            <!--</ul>-->
+                            <!--<ul  class="search_result">-->
+                            <!--<li class="search_result_add">LY·DE00012（热压机）</li>-->
+                            <!--<li class="search_location" title="定位"></li>-->
+                            <!--<li class="search_guiji"  title="轨迹回放"></li>-->
+                            <!--<li class="search_result_car car_personal">关机时刻（2019-02-27 09:24）</li>-->
+                            <!--&lt;!&ndash;<li class="search_result_car car_time">关机总时长（324分/天)</li>&ndash;&gt;-->
+                            <!--</ul>-->
+                            <!--<ul  class="search_result">-->
+                            <!--<li class="search_result_add">LY·DE00012（热压机）</li>-->
+                            <!--<li class="search_location" title="定位"></li>-->
+                            <!--<li class="search_guiji"  title="轨迹回放"></li>-->
+                            <!--<li class="search_result_car car_personal">关机时刻（2019-02-27 09:24）</li>-->
+                            <!--&lt;!&ndash;<li class="search_result_car car_time">关机总时长（324分/天)</li>&ndash;&gt;-->
+                            <!--</ul>-->
+                            <!--<ul  class="search_result">-->
+                            <!--<li class="search_result_add">LY·DE00012（热压机）</li>-->
+                            <!--<li class="search_location" title="定位"></li>-->
+                            <!--<li class="search_guiji"  title="轨迹回放"></li>-->
+                            <!--<li class="search_result_car car_personal">关机时刻（2019-02-27 09:24）</li>-->
+                            <!--&lt;!&ndash;<li class="search_result_car car_time">关机总时长（324分/天)</li>&ndash;&gt;-->
+                            <!--</ul>-->
+                            <!--<ul  class="search_result">-->
+                            <!--<li class="search_result_add">LY·DE00012（热压机）</li>-->
+                            <!--<li class="search_location" title="定位"></li>-->
+                            <!--<li class="search_guiji"  title="轨迹回放"></li>-->
+                            <!--<li class="search_result_car car_personal">关机时刻（2019-02-27 09:24）</li>-->
+                            <!--&lt;!&ndash;<li class="search_result_car car_time">关机总时长（324分/天)</li>&ndash;&gt;-->
+                            <!--</ul>-->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="dataAllBorder01 cage_cl check_increase" style=" margin-top: 1.5% !important;">
+
+                    <!--车辆检索切换06-->
+                    <div class="dataAllBorder02 over_hide dataAllBorder20" id="over_hide">
+                        <div class="analysis" style="height: 34px;">设备关机列表：</div>
+                        <!--检索结果板块-->
+                        <div class="search_sesult_box off">
+                            <!--<ul  class="search_result">-->
+                            <!--<li class="search_result_add">LY·DE00012（热压机）</li>-->
+                            <!--<li class="search_location" title="定位"></li>-->
+                            <!--<li class="search_guiji"  title="轨迹回放"></li>-->
+                            <!--<li class="search_result_car car_personal">关机时刻（2019-02-27 09:24）</li>-->
+                            <!--&lt;!&ndash;<li class="search_result_car car_time">关机总时长（324分/天)</li>&ndash;&gt;-->
+                            <!--</ul>-->
+                            <!--<ul  class="search_result">-->
+                            <!--<li class="search_result_add">LY·DE00012（热压机）</li>-->
+                            <!--<li class="search_location" title="定位"></li>-->
+                            <!--<li class="search_guiji"  title="轨迹回放"></li>-->
+                            <!--<li class="search_result_car car_personal">关机时刻（2019-02-27 09:24）</li>-->
+                            <!--&lt;!&ndash;<li class="search_result_car car_time">关机总时长（324分/天)</li>&ndash;&gt;-->
+                            <!--</ul>-->
+                            <!--<ul  class="search_result">-->
+                            <!--<li class="search_result_add">LY·DE00012（热压机）</li>-->
+                            <!--<li class="search_location" title="定位"></li>-->
+                            <!--<li class="search_guiji"  title="轨迹回放"></li>-->
+                            <!--<li class="search_result_car car_personal">关机时刻（2019-02-27 09:24）</li>-->
+                            <!--&lt;!&ndash;<li class="search_result_car car_time">关机总时长（324分/天)</li>&ndash;&gt;-->
+                            <!--</ul>-->
+                            <!--<ul  class="search_result">-->
+                            <!--<li class="search_result_add">LY·DE00012（热压机）</li>-->
+                            <!--<li class="search_location" title="定位"></li>-->
+                            <!--<li class="search_guiji"  title="轨迹回放"></li>-->
+                            <!--<li class="search_result_car car_personal">关机时刻（2019-02-27 09:24）</li>-->
+                            <!--&lt;!&ndash;<li class="search_result_car car_time">关机总时长（324分/天)</li>&ndash;&gt;-->
+                            <!--</ul>-->
+                            <!--<ul  class="search_result">-->
+                            <!--<li class="search_result_add">LY·DE00012（热压机）</li>-->
+                            <!--<li class="search_location" title="定位"></li>-->
+                            <!--<li class="search_guiji"  title="轨迹回放"></li>-->
+                            <!--<li class="search_result_car car_personal">关机时刻（2019-02-27 09:24）</li>-->
+                            <!--&lt;!&ndash;<li class="search_result_car car_time">关机总时长（324分/天)</li>&ndash;&gt;-->
+                            <!--</ul>-->
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--<div class="dataAllBorder01 cage_cl check_decrease" style="margin-top: 1.5% !important; height: 32%; position: relative;">-->
+                <!--<div class="dataAllBorder02 over_hide" style="padding: 1.2%;">-->
+                <!--<div class="analysis">设备当前状态占比：</div>-->
+
+                <!--<div class="data_chart">-->
+                <!--<div id="container_huan_r" style="height: 90%;width: 100%"></div>-->
+                <!--</div>-->
+
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+
+        </div>
+        <!-- 统计分析一 -->
+        <div class="inner" style="display: none;margin-top: 34px">
+            <div class="data_left01">
+                <div class="dataAll maginS">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxx2分析</div>
+                            <div class="data_chart" id="buyTime"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxx类型分析</div>
+                            <p class="data_chart" id="Package01"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxx分析</div>
+                            <p class="data_chart" id="rode01"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="data_left01">
+                <div class="dataAll maginS">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxxx分析</div>
+                            <p class="data_chart" id="bookAret"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxxxx分析</div>
+                            <p class="data_chart" id="bookBmonth"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxxxx分析</div>
+                            <p class="data_chart" id="whearAbook"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="data_left02">
+                <div class="dataAll01">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit2">数据汇总</div>
+
+                            <table class="table_data01">
+                                <tr>
+                                    <td>总数</td>
+                                    <td colspan="3" class="font01">56320</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx数</td>
+                                    <td colspan="3" class="font02">56320</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxx数：</td>
+                                    <td>10个</td>
+                                    <td>类型数：</td>
+                                    <td>6个</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxx最多数：</td>
+                                    <td>16-20点</td>
+                                    <td>xxxxx最多月：</td>
+                                    <td>12月</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxx最多季节：</td>
+                                    <td>xxxx</td>
+                                    <td>xxxxx天气：</td>
+                                    <td>晴天</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx：</td>
+                                    <td>套餐A</td>
+                                    <td>xxxxxx：</td>
+                                    <td>活动</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx：</td>
+                                    <td>交通畅通</td>
+                                    <td>xxxxx特殊时间：</td>
+                                    <td>国庆节</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxx：</td>
+                                    <td colspan="3" style="color: red">xxxxxB</td>
+
+                                </tr>
+                                <tr>
+                                    <td>xxxxx多季节：</td>
+                                    <td colspan="3" style="color: red">冬季</td>
+
+                                </tr>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll02">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxx分析</div>
+                            <p class="data_chart" id="rodeAbook"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="data_left01">
+                <div class="dataAll maginS">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxx分析</div>
+                            <p class="data_chart" id="seaAbook01"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxx订单分析</div>
+                            <p class="data_chart" id="actionBook"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxxx分析</div>
+                            <p class="data_chart" id="sperceBook01"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 统计分析二 -->
+        <div class="inner" style="display: none;">
+            <div class="data_left03">
+                <div class="dataAllNo01 maginS01">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit3">收入渠道分析</div>
+                            <table class="table_data01">
+                                <tr>
+                                    <td>总收入：</td>
+                                    <td colspan="3" class="font01">123653元</td>
+                                </tr>
+                                <tr>
+                                    <td>收入渠道数：</td>
+                                    <td colspan="3" class="font03">5个</td>
+                                </tr>
+                                <tr>
+                                    <td>收入最多渠道</td>
+                                    <td class="font04">渠道A(56%)</td>
+                                    <td>收入最少渠道</td>
+                                    <td class="font05">渠道C(2.8%)</td>
+                                </tr>
+                                <tr>
+                                    <td>渠道A收入</td>
+                                    <td class="font6">53602元</td>
+                                    <td>渠道A收入占比</td>
+                                    <td class="font6">4.8%</td>
+                                </tr>
+                                <tr>
+                                    <td>渠道B收入</td>
+                                    <td class="font6">53602元</td>
+                                    <td>渠道B收入占比</td>
+                                    <td class="font6">4.8%</td>
+                                </tr>
+                                <tr>
+                                    <td>渠道C收入</td>
+                                    <td class="font6">53602元</td>
+                                    <td>渠道D收入占比</td>
+                                    <td class="font6">4.8%</td>
+                                </tr>
+
+                            </table>
+                            <p class="data_chart01" id="zhanbi02"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="data_left04">
+
+                <!--style="margin-top: 6.3%"-->
+                <div class="dataAllNo01">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit3">营销投入与销售量分析</div>
+                            <table class="table_data02">
+                                <tr>
+                                    <td class="font07">销量总量</td>
+                                    <td class="font03">1560万元</td>
+                                    <td class="font07">营销投入量</td>
+                                    <td class="font02">560万</td>
+                                </tr>
+                                <tr>
+                                    <td class="font07">总利润</td>
+                                    <td class="font01">1000万元</td>
+                                    <td class="font07">利润率</td>
+                                    <td class="font01">464.15%</td>
+                                </tr>
+
+                            </table>
+                            <p>
+                            <div class="zhanleft01" id="allAly01"></div>
+                            <div class="zhanleft01" id="allAly02"></div>
+                            </p>
+                            <p class="zhanleft02" id="allAly03"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="data_left03">
+                <div class="dataAllNo01 maginS01">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit3">支出渠道分析</div>
+                            <table class="table_data01">
+                                <tr>
+                                    <td>总支出：</td>
+                                    <td colspan="3" class="font02">123653元</td>
+                                </tr>
+                                <tr>
+                                    <td>支出渠道数：</td>
+                                    <td colspan="3" class="font02">5个</td>
+                                </tr>
+                                <tr>
+                                    <td>支出最多渠道</td>
+                                    <td class="font05">渠道A(56%)</td>
+                                    <td>支出最少渠道</td>
+                                    <td class="font04">渠道C(2.8%)</td>
+                                </tr>
+                                <tr>
+                                    <td>渠道A支出</td>
+                                    <td class="font6">53602元</td>
+                                    <td>渠道A支出占比</td>
+                                    <td class="font6">4.8%</td>
+                                </tr>
+                                <tr>
+                                    <td>渠道B支出</td>
+                                    <td class="font6">53602元</td>
+                                    <td>渠道B支出占比</td>
+                                    <td class="font6">4.8%</td>
+                                </tr>
+                                <tr>
+                                    <td>渠道C支出</td>
+                                    <td class="font6">53602元</td>
+                                    <td>渠道D支出占比</td>
+                                    <td class="font6">4.8%</td>
+                                </tr>
+
+                            </table>
+                            <p class="data_chart01" id="zhanbi03"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 统计分析三 -->
+        <div class="inner" style="display: none;">
+            <div class="clear"></div>
+            <div class="data_left05">
+                <div class="dataAllNo02 ">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit">xxxxxxx分析</div>
+                            <p class="data_chart02" id="shijian01"></p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="data_left05">
+                <div class="dataAllNo02 ">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit">xxxxx6分析</div>
+                            <table class="table_data02">
+                                <tr>
+                                    <td class="font07">事件类型</td>
+                                    <td class="font03">5个</td>
+                                    <td class="font07">xxxx</td>
+                                    <td class="font02">560万</td>
+                                </tr>
+                                <tr>
+                                    <td class="font07">最多发生事件</td>
+                                    <td class="font01">xxxx</td>
+                                    <td class="font07">最少发生事件</td>
+                                    <td class="font01">xxxxx</td>
+                                </tr>
+
+                            </table>
+                            <p class="data_chart02" id="shijian03"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="data_left05">
+                <div class="dataAllNo02">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit">xxxx分析</div>
+                            <p class="data_chart02" id="shijian02"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="data_left05">
+                <div class="dataAllNo02">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit">xxxxxx分析</div>
+
+                            <p class="data_chart03" id="shijian04"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 统计分析四 -->
+        <div class="inner" style="display: none;">
+            <div class="manage_left l_left">
+                <!--<div class="manage_left_nav"><img src="img/left_nav.png"/></div>-->
+                <div class="manage_line1">
+                    <div class="manage_line2">
+                        <div class="manage_top_middle">
+                            <table class="table table-bordered">
+                                <tbody>
+                                <tr>
+                                    <td>xxxx总数</td>
+                                    <td colspan="3">25414人</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxx</td>
+                                    <td colspan="3">省内游客</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxx</td>
+                                    <td colspan="3">青年</td>
+                                </tr>
+                                <tr>
+                                    <td>男性游客</td>
+                                    <td>5424人</td>
+                                    <td>女性游客</td>
+                                    <td>5457人</td>
+                                </tr>
+                                <tr>
+                                    <td>团队游客</td>
+                                    <td>5424人</td>
+                                    <td>散客</td>
+                                    <td>5457人</td>
+                                </tr>
+                                <tr>
+                                    <td>同比</td>
+                                    <td>下降5%</td>
+                                    <td>环比</td>
+                                    <td>上升5.6%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p>xxxxx数据汇总</p>
+                        </div>
+                        <div class="manage_left_top">
+                            <div class="manage_top_left l_left">
+                                <div id="container2" style="height: 90%"></div>
+                                <p>xxxxx分析</p>
+                            </div>
+                            <div class="manage_top_left l_left">
+                                <div id="container1" style="height: 90%"></div>
+                                <p>xxxx分析</p>
+                            </div>
+                            <div class="manage_top_left l_left">
+                                <div id="container3" style="height:90%"></div>
+                                <p>xxxx分析</p>
+                            </div>
+
+                        </div>
+                        <div class="manage_top_middle">
+                            <div id="container4" style="height: 90%"></div>
+                            <p>xxxx数据分析</p>
+                        </div>
+                        <!--<div class="manage_top_middle l_left">-->
+                        <!--<div id="container5" style="height: 90%"></div>-->
+                        <!--<p>天气——游客数据分析</p>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="manage_left l_left">
+                <!--<div class="manage_left_nav"><img src="img/left_nav.png"/></div>-->
+                <div class="manage_line1">
+                    <div class="manage_line2">
+                        <div class="manage_top_middle l_left">
+                            <div id="container9" style="height: 90%"></div>
+                            <p>xxxx情况</p>
+                        </div>
+                        <div class="manage_top_middle l_left">
+                            <div id="container10" style="height: 90%"></div>
+                            <p>xxxx分析</p>
+                        </div>
+                        <div class="manage_top_middle l_left">
+                            <div id="container11" style="height: 90%"></div>
+                            <p>xxxx分析</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="manage_left l_left">
+                <!--<div class="manage_left_nav"><img src="img/left_nav.png"/></div>-->
+                <div class="manage_line1">
+                    <div class="manage_line2">
+                        <div class="manage_top_middle">
+                            <div id="container12" style="height: 90%"></div>
+                            <p>xxxxx排行</p>
+                        </div>
+                        <div class="manage_top_middle">
+                            <div id="container6" style="height: 90%"></div>
+                            <p>xxxx数据分析</p>
+                        </div>
+                        <div class="manage_top_middle l_left">
+                            <div id="container5" style="height: 90%"></div>
+                            <p>xxxxx数据分析</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 统计分析五 -->
+        <div class="inner" style="display: none;">
+            <div class="user_left l_left" style=" margin-left: 0.6%">
+                <!--<div class="user_left_nav"><img src="../images/left_nav.png"/></div>-->
+                <div class="user_line1">
+                    <div class="user_line2">
+                        <div class="user_top_middle">
+                            <table class="table table-bordered">
+                                <tbody>
+                                <tr>
+                                    <td>xxxx总数</td>
+                                    <td colspan="3">965人</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxx工作人员</td>
+                                    <td>625人</td>
+                                    <td>xxxx工作人员</td>
+                                    <td>340人</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxx</td>
+                                    <td>急救部</td>
+                                    <td>xxxx工作人员</td>
+                                    <td>xxx（99%）</td>
+                                </tr>
+                                <tr>
+                                    <td>xxx</td>
+                                    <td>售票部</td>
+                                    <td>xxxx</td>
+                                    <td>安保部</td>
+                                </tr>
+                                <tr>
+                                    <td>xxx</td>
+                                    <td>李焕</td>
+                                    <td>xxx</td>
+                                    <td>周伟</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxx主要原因</td>
+                                    <td>人为损坏</td>
+                                    <td>xxx处理情况</td>
+                                    <td>均及时进行设备处理</td>
+                                </tr>
+                                <!--<tr>-->
+                                <!--<td>年度最佳员工</td>-->
+                                <!--<td>李进</td>-->
+                                <!--<td>重点观察员工</td>-->
+                                <!--<td>周伟</td>-->
+                                <!--</tr>-->
+
+                                </tbody>
+                            </table>
+                            <p>xxx管理汇总</p>
+                        </div>
+                        <div class="user_left_top">
+                            <div class="user_top_left l_left">
+                                <div id="userContainerSex" style="height: 90%"></div>
+                                <p>工作人员性别占比</p>
+                            </div>
+                            <div class="user_top_left l_left">
+                                <div id="userContainerManage" style="height: 90%"></div>
+                                <p>各部门人员占比</p>
+                            </div>
+                            <div class="user_top_left l_left">
+                                <div id="userContainerAge" style="height:90%"></div>
+                                <p>工作人员年龄段占比</p>
+                            </div>
+
+                        </div>
+                        <div class="user_top_middle">
+                            <div id="userContainerAttendance" style="height: 90%"></div>
+                            <p>景区各部门出勤情况</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user_left l_left" style=" margin-left: 0.6%">
+                <!--<div class="manage_left_nav"><img src="../images/left_nav.png"/></div>-->
+                <div class="user_line1">
+                    <div class="user_line2">
+                        <div class="user_top_middle l_left">
+                            <div id="userContainerPersonal" style="height: 90%"></div>
+                            <p>xxx排行</p>
+                        </div>
+                        <div class="user_top_middle l_left">
+                            <div id="userContainerFlow" style="height: 90%"></div>
+                            <p>xxx分析</p>
+                        </div>
+                        <div class="user_top_middle l_left">
+                            <div id="userContainerIllegal" style="height: 90%"></div>
+                            <p>xxxx分析</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user_left l_left" style=" margin-left: 0.6%">
+                <!--<div class="manage_left_nav"><img src="../images/left_nav.png"/></div>-->
+                <div class="user_line1">
+                    <div class="user_line2">
+                        <div class="user_top_middle">
+                            <div id="userContainerComplaint" style="height: 90%"></div>
+                            <p>xxxx情况</p>
+                        </div>
+                        <div class="user_top_middle">
+                            <div id="userContainerPrize" style="height: 90%"></div>
+                            <p>xxx分析</p>
+                        </div>
+                        <div class="user_top_middle l_left">
+                            <div class="user_right_left l_left">
+                                <div id="userContainerReason" style="height: 90%"></div>
+                                <p>xxx原因分析</p>
+                            </div>
+                            <div class="user_right_left l_left">
+                                <div id="userContainerHandle" style="height: 90%"></div>
+                                <p>故障处理情况</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="/js/echarts-all.js"></script>
+<script th:inline="javascript" src="/js/index.js"></script>
+<script src="/js/bstable/js/bootstrap.min.js"></script>
+<script src="/js/bstable/js/bootstrap-table.js"></script>
+<script type="text/javascript" src="/js/jquery.pagination.js"></script>
+<script src="/js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+
+<script src="/js/Home_page.js"></script>
+<script>
+    var number;
+    $(function () {
+        if (window.screen.height <= 768) {
+            number = 4;
+        } else if (window.screen.height > 768 && window.screen.height <= 900) {
+            number = 6
+        } else if (window.screen.height > 1080) {
+            number = 8
+        }
+    });
+
+    Echarts();
+
+
+    //首页左侧 动画
+    function TimeControl() {
+        $(".message_scroll_box").animate({marginTop: 96}, 800,
+            function () {
+                $(".message_scroll_box").css({marginTop: 0});    //把顶部的边界清零
+                $(".message_scroll_box .message_scroll:first").before($(".message_scroll_box .message_scroll:last"));    //在第一个新闻后面插入最后一个新闻
+            });
+    }
+
+    var T = setInterval(TimeControl, 4300);    //开始定时
+    $(".message_scroll_box").mouseenter(function () {
+        clearInterval(T);    //停止定时
+    })
+        .mouseleave(function () {
+            T = setInterval(TimeControl, 4500);    //再次定时
+        })
+
+</script>
+
+<script th:inline="javascript" type="text/javascript">
+    $(function(){
+        $(".index_nav ul li").each(function(index){
+            $(this).click(function(){
+                $(this).addClass("nav_active").siblings().removeClass("nav_active");
+                $(".index_tabs .inner").eq(index).fadeIn().siblings("div").stop().hide();
+                if(index==1){
+                    yingXiao();
+                }else if(index==2){
+                    shouRu();
+                }else if(index==3){
+                    AnQuan();
+                }else if(index==4){
+                    user();
+                }else if(index==5){
+                    manage();
+                }
+            })
+        });
+        $(".tabs ul li").each(function(index){
+            $(this).click(function(){
+                $(".tabs ul li div .div").removeClass("tabs_active");
+                $(this).find("div .div").addClass("tabs_active");
+                $(".tabs_map>div").eq(index).fadeIn().siblings("div").stop().hide();
+            })
+        });
+        $(".middle_top_bot ul li").each(function(){
+            $(this).click(function(){
+                $(".middle_top_bot ul li").removeClass("middle_top_bot_active");
+                $(this).addClass("middle_top_bot_active");
+            })
+        });
+
+
+
+
+// 获取设备总数
+        $.ajax({
+                type: "GET",
+                url: "http://"+location.host +"/getTotalEquip",
+                data: '',
+                dataType: "json",
+                success: function(data){
+                    console.log(data);
+                    $('.big-index-1 ul li:nth-child(1) strong').html(data);
+                    console.log(typeof data);
+                    var bai = parseInt(data/100) ;
+                    var shi = parseInt(data%100 /10);
+                    var ge = data%100%10;
+                    console.log(bai,shi,ge);
+                    $('.data_show_box li:nth-child(1)').html(bai);
+                    $('.data_show_box li:nth-child(2)').html(shi);
+                    $('.data_show_box li:nth-child(3)').html(ge);
+
+
+                    console.log($(".message_scroll_box").children()[0]);
+
+
+                    // ws连接
+                    var statusArray = ['关机','开机'];
+
+                    var len = data;
+
+                    var socket;
+                    var t;
+                    var MAX = [[${max}]];
+                    // console.log([[${max}]]);
+                    var count = 0;
+                    function openClick() {
+                        connection();
+                    }
+                    function closeClick() {
+                        socket.close();
+                    }
+                    function sendClick() {
+
+                        var content = document.getElementById("message").value;
+                        var obj = {
+                            "content":content
+                        };
+                        document.getElementById("content").innerHTML = document.getElementById("content").innerHTML + '<br/>' + "说：" + content;
+                        socket.send(JSON.stringify(obj));
+
+                    }
+
+                    var connection = function() {
+                        var url = 'ws://'+location.host+'/websocket'
+                        // var url = [[${wsUrl}]]
+                        socket = new WebSocket(url);
+                        socket.onopen = onopen;
+                        socket.onmessage = onmessage;
+                        socket.onclose = onclose;
+                        socket.onerror = onerror;
+                    }
+                    var reconnection = function() {
+                        count = count + 1;
+                        console.log("reconnection...【" + count + "】");
+                        //1与服务器已经建立连接
+                        if (count >= MAX || socket.readyState == 1) {
+                            clearTimeout(t);
+                        } else {
+                            //2已经关闭了与服务器的连接
+                            if (socket.readyState == 3) {
+                                connection();
+                            }
+                            //0正尝试与服务器建立连接,2正在关闭与服务器的连接
+                            t = setTimeout(function() {reconnection();}, [[${reTime}]]);
+                        }
+                    }
+                    var onopen = function() {
+                        console.log("open...");
+                    }
+                    var onclose = function() {
+                        console.log("close...");
+                        reconnection();
+                    }
+                    var count = 0
+                    var onmessage = function(e) {
+                        count = count +1;
+                        console.log("message...");
+                        if (e.data === "") return;
+                        if(JSON.parse(e.data).index === '1'){
+                            console.log('part1');
+                            var  hasOn = false;
+                            console.log(e);
+                            var left_up_html = '';
+                            console.log(e.data);
+                            console.log(JSON.parse(e.data));
+                            console.log(JSON.parse(e.data).msg);
+                            var source = JSON.parse(e.data).msg;
+                            console.log(source[len-1]);
+                            tempObj = source[len-1];
+                            len --;
+                            if(len === 0){
+                                len = data;
+                            }
+                            // $('.inner .left_cage .message_scroll_box').html(left_up_html);
+                            //首页左侧 动画
+                            function TimeControl(){
+                                if(hasOn === true) {
+                                    // 防抖动
+                                    return;
+                                }
+                                $(".message_scroll_box").animate({marginTop:96},2000,
+                                    function(){
+                                        $(".message_scroll_box").css({marginTop:0});    //把顶部的边界清零
+                                        // $(".message_scroll_box .message_scroll:first").before($(".message_scroll_box .message_scroll:last"));    //在第一个新闻后面插入最后一个新闻
+                                        var tempHTML =                  '<div class="message_scroll">\n' +
+                                            '                                <div class="scroll_top">\n' +
+                                            '                                    <span class="scroll_title">'+tempObj.name+'</span>\n' ;
+                                        if(JSON.stringify(tempObj.data)=== '{}'||JSON.stringify(tempObj.data.state)=== '{}'|| tempObj.data.state.startup === '1') {
+                                            tempHTML += '<span class="scroll_level scroll_level01">开机</span>' ;
+                                        }else {
+                                            tempHTML += '<span class="scroll_level scroll_level02">关机</span>'
+                                        }
+                                        tempHTML +=
+                                            '                                    <a class="localize"></a>\n' +
+                                            '                                    <span class="scroll_timer">'+tempObj.deviceNum+ '</span>\n' +
+                                            '                                </div>\n' +
+                                            '                                <div class="msg_cage">\n' +
+                                            '                                    <a class="localize_title">水压：xxx  流量：xxx</a>\n' +
+                                            '                                </div>\n' +
+                                            '                                <div class="msg_cage">\n' +
+                                            '                                    <a class="localize_msg">设备运行时长：342 分钟</a>\n' +
+                                            '                                </div>\n' +
+                                            '                            </div>'
+                                        $(tempHTML).insertBefore($(".message_scroll_box").children()[0])   ;    //在第一个新闻后面插入最后一个新闻
+                                        console.log($(".message_scroll_box").children()[0]);
+                                        hasOn = true;
+                                    });
+                            }
+                            var T=setInterval(TimeControl,4300);    //开始定时
+                            $(".message_scroll_box").mouseenter(function(){
+                                clearInterval(T);    //停止定时
+                            })
+                                .mouseleave(function(){
+                                    T=setInterval(TimeControl,4500);    //再次定时
+                                })
+                        }
+                        if(JSON.parse(e.data).index === '2') {
+                            console.log(JSON.parse(e.data));
+                            console.log('part2');
+                            const startupNum = JSON.parse(e.data).startupNum;
+                            const shutdownNum = JSON.parse(e.data).shutdownNum;
+                            const startupRatio = JSON.parse(e.data).startupRatio;
+                            // 开机部分
+                            $('.big-index-1 ul li:nth-child(3) strong').html(startupNum);
+                            $('.depart_number_box .depart_number_cage:nth-child(1) li:nth-child(2)').html(startupNum);
+
+                            // 关机部分
+                            $('.big-index-1 ul li:nth-child(2) strong').html(shutdownNum);
+                            $('.depart_number_box .depart_number_cage:nth-child(2) li:nth-child(2)').html(shutdownNum);
+
+
+                            // 比例
+                            $('.big-index-1 ul li:nth-child(4) strong').html(startupRatio);
+                        }
+                        if(JSON.parse(e.data).index === '5'){
+                            console.log('part5');
+                            console.log(JSON.parse(e.data).msg);
+                            var tempObj = JSON.parse(e.data).msg;
+                            var tempArr = Object.keys(tempObj);
+                            console.log(tempArr);
+                            var source = [];
+                            colorArr = ['#FA58D0','#0B3861','#0B610B','#8A2908','#2EFEF7','#9F81F7','#FF4000','#0B614B','#610B4B','#610B4B','#FE2EC8','#06b8f8','#ff5c58','#ffffb3','#fee581','#1afffd','#e15828','#1ec7f1','#71c186','#24a3e1','#72e7d5'];
+                            for(var i=0;i<tempArr.length;i++){
+                                source.push(
+                                    {value:tempObj[tempArr[i]], name:tempArr[i],
+                                        itemStyle:{
+                                            normal:{
+                                                color:colorArr[i]
+
+                                            }
+                                        }},
+                                );
+                            }
+                            console.log(source);
+                            var myChart = echarts.init($("#mid02")[0]);
+                            option = {
+                                title : {
+                                    text: '设备种类',
+                                    textStyle:{
+                                        color:"#e9ebee"
+
+                                    },
+
+                                    x:'center'
+                                },
+                                tooltip : {
+                                    trigger: 'item',
+                                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                                },
+                                legend: {
+                                    orient : 'vertical',
+                                    x : 'left',
+                                    data: tempArr,
+                                    textStyle:{
+                                        color:"#e9ebee"
+
+                                    }
+                                },
+
+                                calculable : false,
+                                series : [
+                                    {
+                                        name:'设备类别',
+                                        type:'pie',
+                                        radius : '55%',
+                                        center: ['50%', '60%'],
+                                        data: source
+                                    }
+                                ]
+                            };
+
+
+                            myChart.setOption(option);
+                        }
+                        if(JSON.parse(e.data).index === '4'){
+                            console.log('part 4');
+                            console.log(JSON.parse(e.data).shutdownData);
+                            console.log(JSON.parse(e.data).startupData);
+                            const data = JSON.parse(e.data).shutdownData;
+                            const open_data = JSON.parse(e.data).startupData;
+
+                            function getLogList(source, tip) {
+                                var offLoglistHtml = '';
+                                for (var i = 0; i<data.length;i++) {
+                                    const item = data[i];
+                                    offLoglistHtml +=  ' <ul  class="search_result">\n' +
+                                        '                                <li class="search_result_add">'+item.deviceNum+'（'+item.equipName+'）</li>\n' +
+                                        '                                <li class="search_location" title="定位"></li>\n' +
+                                        '                                <li class="search_guiji"  title="轨迹回放"></li>\n' +
+                                        '                                <li class="search_result_car car_personal">'+tip+'时刻（'+item.shutdownTime+'）</li>\n' +
+                                        '                  </ul>'
+                                }
+                                return offLoglistHtml;
+                            }
+
+
+                            $('.search_sesult_box.off').html(getLogList(data,'关机'));
+                            $('.search_sesult_box.open').html(getLogList(open_data,'开机'));
+                            console.log('here');
+                        }
+                        if (JSON.parse(e.data).index ==='3'){
+                            console.log('part 3');
+                            console.log(JSON.parse(e.data).msg);
+                            var openList =  JSON.parse(e.data).msg.map(item => {
+                                return Number(item.startupNum);
+                        });
+                            var offList = JSON.parse(e.data).msg.map(item => {
+                                return Number(item.shutdownNum);
+                        })
+                            console.log(openList,offList);
+                            console.log(openList,offList);
+                            const open_len = openList.length;
+                            const off_len = offList.length;
+                            for(var i =0;i< 24-open_len;i++){
+                                openList.push(0);
+                            }
+                            for(var i =0;i< 24-off_len;i++){
+                                offList.push(0);
+                            }
+                            console.log(openList, offList);
+
+                            var myChart = echarts.init($("#actionBook24")[0]);
+                            option = {
+                                title : {
+                                    text: '设备开关机状态分析图',
+                                    textStyle:{
+                                        color:"#e9ebee"
+
+                                    },
+                                    x:'center'
+
+                                },
+                                tooltip : {
+                                    trigger: 'axis'
+                                },
+                                legend: {
+                                    orient : 'vertical',
+                                    x : 'left',
+                                    data:['开机数量','关机数量'],
+                                    textStyle:{
+                                        color:"#e9ebee"
+
+                                    },
+                                },
+
+                                calculable : false,
+                                xAxis : [
+                                    {
+                                        type : 'category',
+                                        splitLine:{show: false},
+                                        axisLabel : {
+                                            formatter: '{value} ',
+                                            textStyle: {
+                                                color: '#a4a7ab',
+                                                align: 'right'
+                                            }
+                                        },
+                                        data : ['0时','1时','02时','3时','4时','5时','6时','7时','8时','9时','10时','11时','12时','13时','14时','15时','16时','17时','18时','19时','20时','21时','22时','23时']
+                                    }
+                                ],
+                                yAxis : [
+                                    {
+                                        type : 'value',
+                                        splitLine:{show: false},
+                                        axisLabel : {
+                                            formatter: '{value} ',
+                                            textStyle: {
+                                                color: '#a4a7ab',
+                                                align: 'right'
+                                            }
+                                        }
+                                    }
+                                ],
+                                grid:{
+                                    borderWidth:0
+                                },
+                                series : [
+                                    {
+                                        name:'开机数量',
+                                        type:'bar',
+                                        data:openList,
+                                        itemStyle: {
+                                            normal: {
+                                                color: '#2481ff'
+                                            }
+                                        },
+                                        markPoint : {
+                                            data : [
+                                                {type : 'max', name: '最大值'},
+                                                {type : 'min', name: '最小值'}
+                                            ]
+                                        },
+                                        markLine : {
+                                            data : [
+                                                {type : 'average', name: '平均值'}
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        name:'关机数量',
+                                        type:'bar',
+                                        data:offList,
+                                        itemStyle: {
+                                            normal: {
+                                                color: '#1afffd'
+                                            }
+                                        },
+
+                                        markPoint : {
+                                            data : [
+                                                {type : 'max', name: '最大值'},
+                                                {type : 'min', name: '最小值'}
+                                            ]
+                                        },
+                                        markLine : {
+                                            data : [
+                                                {type : 'average', name : '平均值'}
+                                            ]
+                                        }
+                                    }
+                                ]
+                            };
+
+
+                            myChart.setOption(option);
+                        }
+
+                    }
+
+                    var onerror = function() {
+                        console.log("error...");
+                        reconnection();
+                    }
+                    connection();
+                }
+            }
+        )
+
+
+        // 获取开机事件列表
+        $.ajax({
+            type: "GET",
+            url: "http://10.166.0.7:8080/getStartupList",
+            data: {num:5},
+            dataType: "json",
+            success: function(data){
+                console.log(data);
+                var startLoglistHtml = '';
+                for (var i = 0; i<data.length;i++) {
+                    const item = JSON.parse(data[i]);
+                    startLoglistHtml +=  ' <ul  class="search_result">\n' +
+                        '                                <li class="search_result_add">'+item.deviceNum+'（'+item.equipName+'）</li>\n' +
+                        '                                <li class="search_location" title="定位"></li>\n' +
+                        '                                <li class="search_guiji"  title="轨迹回放"></li>\n' +
+                        '                                <li class="search_result_car car_personal">开机时刻（'+item.time+'）</li>\n' +
+                        '                  </ul>'
+                }
+                $('.search_sesult_box.open').html(startLoglistHtml);
+            }
+        });
+// 关机
+        $.ajax({
+            type: "GET",
+            url: "http://10.166.0.7:8080/getShutdownList",
+            data: {num:5},
+            dataType: "json",
+            success: function(data){
+                console.log(data);
+
+            }
+        });
+// 整点请求  设备数（开关机）
+        var date = new Date();
+        var nextHourDate = new Date();
+        nextHourDate.setHours(date.getHours()+1);
+        nextHourDate.setMinutes(0);
+        nextHourDate.setSeconds(0);
+        setTimeout(nextHourTrigger(),nextHourDate - date);
+        function nextHourTrigger() {
+            console.log('第一次');
+            function getAllDeviceData() {
+                console.log('整点触发');
+                $.ajax({
+                    type: "GET",
+                    url: "http://10.166.0.7:8080/getTotalEquip",
+                    data: '',
+                    dataType: "json",
+                    success: function(data){
+                        console.log(data);
+                        $('.big-index-1 ul li:nth-child(1) strong').html(data);
+                        $('.depart_number_box .depart_number_cage li:nth-child(2)').html(data);
+                    }
+                });
+                $.ajax({
+                    type: "GET",
+                    url: "http://10.166.0.7:8080/getStartupEquip",
+                    data: '',
+                    dataType: "json",
+                    success: function(data){
+                        console.log(data);
+                        $('.big-index-1 ul li:nth-child(3) strong').html(data);
+
+                    }
+                });
+                $.ajax({
+                    type: "GET",
+                    url: "http://10.166.0.7:8080/getShutdownEquip",
+                    data: '',
+                    dataType: "json",
+                    success: function(data){
+                        console.log(data);
+                        $('.big-index-1 ul li:nth-child(2) strong').html(data);
+                        $('.depart_number_box .depart_number_cage:nth-child(1) li:nth-child(2)').html(data);
+                    }
+                });
+                $.ajax({
+                    type: "GET",
+                    url: "http://10.166.0.7:8080/getStartupEquipRatio",
+                    data: '',
+                    dataType: "json",
+                    success: function(data){
+                        console.log(data);
+                        $('.big-index-1 ul li:nth-child(4) strong').html(data);
+                    }
+                });
+
+            }
+            setInterval(getAllDeviceData,60*60*1000);
+        }
+    });
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

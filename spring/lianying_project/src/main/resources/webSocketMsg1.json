@@ -1,0 +1,21 @@
+{
+  "index":"1",
+  "msg":[
+    {
+      "name":"水压测试仪",
+      "deviceNum":"2019030100672660877D",
+      "data": {
+        "process":{
+          "waterPressure":"100",
+          "flow":"50"
+        },
+        "state":{"startup":"1"}
+      }
+    },
+    {
+      "name":"注塑机",
+      "deviceNum":"10086",
+      "data":{}
+    }
+  ]
+}

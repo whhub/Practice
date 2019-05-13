@@ -1,0 +1,27 @@
+{
+  "index":"4",
+  "shutdownData":[
+    {
+      "deviceNum":"123456",
+      "equipNum":"热压机",
+      "shutdownTime":"2019-03-07 10:25:03"
+    },
+    {
+      "deviceNum":"123456789",
+      "equipNum":"热压机",
+      "shutdownTime":"2019-03-07 10:25:03"
+    }
+  ],
+  "startupData":[
+    {
+      "deviceNum":"123456D",
+      "equipNum":"热压机",
+      "startupTime":"2019-03-07 10:25:03"
+    },
+    {
+      "deviceNum":"123456789F",
+      "equipNum":"热压机",
+      "startupTime":"2019-03-07 10:25:03"
+    }
+  ]
+}

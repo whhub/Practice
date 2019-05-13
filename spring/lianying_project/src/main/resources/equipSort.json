@@ -1,0 +1,113 @@
+
+{
+  "code": 0,
+  "msg": "操作成功",
+  "data": [
+    {
+      "一车间": [
+        {
+          "注塑机": [
+            {
+              "id": 4,
+              "deviceName": "jd001",
+              "deviceArea": "sourth",
+              "deviceNum": "10086",
+              "controllerModel": "2019-1-1",
+              "templateID": 3,
+              "workshopID": 1,
+              "customFields": null
+            },
+            {
+              "id": 5,
+              "deviceName": "jd002",
+              "deviceArea": null,
+              "deviceNum": "2018120700670916472D",
+              "controllerModel": null,
+              "templateID": 3,
+              "workshopID": 1,
+              "customFields": null
+            }
+          ]
+        },
+        {
+          "一体机": [
+            {
+              "id": 6,
+              "deviceName": "ytj",
+              "deviceArea": null,
+              "deviceNum": "2018121101842806456D",
+              "controllerModel": null,
+              "templateID": 5,
+              "workshopID": 1,
+              "customFields": null
+            }
+          ]
+        },
+        {
+          "4zhoujichuang": [
+            {
+              "id": 9,
+              "deviceName": "4轴",
+              "deviceArea": null,
+              "deviceNum": "2019011600273222151D",
+              "controllerModel": null,
+              "templateID": 8,
+              "workshopID": 1,
+              "customFields": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "实验室": [
+        {
+          "3D打印机": [
+            {
+              "id": 7,
+              "deviceName": "电子部3D打印机",
+              "deviceArea": "null",
+              "deviceNum": "2019011101881334561D",
+              "controllerModel": "null",
+              "templateID": 6,
+              "workshopID": 2,
+              "customFields": null
+            }
+          ]
+        },
+        {
+          "扭矩扳手": [
+            {
+              "id": 8,
+              "deviceName": "电子部扭矩枪",
+              "deviceArea": null,
+              "deviceNum": "2019011100824685004D",
+              "controllerModel": null,
+              "templateID": 7,
+              "workshopID": 2,
+              "customFields": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "联影车间1": [
+        {
+          "水压测试仪": [
+            {
+              "id": 10,
+              "deviceName": "水压测试仪01",
+              "deviceArea": null,
+              "deviceNum": "2019030100672660877D",
+              "controllerModel": null,
+              "templateID": 9,
+              "workshopID": 3,
+              "customFields": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

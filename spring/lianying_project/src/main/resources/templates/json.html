@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json</title>
+</head>
+<body>
+    解析JSON<br>
+<button onclick="test()">解析</button>
+</body>
+<script type="text/javascript">
+    var str1 = '{ "name": "cxh", "sex": "man" }';  //json字符串
+    var str2 = { "name": "cxh", "sex": "man" }; //json对象
+
+    //json字符串转换为json对象
+    //1
+    // var obj = eval('(' + str + ')');
+    //2
+    // var obj = str.parseJSON(); //由JSON字符串转换为JSON对象
+    // //3
+    // var obj = JSON.parse(str); //由JSON字符串转换为JSON对象
+
+    alert("dkfsjlsd");
+
+    $(document).ready(function () {
+        alert("进入函数！");
+        alert(obj.name);
+    });
+
+    function test() {
+        // alert("解析函数");
+        var obj = eval('(' + str1 + ')');
+        alert(obj.name);
+    }
+</script>
+</html>
