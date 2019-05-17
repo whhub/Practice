@@ -68,8 +68,12 @@ public class MyWebSocket {
 
 
     public void sendMessage(String message) throws IOException {
-        this.session.getBasicRemote().sendText(message);
-        //this.session.getAsyncRemote().sendText(message);
+        if(this.session == null) {
+            System.out.println("this.session is null");
+        }else {
+            this.session.getBasicRemote().sendText(message);
+            //this.session.getAsyncRemote().sendText(message);
+        }
     }
 
     /**
