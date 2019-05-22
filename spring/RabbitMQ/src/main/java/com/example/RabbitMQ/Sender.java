@@ -1,6 +1,7 @@
 package com.example.RabbitMQ;
 
 import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +11,8 @@ import java.util.Date;
 public class Sender {
 
     @Autowired
-    private AmqpTemplate rabbitTemplate;
+    //private AmqpTemplate rabbitTemplate;
+    private RabbitTemplate rabbitTemplate;
 
     public void Send() {
         String context = "hello " + new Date();
@@ -21,7 +23,7 @@ public class Sender {
         for (int i =0; i< 10; i++) {
             String msg = "hello, 序号: " + i;
             System.out.println("Sender, " + msg);
-            rabbitTemplate.convertAndSend("queue-test", msg);
+            rabbitTemplate.convertAndSend("hello", msg);
         }
 
     }
