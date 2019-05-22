@@ -17,5 +17,12 @@ public class Sender {
         System.out.println("Sender: " + context);
 
         this.rabbitTemplate.convertAndSend("hello", context);
+
+        for (int i =0; i< 10; i++) {
+            String msg = "hello, 序号: " + i;
+            System.out.println("Sender, " + msg);
+            rabbitTemplate.convertAndSend("queue-test", msg);
+        }
+
     }
 }
