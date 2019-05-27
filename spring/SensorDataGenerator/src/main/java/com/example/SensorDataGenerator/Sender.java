@@ -15,6 +15,6 @@ public class Sender {
     private RabbitTemplate rabbitTemplate;
 
     public void Send(String message) {
-        this.rabbitTemplate.convertAndSend("lyTest", message);
+        this.rabbitTemplate.convertAndSend(RabbitConfig.HELLO_QUEUE, message);
     }
 }

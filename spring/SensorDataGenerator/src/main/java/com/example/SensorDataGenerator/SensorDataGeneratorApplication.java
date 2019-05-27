@@ -9,7 +9,6 @@ public class SensorDataGeneratorApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(SensorDataGeneratorApplication.class, args);
-
 	}
 
 }
