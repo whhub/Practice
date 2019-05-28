@@ -1,0 +1,27 @@
+{
+  "deviceNum":"2019030100672660877D",
+  "date":"2019-03-25 17:56:59:358",
+  "data":{
+    "process":  //工艺类
+    {
+      "waterPressure":"100",
+      "flow":"50"
+    },
+    "state":   //状态类
+    {
+      "startup":"0",
+      "planTotalTime":"480",    //计划工作时间，单位：min
+      "planProductRate":"0.6",  //生产速率，单位：min/件
+      "realGoodNum":"430",      //良品数，单位：件
+      "realTotalNum":"450"      //总产量
+    },
+    "energy": //能耗类
+    {
+
+    },
+    "custom": //自定义类
+    {
+
+    }
+  }
+}

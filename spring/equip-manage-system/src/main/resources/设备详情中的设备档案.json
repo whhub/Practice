@@ -1,0 +1,26 @@
+[
+  {
+    "deviceNum": "156161313",
+    "docName": "设备维护手册.word",
+    "createTime": "2019-02-03",
+    "downloadNum": "324",
+    "author": "admin",
+    "introduction": "this is a book"
+  },
+  {
+    "deviceNum": "156161313",
+    "docName": "设备手册.word",
+    "createTime": "2019-02-03",
+    "downloadNum": "324",
+    "author": "admin",
+    "introduction": "this is a book"
+  },
+  {
+    "deviceNum": "156161313",
+    "docName": "设备维护手册.pdf",
+    "createTime": "2019-02-03",
+    "downloadNum": "324",
+    "author": "admin",
+    "introduction": "this is a book"
+  }
+]
