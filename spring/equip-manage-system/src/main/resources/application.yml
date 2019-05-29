@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: local
+    active: wh
   jpa:
     show-sql: false
     hibernate:
