@@ -1,0 +1,26 @@
+[
+  {
+    "color":"red",
+    "msg":"维护1",
+    "date":"2019-03-20",
+    "status":"1"
+  },
+  {
+    "color":"blue",
+    "msg":"维护2",
+    "date":"2019-03-21",
+    "status":"1"
+  },
+  {
+    "color":"green",
+    "msg":"维护3",
+    "date":"2019-03-22",
+    "status":"0"
+  },
+  {
+    "color":"red",
+    "msg":"维护1",
+    "date":"2019-03-23",
+    "status":"0"
+  }
+]

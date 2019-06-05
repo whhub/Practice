@@ -1,0 +1,63 @@
+{
+  "code": 0,
+  "msg": "操作成功",
+  "data": {
+    "model": {
+      "id": 0,
+      "modelName": "OEE算法模型",
+      "version": "v2.0.3",
+      "isOpen": true,
+      "updateDate": "2019-5-12 12:30:25",
+      "msg": "6种重大损失降低机器效能说明",
+      "author": "曙锐智能",
+      "furmula": "总体设备效能(OEE)=可用时间*生产效率",
+      "linkNum": 4
+    },
+    "nodes": [
+      {
+      "node": {
+        "id": 2,
+        "modelId": 0,
+        "nodeName": "可用时间",
+        "furmula": "x+y"
+      },
+      "params": [
+        {
+        "id": 1,
+        "nodeId": 2,
+        "paramName": "可用总工时",
+        "variable": "x",
+        "connectType": "通用类数据",
+        "connectKeyname": "time1"
+      },
+        {
+          "id": 2,
+          "nodeId": 2,
+          "paramName": "损失工时",
+          "variable": "y",
+          "connectType": "通用类数据",
+          "connectKeyname": "time2"
+        }
+      ]
+      },
+      {
+        "node": {
+          "id": 3,
+          "modelId": 0,
+          "nodeName": "生产效率",
+          "furmula": "x"
+        },
+        "params": [
+          {
+            "id": 3,
+            "nodeId": 3,
+            "paramName": "生产效率",
+            "variable": "x",
+            "connectType": "通用类数据",
+            "connectKeyname": "t1"
+          }
+        ]
+      }
+    ]
+  }
+}

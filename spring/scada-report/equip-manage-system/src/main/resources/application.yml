@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: wh
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    thymeleaf:
+      mode: HTML
+      encoding: UTF-8
+      cache: false
+
+server:
+  port: 8080
+
+my-thread:
+  sleepTime: 1000
+my-data:
+  type1: 通用类数据
+  type2: 导入类数据
+  type3: 设备类数据

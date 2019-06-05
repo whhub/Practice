@@ -1,0 +1,14 @@
+[
+  {
+    "color":"red",
+    "msg":"维护1"
+  },
+  {
+    "color":"blue",
+    "msg":"维护2"
+  },
+  {
+    "color":"green",
+    "msg":"维护3"
+  }
+]
