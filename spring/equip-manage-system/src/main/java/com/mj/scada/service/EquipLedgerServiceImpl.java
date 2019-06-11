@@ -24,7 +24,7 @@ import java.util.*;
  *Date:2019-03-18 14:37
  */
 @Service
-public class EquipLedgerServiceImpl implements EquipLedgerService
+public class xEquipLedgerServiceImpl implements EquipLedgerService
 {
     @Autowired
     private EquipLedgerRepository equipLedgerRepository;
