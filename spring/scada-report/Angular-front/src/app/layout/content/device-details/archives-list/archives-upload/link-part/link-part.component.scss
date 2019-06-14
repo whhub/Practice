@@ -1,0 +1,121 @@
+.linkPart{
+  width: 65%;
+  margin: 20px auto;
+  .header{
+    >span{
+      &:nth-child(1){
+        margin-left: 15px;
+        color: #27B6AF;
+      }
+      &:nth-child(2){
+        margin-left: 110px;
+        >i{
+          margin-right: 5px;
+        }
+      }
+      &:nth-child(3){
+        margin-left: 195px;
+        >i{
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .tableBox{
+    margin-top: 25px;
+    th{
+      sup{
+        margin-left: 2px;
+      }
+    }
+    th,td{
+      font-size: 13px;
+    }
+    thead{
+      tr{
+        th{
+       :host ::ng-deep &{
+         border-bottom: 2px solid #d9d9d9;
+         text-align: center;
+         &:nth-child(2){
+           border-right: 2px solid #d9d9d9;
+         }
+       }
+
+        }
+
+      }
+    }
+    tbody{
+      tr{
+        td{
+          text-align: center;
+          &:nth-child(2){
+            border-right: 2px solid #d9d9d9;
+          }
+          &.inputTd{
+          :host  ::ng-deep &  .ant-input-group-addon{
+              padding: 0;
+              border: none;
+            button{
+              border-radius: 0 4px 4px 0;
+            }
+            }
+          }
+          &.typeTd{
+            >span{
+              background-color:#5A6CD3;
+              color: #FFFFFF;
+              cursor: not-allowed;
+              display: inline-block;
+              padding: 2px 14px;
+            }
+          }
+          &.deleteTd{
+            >span{
+              display: inline-block;
+              background-color: #27B6AF;
+              padding: 2px 4px;
+              cursor: pointer;
+              i{
+                color: #FFFFFF;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        &:last-child{
+          &:hover{
+            td{
+              :host ::ng-deep &  {
+                background-color: transparent;
+              }
+            }
+
+          }
+          td{
+            :host ::ng-deep &{
+              border-bottom: none;
+            }
+
+          }
+        }
+      }
+    }
+  }
+  .footer{
+    >span{
+      padding: 3px 14px;
+      cursor: pointer;
+      &:nth-child(1){
+        background-color: #27B6AF;
+        color: #FFFFFF;
+        margin-left: 101px;
+
+      }
+      &:nth-child(2){
+        margin-left: 15px;
+      }
+    }
+  }
+}

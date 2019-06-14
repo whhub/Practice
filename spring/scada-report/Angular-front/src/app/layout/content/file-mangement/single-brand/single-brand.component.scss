@@ -1,0 +1,148 @@
+$side-width: 200px;
+$green: #219020;
+$light-blue: #4bb7d5;
+$orange: #ff8d05;
+$danger: #e21e25;
+$border: 1px solid #d9d9d9;
+
+
+.body{
+  padding: 10px 10px 20px 10px;
+  background-color: #FFFFFF;
+  margin: 0 10px 0 10px;
+  .header{
+    line-height: 36px;
+    >span{
+     margin-left: 15px;
+    }
+    >i{
+      margin-left: 10px;
+    }
+  }
+  .group{
+    .item{
+      margin: 5px 0;
+      font-size: 13px;
+      >span{
+        &:nth-child(1){
+          width: 205px;
+          display: inline-block;
+          margin-left: 15px;
+          >span{
+            &:nth-child(1){
+              display: inline-block;
+              width: 66px;
+            }
+            &:nth-child(2){
+              margin-left: 5px;
+
+            }
+          }
+        }
+        &:nth-child(2){
+          margin-left: 35px;
+          >span{
+            &:nth-child(2){
+              color: #00c1de;
+              margin-left: 10px;
+              font-weight: bolder;
+            }
+          }
+        }
+        &:nth-child(3){
+          margin-left: 35px;
+          >span{
+          &:nth-child(2){
+            color: #00c1de;
+            margin-left: 10px;
+            font-weight: bolder;
+          }
+        }
+
+        }
+      }
+    }
+    .remarks{
+
+      font-size: 13px;
+      >span{
+        &:nth-child(1){
+          margin-left: 15px;
+          //vertical-align: top;
+        }
+        &:nth-child(2){
+          margin-left: 16px;
+          color: rgb(182,182,182);
+          width: calc(75% - 73px);
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}
+.foot{
+  margin: 0 10px;
+  >div{
+
+    margin: 15px 0;
+    .gutter-box{
+      background-color: #FFFFFF;
+      padding: 15px 30px;
+      >span{
+        font-size: 15px;
+        color: rgb(16,16,16);
+        >i{
+          font-size: 17px;
+          margin-right: 5px;
+        }
+      }
+      >p{
+        margin-bottom: 0;
+        color: rgba(182, 182, 182, 1);
+        font-size: 13px;
+      }
+    }
+    &:nth-child(1){
+      .gutter-row{
+        &:nth-child(1),&:nth-child(2){
+          .gutter-box{
+            >span{
+              color: #00c1de;
+              &:focus{
+                outline: none;
+              }
+
+              >span{
+                cursor: pointer;
+                &:focus{
+                  outline: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &:nth-child(2){
+      .gutter-row{
+        &:nth-child(3){
+          .gutter-box{
+            position: relative;
+            >span{
+              color: rgba(229, 28, 35, 1);
+              cursor: pointer;
+            }
+            .flag{
+              position: absolute;
+              color: rgb(255, 152, 0);
+              right: 8px;
+              top: 8px;
+              font-size: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

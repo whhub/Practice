@@ -1,0 +1,290 @@
+<div class="rightCon">
+  <div class="headPart clearfix">
+    <div>
+      <div class="item">
+        <span>加工</span>  <nz-progress [nzPercent]="90" [nzStrokeColor]="'#219020'"></nz-progress> <span>07:04:34</span>
+      </div>
+      <div class="item">
+        <span>待机</span>  <nz-progress [nzPercent]="30" [nzStrokeColor]="'#ff8d05'"></nz-progress> <span>02:00:34</span>
+      </div>
+      <div class="item">
+        <span>故障</span>  <nz-progress [nzPercent]="1" [nzStrokeColor]="'#e21e25'"></nz-progress> <span>00:00:00</span>
+      </div>
+
+    </div>
+    <div>
+      <div echarts [options]="chartOption" class="demo-chart"></div>
+    </div>
+  </div>
+  <div class="bodyPart">
+    <div class="bodyPartItem">
+      <div>
+        <span>加工（最近24小时）</span>
+      </div>
+      <div>
+        <div class="tableHeader clearfix">
+          <span>12AM</span>
+          <span>1AM</span>
+          <span>2AM</span>
+          <span>3AM</span>
+          <span>4AM</span>
+          <span>5AM</span>
+          <span>6AM</span>
+          <span>7AM</span>
+          <span>8AM</span>
+          <span>9AM</span>
+          <span>10AM</span>
+          <span>11AM</span>
+          <span>12PM</span>
+          <span>1PM</span>
+          <span>2PM</span>
+          <span>3PM</span>
+          <span>4PM</span>
+          <span>5PM</span>
+          <span>6PM</span>
+          <span>7PM</span>
+          <span>8PM</span>
+          <span>9PM</span>
+          <span>10PM</span>
+          <span>11PM</span>
+        </div>
+        <div class="tableBody clearfix">
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span class="run">90%</span>
+          <span class="run">85%</span>
+          <span class="run">10%</span>
+          <span class="run">35%</span>
+          <span class="run">26%</span>
+          <span class="run">33%</span>
+          <span class="run">56%</span>
+          <span class="run">95%</span>
+          <span class="run">60%</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+        </div>
+      </div>
+    </div>
+    <div class="bodyPartItem">
+      <div>
+        <span>待机（最近24小时）</span>
+      </div>
+      <div>
+        <div class="tableHeader clearfix">
+          <span>12AM</span>
+          <span>1AM</span>
+          <span>2AM</span>
+          <span>3AM</span>
+          <span>4AM</span>
+          <span>5AM</span>
+          <span>6AM</span>
+          <span>7AM</span>
+          <span>8AM</span>
+          <span>9AM</span>
+          <span>10AM</span>
+          <span>11AM</span>
+          <span>12PM</span>
+          <span>1PM</span>
+          <span>2PM</span>
+          <span>3PM</span>
+          <span>4PM</span>
+          <span>5PM</span>
+          <span>6PM</span>
+          <span>7PM</span>
+          <span>8PM</span>
+          <span>9PM</span>
+          <span>10PM</span>
+          <span>11PM</span>
+        </div>
+        <div class="tableBody clearfix">
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span class="off">90%</span>
+          <span class="off">85%</span>
+          <span class="off">10%</span>
+          <span class="off">35%</span>
+          <span class="off">26%</span>
+          <span class="off">33%</span>
+          <span class="off">56%</span>
+          <span class="off">95%</span>
+          <span class="off">60%</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+        </div>
+      </div>
+    </div>
+    <div class="bodyPartItem">
+      <div>
+        <span>故障（最近24小时）</span>
+      </div>
+      <div>
+        <div class="tableHeader clearfix">
+          <span>12AM</span>
+          <span>1AM</span>
+          <span>2AM</span>
+          <span>3AM</span>
+          <span>4AM</span>
+          <span>5AM</span>
+          <span>6AM</span>
+          <span>7AM</span>
+          <span>8AM</span>
+          <span>9AM</span>
+          <span>10AM</span>
+          <span>11AM</span>
+          <span>12PM</span>
+          <span>1PM</span>
+          <span>2PM</span>
+          <span>3PM</span>
+          <span>4PM</span>
+          <span>5PM</span>
+          <span>6PM</span>
+          <span>7PM</span>
+          <span>8PM</span>
+          <span>9PM</span>
+          <span>10PM</span>
+          <span>11PM</span>
+        </div>
+        <div class="tableBody clearfix">
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span class="error">90%</span>
+          <span class="error">85%</span>
+          <span class="error">10%</span>
+          <span class="error">35%</span>
+          <span class="error">26%</span>
+          <span class="error">33%</span>
+          <span class="error">56%</span>
+          <span class="error">95%</span>
+          <span class="error">60%</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+          <span>N/A</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footPart">
+    <div class="header">
+      <i nz-icon type="cluster" theme="outline"></i><span>OEE解析</span>
+    </div>
+    <div nz-row>
+      <div nz-col nzSpan="6">
+        <div class="footPartItem">
+          <p class="itemTitle">
+            <span>OEE</span>
+          </p>
+          <p>
+            <span>82%</span> <i nz-icon type="dashboard" theme="outline"></i>
+
+          </p>
+          <div>
+            <span>标准差 :</span>  <span>19.3%</span>
+          </div>
+          <div>
+            <span>高时 :</span> <span>100%</span> <span>1PM</span>
+          </div>
+          <div>
+            <span>低时 :</span> <span>3%</span> <span>8PM</span>
+          </div>
+        </div>
+
+      </div>
+      <div nz-col nzSpan="6">
+        <div class="footPartItem">
+          <p class="itemTitle">
+            <span>有效性/Availability</span>
+          </p>
+          <p>
+            <span>82%</span> <i nz-icon type="dashboard" theme="outline"></i>
+
+          </p>
+          <div>
+            <span>标准差 :</span>  <span>19.3%</span>
+          </div>
+          <div>
+            <span>高时 :</span> <span>100%</span> <span>1PM</span>
+          </div>
+          <div>
+            <span>低时 :</span> <span>3%</span> <span>8PM</span>
+          </div>
+        </div>
+
+      </div>
+      <div nz-col nzSpan="6">
+        <div class="footPartItem">
+          <p class="itemTitle">
+            <span>表现性/Performance</span>
+          </p>
+          <p>
+            <span>82%</span> <i nz-icon type="dashboard" theme="outline"></i>
+
+          </p>
+          <div>
+            <span>标准差 :</span>  <span>19.3%</span>
+          </div>
+          <div>
+            <span>高时 :</span> <span>100%</span> <span>1PM</span>
+          </div>
+          <div>
+            <span>低时 :</span> <span>3%</span> <span>8PM</span>
+          </div>
+        </div>
+
+      </div>
+      <div nz-col nzSpan="6">
+        <div class="footPartItem">
+          <p class="itemTitle">
+            <span>质量指数Quality</span>
+          </p>
+          <p>
+            <span>82%</span> <i nz-icon type="dashboard" theme="outline"></i>
+
+          </p>
+          <div>
+            <span>标准差 :</span>  <span>19.3%</span>
+          </div>
+          <div>
+            <span>高时 :</span> <span>100%</span> <span>1PM</span>
+          </div>
+          <div>
+            <span>低时 :</span> <span>3%</span> <span>8PM</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

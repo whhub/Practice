@@ -1,0 +1,117 @@
+$theme-color: #27B6AF;
+$danger-color: #E32C32;
+$green-color: #219020;
+$blue-color: #8592DC;
+@mixin btnStyle($color) {
+  >i{
+    color: $color;
+  }
+  &:hover{
+    color: $color;
+    border-color: $color;
+  }
+}
+.deviceCate{
+  >.header{
+    line-height: 40px;
+    font-size: 16px;
+    //border-left: 1px solid #d9d9d9;
+    background-color: white;
+    i{
+      margin-left: 15px;
+      color: rgb(37, 155, 36);
+      font-size: 20px;
+    }
+    span{
+      margin-left: 5px;
+      line-height: 24px;
+      border-bottom: 1.5px solid rgb(37, 155, 36);
+      display: inline-block;
+      width: 80px;
+      font-size: 13px;
+      font-weight: bolder;
+    }
+  }
+  .content{
+    padding: 0 5px;
+    margin-top: 15px;
+    >.header{
+      padding: 10px 0 10px 15px;
+      background-color: #FFFFFF;
+      >button{
+        margin: 0 3px;
+        &:nth-child(1){
+          @include btnStyle($danger-color);
+        }
+        &:nth-child(2){
+          @include btnStyle($theme-color);
+        }
+        &:nth-child(3){
+          @include btnStyle($blue-color);
+        }
+      }
+    }
+    .toolBox{
+      padding-left: 15px;
+      margin-top: 10px;
+      >ul{
+        >li{
+          float: left;
+          margin-right: 25px;
+          >input{
+            width: 120px;
+            margin-left: 10px;
+          }
+          >nz-select{
+            margin-left: 10px;
+          }
+          >button{
+            margin: 0 2px;
+          }
+        }
+      }
+    }
+    .contentBody{
+      background-color: #FFFFFF;
+      tr{
+        td{
+          font-size: 13px;
+        }
+      }
+      .ant-table-thead{
+        > tr{
+          > th{
+            :host ::ng-deep &{
+              color: $green-color;
+              font-weight: bolder;
+            }
+
+          }
+        }
+      }
+      td.inner{
+        i{
+          margin-left: 10px;
+        }
+      }
+      td.btnGroup{
+        >i{
+          &:focus{
+            outline: none;
+          }
+          margin: 0 4px;
+          cursor: pointer;
+          &:nth-child(1){
+            color: $green-color;
+          }
+          &:nth-child(3){
+            color: $danger-color;
+          }
+          &:nth-child(4){
+            color: $blue-color;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+$light-blue: #4bb7d5;
+$green: #219020;
+$orange: #ff8d05;
+$danger: #e21e25;
+$online: rgb(139, 195, 74);
+$wait: rgb(255, 152, 0);
+$offline: rgb(170, 170, 170);
+$error: rgb(229, 28, 35);
+:host{
+  flex: 1;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+header{
+  line-height: 40px;
+  font-size: 16px;
+  //border-left: 1px solid #d9d9d9;
+  background-color: white;
+  i{
+    margin-left: 15px;
+    color: rgb(37, 155, 36);
+    font-size: 20px;
+  }
+  span{
+    margin-left: 5px;
+    line-height: 24px;
+    border-bottom: 1.5px solid rgb(37, 155, 36);
+    display: inline-block;
+    width: 80px;
+    font-size: 13px;
+    font-weight: bolder;
+  }
+}
+.content{
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  .contentHeader{
+    line-height: 45px;
+    background-color: #FFFFFF;
+
+    >span{
+      float: left;
+      &:nth-child(1){
+        margin-left: 15px;
+        >i{
+          font-size: 16px;
+          margin-right: 5px;
+        }
+      }
+
+    }
+    nz-button-group{
+      float: right;
+      margin-right: 15px;
+    }
+  }
+  .contentBody{
+    margin-top: 10px;
+    flex: auto;
+    display: flex;
+    .sider{
+      flex: 7;
+      margin-right: 10px;
+      background-color: #FFFFFF;
+      .item{
+        margin: 10px 0;
+        >span{
+          &:nth-child(1){
+            color: #27B6AF;
+            margin-left: 20px;
+            display: inline-block;
+            width: 68px;
+            >sup{
+              color: #E32C32;
+            }
+          }
+        }
+        >nz-upload{
+          margin-left: 25px;
+          button{
+            background-color: #27B6AF;
+            color: #FFFFFF;
+            border-color: #27B6AF;
+          }
+          nz-upload-list{
+            :host ::ng-deep &{
+              display: inline-block;
+              margin-left: 25px;
+              >div{
+                display: inline-block;
+                padding-right: 10px;
+                >div{
+                  display: inline-block;
+                  >span{
+                    display: inline-block;
+                  }
+                }
+                >i{
+                  margin-left: 15px;
+                }
+              }
+            }
+
+          }
+        }
+        >input,nz-select,textarea{
+          width: 80%;
+          margin-left: 25px;
+        }
+        >p{
+          margin-bottom: 0;
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.45);
+          margin-left: 112px;
+          margin-top: 5px;
+        }
+      }
+      .btnBox{
+        text-align: center;
+        >span{
+          display: inline-block;
+          padding: 2px 14px;
+          cursor: pointer;
+          &:nth-child(1){
+            background-color: #00c1de;
+            color: #fff;
+          }
+          &:nth-child(2){}
+        }
+      }
+    }
+    .right{
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      background-color: #FFFFFF;
+
+      .rightBody{
+        flex: auto;
+
+        background-color: #FFFFFF;
+        .header{
+          line-height: 36px;
+          >span{
+            font-weight: bolder;
+            margin-left: 15px;
+          }
+        }
+        .tip{
+          .tipItem{
+            margin: 5px 0;
+            font-size: 12px;
+            >span{
+              &:nth-child(1){
+                margin-left: 15px;
+                font-size: 12px;
+              }
+            }
+            &:nth-child(1){
+              >span{
+                float: left;
+              }
+              >p{
+                float: left;
+                display: inline-block;
+                font-size: 12px;
+                margin-bottom: 0;
+                width: 85%;
+                margin-left: 10px;
+                >span{
+                  color: #27B6AF;
+                }
+                >sup{
+                  color: #E32C32;
+                }
+              }
+            }
+            &:nth-child(2){
+              >span{
+                &:nth-child(2){
+                  margin-left: 10px;
+                  >span{
+                    color: #27B6AF;
+                    margin-left: 5px;
+                  }
+                }
+              }
+            }
+            &:nth-child(3){
+              >span{
+                &:nth-child(2){
+                  margin-left: 10px;
+                }
+
+              }
+              >p{
+                margin: 5px 0 5px 34px;
+                &:nth-child(3){
+                  >i{
+                    color: #4D97FF;
+                  }
+                }
+                &:nth-child(4){
+                  >i{
+                    color: #FF9743;
+                  }
+                }
+                &:nth-child(5){
+                  >i{
+                    color: #63C422;
+                  }
+                }
+                &:nth-child(6){
+                  >i{
+                    color: #47CCAB;
+                  }
+                }
+                &:nth-child(7){
+                  >i{
+                    color: #4D97FF;
+                  }
+                }
+                &:nth-child(8){
+                  >i{
+                    color: #FF5A5A;
+                  }
+                }
+                >i{
+                  font-size: 16px;
+                }
+                >span{
+                  margin-left: 5px;
+                }
+              }
+            }
+            &:nth-child(4), &:nth-child(5){
+              >span{
+                &:nth-child(2){
+                  margin-left: 10px;
+                }
+              }
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+}

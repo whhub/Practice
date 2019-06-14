@@ -1,0 +1,31 @@
+<div class="uploadPart">
+  <div class="header">
+    <span>上传文档</span>
+  </div>
+  <div class="Content">
+    <div>
+      <span>文档名称</span>
+      <input nz-input placeholder="Basic usage" [(ngModel)]="value" />
+    </div>
+    <div>
+      <span>文档类型</span>
+      <span>
+        <span (click)="currentType = 'ppt'" [class.active]="currentType === 'ppt'">PPT</span>
+        <span (click)="currentType = 'doc'" [class.active]="currentType === 'doc'">DOC</span>
+        <span (click)="currentType = 'xls'" [class.active]="currentType === 'xls'">XLS</span>
+        <span (click)="currentType = 'pdf'" [class.active]="currentType === 'pdf'">PDF</span>
+        <span (click)="currentType = 'txt'" [class.active]="currentType === 'txt'">TXT</span>
+      </span>
+    </div>
+    <div>
+      <span>选择文档</span>
+      <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/" [nzFileList]="fileList">
+        <button nz-button><i nz-icon nzType="upload"></i><span>上传许可(*.lic)</span></button>
+      </nz-upload>
+    </div>
+  </div>
+  <div class="footer">
+    <span nz-wave>上传</span>
+    <span nz-wave>取消</span>
+  </div>
+</div>

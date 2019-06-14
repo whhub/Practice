@@ -1,0 +1,111 @@
+:host{
+  flex: 1;
+
+}
+.realTime{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  .header{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 8px 0;
+    >div{
+      float: left;
+      &:nth-child(1){
+        margin-top: 5px;
+        margin-left: 15px;
+      }
+      &:nth-child(1){
+        >i{
+          font-size: 18px;
+          margin-right: 5px;
+        }
+        >span{
+          font-size: 14px;
+        }
+      }
+      &:nth-child(2){
+        float: left;
+        margin-left: 15px;
+        margin-top: 5px;
+        >span{
+          font-size: 13px;
+        }
+      }
+      &:nth-child(3){
+        float: right;
+        margin-right: 15px;
+        nz-radio-group{
+         :host  ::ng-deep & .ant-radio-button-wrapper-checked{
+            background-color: rgb(139, 195, 74);
+            border-color: rgb(139, 195, 74);
+            box-shadow: -1px 0 1px  rgb(139, 195, 74);
+         }
+          .ant-radio-button-wrapper:hover, .ant-radio-button-wrapper-focused{
+            color: rgb(139, 195, 74);
+          }
+          .ant-radio-button-wrapper-checked:hover, .ant-radio-button-wrapper-focused{
+            color: #FFFFFF;
+          }
+          .ant-radio-button-wrapper-checked::before{
+            background-color:rgb(139, 195, 74)!important; ;
+          }
+          .ant-radio-button-wrapper-checked:hover{
+
+          }
+        }
+      //rgb(139, 195, 74)
+      }
+    }
+  }
+  .content{
+    flex: 1;
+    background-color: #FFFFFF;
+    .gutter-box{
+      >div{
+        position: relative;
+        border-radius: 5px;
+        width: 210px;
+        margin: 55px auto;
+        padding: 10px;
+        >span{
+          position: absolute;
+          display: inline-block;
+          background-color: #FFFFFF;
+          left: 20px;
+          top: -11px;
+          padding: 0 6px;
+          font-size: 13px;
+        }
+        >div{
+          border-bottom: 1px dashed #d9d9d9 ;
+          >span{
+            font-size: 12px;
+            &:nth-child(1){
+              display: inline-block;
+              width: 90px;
+              //color: rgb(139, 195, 74);
+              //font-weight: bolder;
+              text-align: right;
+              margin-left: 30px;
+            }
+            &:nth-child(2){
+              font-weight: bolder;
+              color: rgb(139,195,74);
+            }
+          }
+        }
+        &.technology{
+          border: 1px solid rgb(37, 155, 36);
+        }
+        &.energy{
+          border: 1px solid rgb(255, 152, 0);
+        }
+        &.state,&.self{
+          border: 1px solid rgb(37, 155, 36);
+        }
+      }
+    }
+  }
+}

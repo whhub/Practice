@@ -1,0 +1,116 @@
+<div class="archives">
+  <header class="clearfix">
+    <div>
+      <i nz-icon type="book" nzTheme="outline"></i>
+      <span>所有档案</span>
+    </div>
+    <div>
+      <ul class="clearfix">
+        <li (click)="currentTab = 'all'" [class.active]="currentTab === 'all'">全部</li>
+        <li (click)="currentTab = 'ppt'" [class.active]="currentTab === 'ppt'">PPT</li>
+        <li (click)="currentTab = 'doc'" [class.active]="currentTab === 'doc'">DOC</li>
+        <li (click)="currentTab = 'txt'" [class.active]="currentTab === 'txt'">TXT</li>
+        <li (click)="currentTab = 'pdf'" [class.active]="currentTab === 'pdf'">PDF</li>
+        <li (click)="currentTab = 'xls'" [class.active]="currentTab === 'xls'">XLS</li>
+      </ul>
+    </div>
+    <div>
+      <nz-button-group>
+        <button nz-button (click)="showOperation()" disabled><i nz-icon type="upload" nzTheme="outline"></i> 上传文档</button>
+        <button nz-button nzType="primary" ><i nz-icon type="file" nzTheme="outline"></i> 所有文档</button>
+      </nz-button-group>
+    </div>
+  </header>
+  <div class="archivesCon">
+    <div>
+      <ul>
+        <li class="item" *ngFor="let item of archiveslist">
+        <div class="itemHeader" ngSwitch="1">
+          <i nz-icon type="file-pdf" nzTheme="outline" class="pdf" *ngSwitchCase="0"></i>
+          <i nz-icon type="file-word" nzTheme="outline" class="word" *ngSwitchCase="1"></i>
+          <i nz-icon type="file-excel" nzTheme="outline" class="excel" *ngSwitchCase="2"></i>
+
+          <span>{{item.docName}}</span>
+        </div>
+        <div class="itemCon">
+          <p>{{item.introduction}}</p>
+        </div>
+        <div class="itemFoot clearfix">
+          <div>
+            <span>{{item.createTime | date : 'yyyy-MM-dd'}}</span>
+            <span>|</span>
+            <span>共23页</span>
+            <span>|</span>
+            <span>{{item.downloadNum}}次下载</span>
+            <span>|</span>
+            <span>发布者： {{item.author || '未填写'}}</span>
+          </div>
+          <div>
+            <span nz-wave [attr.data-docName]='item.docName' [attr.data-typeId]="item.type" [attr.data-brandId]="item.brand" (click)="downLoad($event)">立即下载</span>
+          </div>
+        </div>
+      </li>
+        <!--<li class="item">-->
+          <!--<div class="itemHeader" ngSwitch="1">-->
+            <!--<i nz-icon type="file-pdf" nzTheme="outline" class="pdf" *ngSwitchCase="0"></i>-->
+            <!--<i nz-icon type="file-word" nzTheme="outline" class="word" *ngSwitchCase="1"></i>-->
+            <!--<i nz-icon type="file-excel" nzTheme="outline" class="excel" *ngSwitchCase="2"></i>-->
+
+            <!--<span>设备维护手册</span>-->
+          <!--</div>-->
+          <!--<div class="itemCon">-->
+            <!--<p>Docker技术简介讲解 - 1、Docker技术解决了什么问题? 2、Docker之helloworld 3、Docker技术基础 4、Docker重...</p>-->
+          <!--</div>-->
+          <!--<div class="itemFoot clearfix">-->
+            <!--<div>-->
+              <!--<span>2019-02-03</span>-->
+              <!--<span>|</span>-->
+              <!--<span>共23页</span>-->
+              <!--<span>|</span>-->
+              <!--<span>324次下载</span>-->
+              <!--<span>|</span>-->
+              <!--<span>发布者： admin</span>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<span nz-wave>查看详情</span>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</li>-->
+        <!--<li class="item">-->
+          <!--<div class="itemHeader" ngSwitch="2">-->
+            <!--<i nz-icon type="file-pdf" nzTheme="outline" class="pdf" *ngSwitchCase="0"></i>-->
+            <!--<i nz-icon type="file-word" nzTheme="outline" class="word" *ngSwitchCase="1"></i>-->
+            <!--<i nz-icon type="file-excel" nzTheme="outline" class="excel" *ngSwitchCase="2"></i>-->
+
+            <!--<span>设备维护手册</span>-->
+          <!--</div>-->
+          <!--<div class="itemCon">-->
+            <!--<p>Docker技术简介讲解 - 1、Docker技术解决了什么问题? 2、Docker之helloworld 3、Docker技术基础 4、Docker重...</p>-->
+          <!--</div>-->
+          <!--<div class="itemFoot clearfix">-->
+            <!--<div>-->
+              <!--<span>2019-02-03</span>-->
+              <!--<span>|</span>-->
+              <!--<span>共23页</span>-->
+              <!--<span>|</span>-->
+              <!--<span>324次下载</span>-->
+              <!--<span>|</span>-->
+              <!--<span>发布者： admin</span>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<span nz-wave>查看详情</span>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</li>-->
+      </ul>
+    </div>
+    <div>
+      <div>
+        <button nz-button nzType="default">维护类</button>
+      </div>
+      <div>
+        <button nz-button nzType="default">说明类</button>
+      </div>
+    </div>
+  </div>
+</div>

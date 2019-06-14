@@ -1,0 +1,124 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.contentHeader{
+  margin-bottom: 10px;
+  line-height: 45px;
+  background-color: #FFFFFF;
+
+  >span{
+    float: left;
+    &:nth-child(1){
+      margin-left: 15px;
+      >i{
+        font-size: 16px;
+        margin-right: 5px;
+      }
+    }
+    &:nth-child(2){
+      &:focus{
+        outline: none;
+      }
+      margin-top: 7px;
+      margin-left: 210px;
+      line-height: 30px;
+      background-color: #27B6AF;
+      cursor: pointer;
+      color: #FFFFFF;
+      padding: 1px 10px;
+      >i{
+        margin-right: 10px;
+      }
+    }
+  }
+  >div{
+    float: right;
+    margin-right: 15px;
+    >nz-input-group{
+      input{
+        :host  ::ng-deep &{
+          border-radius: 30px;
+          width: 300px;
+        }
+      }
+
+
+    }
+  }
+}
+.tableDiv{
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  >.header{
+    line-height: 36px;
+    //border-bottom: 1px solid #d9d9d9;
+    background-color: #FFFFFF;
+    margin-bottom: 2px;
+    >span{
+      margin-left: 15px;
+      color: #27B6AF;
+    }
+  }
+  input{
+    width:100%;
+  }
+  nz-input-group{
+    :host ::ng-deep &   .ant-input-group-addon{
+      padding: 0;
+      border: none;
+      button{
+        border-radius: 0 4px 4px 0;
+        background-color: rgb(187,187,187);
+        border-color: rgb(187,187,187);
+        color: rgb(16,16,16);
+      }
+    }
+  }
+  .deleteTd{
+    >input{
+      width: 65%;
+      margin-right: 4px;
+    }
+    >button{
+      background-color: #27B6AF;
+      border-color: #27B6AF;
+      color: #FFFFFF;
+      margin: 0 3px;
+    }
+  }
+  .ant-table-thead > tr > th{
+    padding: 10px 8px;
+    :host ::ng-deep &{
+      border-bottom: 2px solid #d9d9d9;
+      background-color: #FFFFFF;
+      &:nth-child(2){
+        border-right: 2px solid #d9d9d9;
+      }
+    }
+  }
+  .ant-table-tbody > tr > td{
+    padding: 10px 16px;
+    :host ::ng-deep &{
+      &:nth-child(2){
+        border-right: 2px solid #d9d9d9;
+      }
+    }
+  }
+  .ant-table-tbody > tr:last-child{
+    &:hover{
+      td{
+        background-color: #FFFFFF;
+      }
+    }
+    td{
+      border-bottom: none;
+    }
+  }
+  nz-table{
+    flex: auto;
+    background-color: #FFFFFF;
+  }
+}

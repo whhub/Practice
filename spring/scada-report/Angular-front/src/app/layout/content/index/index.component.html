@@ -1,0 +1,391 @@
+<header>
+  <i nz-icon type="home" theme="outline"></i>  <span>主页</span>
+</header>
+<!--<div class="allView">-->
+  <!--<div class="viewHeader clearfix">-->
+    <!--<span>-->
+      <!--<span>设备总数：</span>-->
+      <!--<span>38台</span>-->
+    <!--</span>-->
+    <!--<span>-->
+      <!--<span>2019-01-02 </span> <span>17:06:02</span>-->
+    <!--</span>-->
+  <!--</div>-->
+  <!--<div class="allViewData">-->
+    <!--<div nz-row>-->
+      <!--<div nz-col nzSpan="6">-->
+        <!--<div class="item">-->
+          <!--<div class="itemHeader">-->
+            <!--<span>秒</span>-->
+          <!--</div>-->
+          <!--<div class="itemCon clearfix">-->
+            <!--<i nz-icon type="play-circle" theme="outline"></i>-->
+            <!--<span>-->
+              <!--<span>运行中</span>-->
+              <!--<span>34台</span>-->
+            <!--</span>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div nz-col nzSpan="6">-->
+        <!--<div class="item">-->
+          <!--<div class="itemHeader">-->
+            <!--<span>秒</span>-->
+          <!--</div>-->
+          <!--<div class="itemCon pause clearfix">-->
+            <!--<i nz-icon type="pause-circle" theme="outline"></i>-->
+            <!--<span>-->
+              <!--<span>待机中</span>-->
+              <!--<span>04台</span>-->
+            <!--</span>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div nz-col nzSpan="6">-->
+        <!--<div class="item">-->
+          <!--<div class="itemHeader">-->
+            <!--<span>秒</span>-->
+          <!--</div>-->
+          <!--<div class="itemCon warning clearfix">-->
+            <!--<i nz-icon type="exclamation-circle" theme="outline"></i>-->
+            <!--<span>-->
+              <!--<span>报警中</span>-->
+              <!--<span>00台</span>-->
+            <!--</span>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div nz-col nzSpan="6">-->
+        <!--<div class="item">-->
+          <!--<div class="itemHeader">-->
+            <!--<span>秒</span>-->
+          <!--</div>-->
+          <!--<div class="itemCon offline clearfix">-->
+            <!--<i nz-icon type="issues-close" theme="outline"></i>-->
+            <!--<span>-->
+              <!--<span>离线中</span>-->
+              <!--<span>02台</span>-->
+            <!--</span>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+<!--<div class="chartBox">-->
+  <!--<div nz-row>-->
+    <!--<div nz-col nzSpan="16">-->
+      <!--<div class="header">-->
+        <!--<span>状态分析 <i nz-icon type="bar-chart" theme="outline"></i></span>-->
+      <!--</div>-->
+      <!--<app-bar></app-bar>-->
+
+    <!--</div>-->
+    <!--<div nz-col nzSpan="8">-->
+      <!--<div class="header">-->
+        <!--<span>统计分析 <i nz-icon type="pie-chart" theme="outline"></i></span>-->
+      <!--</div>-->
+      <!--<div class="progressDiv">-->
+        <!--<div class="progressDivItem">-->
+          <!--<h3>日警报数</h3>-->
+          <!--<span>同期增长</span>-->
+          <!--<nz-progress [nzPercent]="50" nzStatus="active" [nzStrokeColor]="'#e21e25'" [nzStrokeWidth]="16"></nz-progress>-->
+        <!--</div>-->
+        <!--<div class="progressDivItem">-->
+          <!--<h3>日离线数</h3>-->
+          <!--<span>同期增长</span>-->
+          <!--<nz-progress [nzPercent]="50" nzStatus="active" [nzStrokeColor]="'#a0a0a0'" [nzStrokeWidth]="16"></nz-progress>-->
+        <!--</div>-->
+        <!--<div class="progressDivItem">-->
+          <!--<h3>日待机数</h3>-->
+          <!--<span>同期增长</span>-->
+          <!--<nz-progress [nzPercent]="50" nzStatus="active" [nzStrokeColor]="'#ff8d05'" [nzStrokeWidth]="16"></nz-progress>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div nz-row nzGutter="16">-->
+    <!--<div nz-col class="gutter-row" nzSpan="8">-->
+      <!--<div class="gutter-box">-->
+        <!--<div class="header">-->
+          <!--<span>设备种类</span>-->
+        <!--</div>-->
+        <!--<div class="pieDiv">-->
+          <!--<app-pie></app-pie>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div nz-col class="gutter-row" nzSpan="8">-->
+      <!--<div class="gutter-box">-->
+        <!--<div class="header">-->
+          <!--<span>设备种类</span>-->
+        <!--</div>-->
+        <!--<div class="pieDiv">-->
+          <!--<app-pie></app-pie>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div nz-col class="gutter-row" nzSpan="8">-->
+      <!--<div class="gutter-box">-->
+        <!--<div class="header realtime clearfix">-->
+          <!--<span>实时动态</span>  <span>2019-01-15</span>-->
+        <!--</div>-->
+        <!--<div class="logGroup">-->
+          <!--<ul>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+              <!--<span>13:21:23</span>   <span>NO121</span>  <span>开始运行</span>-->
+            <!--</li>-->
+
+
+          <!--</ul>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+  <!--</div>-->
+<!--</div>-->
+
+
+
+<div class="up">
+  <div nz-row nzGutter="16">
+    <div nz-col nzSpan="16" >
+      <div class="upHeader clearfix">
+        <span>设备状态监控</span>
+        <div>
+          <span>实时:</span>
+          <nz-switch [(ngModel)]="switchValue"></nz-switch>
+        </div>
+      </div>
+      <div class="upbody">
+        <div nz-row nzGutter="16">
+          <div nz-col class="gutter-row" nzSpan="8">
+            <div class="gutter-box">
+              <div class="run">
+               <div class="clearfix">
+                 <div class="imgBox">
+                   <img src="../../../../assets/image/run.png" alt="">
+                 </div>
+                 <div>
+                   <span>运行</span>
+                   <p>{{runCount}} 台</p>
+                 </div>
+               </div>
+               <div>
+                 <app-run></app-run>
+               </div>
+              </div>
+            </div>
+          </div>
+          <div nz-col class="gutter-row" nzSpan="8">
+            <div class="gutter-box">
+              <div class="run">
+                <div class="clearfix">
+                  <div class="imgBox">
+                    <img src="../../../../assets/image/off.png" alt="">
+                  </div>
+                  <div>
+                    <span>关机</span>
+                    <p>{{closeCount}} 台</p>
+                  </div>
+                </div>
+                <div>
+                  <app-off></app-off>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div nz-col class="gutter-row" nzSpan="8">
+            <div class="gutter-box">
+              <div class="run">
+                <div class="clearfix">
+                  <div class="imgBox">
+                    <img src="../../../../assets/image/error.png" alt="">
+                  </div>
+                  <div>
+                    <span>故障</span>
+                    <p>{{errorCount}} 台</p>
+                  </div>
+                </div>
+                <div>
+                  <app-error></app-error>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="upFoot">
+        <app-bar></app-bar>
+      </div>
+    </div>
+    <div nz-col nzSpan="8">
+    <div class="percent">
+      <div class="header">
+        <span>设备类别比例</span>
+      </div>
+      <div class="peiDiv">
+        <app-pie></app-pie>
+      </div>
+    </div>
+    <div class="analyse">
+      <div class="header">
+        <span>设备分析</span>
+      </div>
+      <div class="body">
+        <div nz-row nzGutter="16">
+          <div nz-col nzSpan="24" class="clearfix">
+            <div class="body_left" style="height:100px">
+              <app-analyse1></app-analyse1>
+            </div>
+            <div class="body_right upPart">
+              <p>
+                <span>38,289</span>
+                <i nz-icon type="up"></i>
+                <span>(+16.2%)</span>
+              </p>
+              <p>
+                <span></span>
+                <span>05-12 12:30 am</span>
+              </p>
+            </div>
+          </div>
+          <!--<div nz-col nzSpan="12">-->
+            <!--<div class="body_left" style="height:100px">-->
+              <!--<app-analyse1></app-analyse1>-->
+            <!--</div>-->
+            <!--<div class="body_right downPart">-->
+              <!--<p>-->
+                <!--<span>38,289</span>-->
+                <!--<i nz-icon type="down"></i>-->
+                <!--<span>(+16.2%)</span>-->
+              <!--</p>-->
+              <!--<p>-->
+                <!--<span></span>-->
+                <!--<span>05-12 12:30 am</span>-->
+              <!--</p>-->
+            <!--</div>-->
+          <!--</div>-->
+
+        </div>
+      </div>
+      <div class="foot"></div>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="down">
+  <div class="deviceMonitor">
+    <div class="header clearfix">
+      <span>设备状态监控</span>
+      <span>
+        <i nz-icon type="setting"></i>
+        <i nz-icon type="down"></i>
+      </span>
+      <span>
+        <span>设备总数：</span>
+        <span>{{listOfData.length}}</span>
+      </span>
+
+    </div>
+    <nz-table #basicTable [nzData]="listOfData" [nzShowSizeChanger]="true" >
+
+      <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td ngSwitch="{{data.status}}" class="statusTd clearfix">
+          <div>
+            <span *ngSwitchCase="'1'" class="online">在</span>
+            <span *ngSwitchCase="'0'" class="wait">待</span>
+            <!--<span *ngSwitchCase="'offline'" class="offline">离</span>-->
+            <span *ngSwitchCase="'2'" class="error">障</span>
+          </div>
+          <div>
+            <span>{{data.name}}</span>
+            <p>
+              <i nz-icon type="clock-circle" [class.online]="data.status === 'online'"
+                 [class.wait]="data.status === 'wait'"
+                 [class.offline]="data.status === 'offline'"
+                 [class.error]="data.status === 'error'"></i>
+
+              <span>{{data.time}} </span>
+            </p>
+          </div>
+
+
+        </td>
+        <td>
+          <span>{{data.deviceNum}}</span>
+        </td>
+        <td ngSwitch="{{data.change}}" class="changeTd">
+          <span>
+            <i nz-icon style="font-size: 19px;margin-right: 5px;margin-left: 4px" *ngSwitchCase="'true'">
+              <svg t="1556790215690" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17522" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><style type="text/css"></style></defs><path d="M914.653188 470.024546zM761.329673 1018.973h146.285714V357.922435l-146.285714 129.696613V1018.973zM270.694425 541.407953v480.581247h146.285714v-474.548847L342.077832 439.359843 270.694425 541.407953zM35.430802 1023.4973h146.285714v-348.873834L35.430802 804.822779v218.674521zM526.06605 753.547374v262.912125h146.285714v-393.111438L526.06605 753.547374z" p-id="17523" fill="#219020"></path><path d="M1001.117596 0h-283.522827L832.21038 114.112911l-261.404026 261.404026-1.5081-1.5081-1.5081 1.5081-253.360825-255.874325-309.66323 309.66323v149.301915l309.66323-309.663231 253.360825 255.371625 1.5081-1.0054 1.5081 1.5081 335.803633-335.803633 94.507609 94.50761V0z" p-id="17524" fill="#219020"></path></svg>
+            </i>
+            <i nz-icon style="font-size: 20px;margin-left:5px;margin-right: 11px" *ngSwitchCase="'false'">
+              <svg t="1556772877252" class="icon" style="" viewBox="0 0 1026 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5524" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><style type="text/css"></style></defs><path d="M343.8592 938.6496l117.504 0c15.6672 0 28.416-13.6704 28.416-30.3104L489.7792 465.408l-79.36 44.1856L315.4432 465.408l0 442.9312C315.4432 924.9792 328.2432 938.6496 343.8592 938.6496L343.8592 938.6496 343.8592 938.6496z" fill="#cdcdcd" p-id="5525"></path><path d="M1.5872 169.0624 1.5872 169.0624 47.9744 85.3504 409.6 314.0096 529.7152 243.456 557.2096 227.3792 581.12 249.1904 913.8688 553.472 954.624 503.5008 990.1056 614.4512 1025.5872 725.4016 917.9648 702.7712 810.2912 680.2432 854.0672 626.5856 545.8944 344.9856 430.6944 412.6208 407.9616 425.984 385.6384 411.7504 1.5872 169.0624Z" fill="#FD3425" p-id="5526"></path><path d="M216.3712 938.6496 216.3712 938.6496c15.616 0 28.3648-13.6704 28.3648-30.3104L244.736 435.8656 70.4512 325.6832l0 582.656c0 16.64 12.7488 30.3104 28.3648 30.3104L216.3712 938.6496 216.3712 938.6496z" fill="#cdcdcd" p-id="5527"></path><path d="M706.3552 938.6496 706.3552 938.6496c15.6672 0 28.4672-13.6704 28.4672-30.3104l0-287.0784-2.0992 1.2288L560.8448 465.408c-0.3072 1.4848-0.3584 3.0208-0.3584 4.5568l0 438.3744c0 16.64 12.8 30.3104 28.416 30.3104L706.3552 938.6496 706.3552 938.6496z" fill="#cdcdcd" p-id="5528"></path><path d="M833.8944 938.6496l117.4528 0c15.6672 0 28.4672-13.6704 28.4672-30.3104l0-112.64-174.2848-39.936 0 152.5248C805.4784 924.9792 818.2784 938.6496 833.8944 938.6496L833.8944 938.6496z" fill="#cdcdcd" p-id="5529"></path></svg>
+            </i>
+          </span>
+          <span [class.up]="data.change === 'up'" [class.down]="data.change === 'down'">{{data.value}}</span>
+        </td>
+        <td>
+          <span >{{data.openTime}}</span>
+        </td>
+        <td class="dashboardTd">
+          <i nz-icon type="dashboard" ></i>
+          <span>70%</span>
+        </td>
+        <td class="tagTd" ngSwitch="{{data.status}}">
+          <span *ngSwitchCase="'1'" class="online">运行中</span>
+          <span *ngSwitchCase="'0'" class="wait">待机中</span>
+          <!--<span *ngSwitchCase="'offline'" class="offline">离线</span>-->
+          <span *ngSwitchCase="'2'" class="error">故障</span>
+        </td>
+        <td class="listTd">
+          <i nz-icon type="ellipsis" ></i>
+        </td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</div>

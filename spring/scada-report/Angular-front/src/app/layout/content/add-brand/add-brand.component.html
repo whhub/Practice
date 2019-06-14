@@ -1,0 +1,114 @@
+
+<header>
+  <i nz-icon type="plus-circle" nzTheme="outline"></i>  <span>新增品牌</span>
+</header>
+<div class="content">
+  <div class="clearfix">
+    <div>
+      <i nz-icon type="plus-circle" nzTheme="fill"></i>
+    </div>
+    <div>
+      <span>上级类别</span> <sup>*</sup>
+
+    </div>
+    <div>
+      <nz-select  [(ngModel)]="cate" nzAllowClear nzPlaceHolder="选择类别" [nzDisabled] ='isSelectDisable'>
+        <nz-option nzValue="{{item.value}}" nzLabel="{{item.label}}" *ngFor="let item of selectSource"></nz-option>
+      </nz-select>
+    </div>
+  </div>
+  <div class="clearfix">
+    <div>
+      <i nz-icon type="tag" nzTheme="outline"></i>
+    </div>
+    <div>
+      <span>名称</span> <sup>*</sup>
+      <p>品牌名称</p>
+    </div>
+    <div>
+      <input nz-input  [(ngModel)]="brandName" />
+      <p>整体品牌名称例 ：西门子</p>
+    </div>
+  </div>
+  <div class="clearfix">
+    <div>
+      <i nz-icon type="tags" nzTheme="outline"></i>
+    </div>
+    <div>
+      <span>全称</span>
+
+    </div>
+    <div>
+      <input nz-input  [(ngModel)]="brandFullName" />
+
+    </div>
+  </div>
+  <div class="clearfix">
+    <div>
+      <i nz-icon type="sort-ascending" nzTheme="outline"></i>
+    </div>
+    <div>
+      <span>排序号</span>
+
+    </div>
+    <div>
+
+      <nz-input-number [(ngModel)]="orderNum" [nzMin]="1" [nzMax]="25535" [nzStep]="1"></nz-input-number>
+    </div>
+  </div>
+  <div class="clearfix">
+    <div>
+      <i nz-icon type="file-text" nzTheme="outline"></i>
+    </div>
+    <div>
+      <span>目录类型</span> <sup>*</sup>
+
+    </div>
+    <div>
+      <div>
+        <span  (click)="types = '品牌'" [class.active]="types === '目录'" style="cursor: not-allowed">目录</span>
+        <span (click)="types = '品牌'" [class.active]="types === '品牌'">品牌</span>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="clearfix">
+    <div>
+      <i nz-icon type="bulb" nzTheme="outline"></i>
+    </div>
+    <div>
+      <span>状态</span> <sup>*</sup>
+
+    </div>
+    <div>
+      <div>
+        <span  (click)="status = '启用'" [class.active]="status === '启用'">启用</span>
+        <span (click)="status = '禁用'" [class.active]="status === '禁用'">禁用</span>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="clearfix">
+    <div>
+      <i nz-icon type="environment" nzTheme="fill"></i>
+    </div>
+    <div>
+      <span>备注</span>
+      <p>docker-compose</p>
+
+    </div>
+    <div>
+      <div>
+        <textarea rows="4" nz-input [(ngModel)]="textValue"></textarea>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<div class="saveBtn">
+  <span nz-wave (click)="submit()">保存</span>
+  <span nz-wave>取消</span>
+</div>

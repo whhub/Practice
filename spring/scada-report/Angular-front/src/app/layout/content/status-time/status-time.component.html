@@ -1,0 +1,74 @@
+<header class="clearfix">
+  <span>
+    <i nz-icon type="clock-circle" theme="outline"></i>  <span>状态时间</span>
+  </span>
+  <span>
+    <i nz-icon type="api" theme="outline"></i>
+  </span>
+</header>
+<div class="tableBox">
+  <nz-table #basicTable [nzData]="dataSet">
+    <thead>
+    <tr>
+      <th>S</th>
+      <th>设备描述</th>
+      <th>设备ID</th>
+      <th colspan="2">运行时间</th>
+      <th colspan="2">待机时间</th>
+      <th colspan="2">故障时间</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td ngSwitch="{{data.status}}">
+        <span class="run" *ngSwitchCase="0">
+          <i nz-icon type="sync" theme="outline"></i>
+        </span>
+        <span class="off" *ngSwitchCase="1">
+           <i nz-icon type="hourglass" theme="outline"></i>
+        </span>
+        <span class="err" *ngSwitchCase="2">
+          <i nz-icon type="alert" theme="outline"></i>
+        </span>
+        <span class="offline" *ngSwitchCase="3">
+          <i nz-icon type="desktop" theme="outline"></i>
+        </span>
+      </td>
+      <td>
+        <div class="ip">
+          <span>192.168.1.1</span>
+        </div>
+        <div class="deviceName">
+          <span>
+             沈阳机床 SY-900
+          </span>
+        </div>
+        <div>
+          <span>
+          10010001
+          </span>
+        </div>
+      </td>
+      <td>{{data.diviceId}}</td>
+      <td>
+        {{data.runTime}}
+      </td>
+      <td class="runTimePercent " [class.active]="data.runTimePercent === getMax(data.runTimePercent,data.offTimePercent,data.errTimePercent)">
+        {{data.runTimePercent}}
+      </td>
+      <td>
+        {{data.offTime}}
+      </td>
+      <td class="offTimePercent " [class.active]="data.offTimePercent === getMax(data.runTimePercent,data.offTimePercent,data.errTimePercent)">
+        {{data.offTimePercent}}
+      </td>
+      <td>
+        {{data.errTime}}
+      </td>
+      <td class="errTimePercent " [class.active]="data.errTimePercent === getMax(data.runTimePercent,data.offTimePercent,data.errTimePercent)">
+        {{data.errTimePercent}}
+      </td>
+    </tr>
+    </tbody>
+  </nz-table>
+</div>

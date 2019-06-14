@@ -1,0 +1,135 @@
+<header>
+  <i nz-icon type="desktop" nzTheme="outline"></i>  <span>维护保养</span>
+</header>
+<div class="content">
+   <div class="contentHeader clearfix">
+      <div>
+        <button nz-button nzType="default">导入计划 <i nz-icon type="download"></i></button>
+        <nz-radio-group [(ngModel)]="inType">
+          <label nz-radio-button nzValue="excel">
+            <i nz-icon type="file-excel" nzTheme="outline"></i>
+          </label>
+
+        </nz-radio-group>
+      </div>
+      <div>
+        <button nz-button nzType="default">导出计划 <i nz-icon type="upload"></i></button>
+        <nz-radio-group [(ngModel)]="ouType">
+          <label nz-radio-button nzValue="pdf">
+            <i nz-icon type="file-pdf" nzTheme="outline"></i>
+          </label>
+          <label nz-radio-button nzValue="excel">
+            <i nz-icon type="file-excel" nzTheme="outline"></i>
+          </label>
+          <label nz-radio-button nzValue="word">
+            <i nz-icon type="file-word" nzTheme="outline"></i>
+          </label>
+
+        </nz-radio-group>
+      </div>
+      <div>
+        <ul class="clearfix">
+          <li class="active">今天</li>
+          <li>月</li>
+          <li>周</li>
+          <li>天</li>
+        </ul>
+      </div>
+   </div>
+   <div class="contentBody">
+     <div class="sider">
+         <div>
+           <div class="header">
+             <span>添加事件</span>
+           </div>
+           <div class="colorList">
+             <span (click)="currentColor = 0" [class.colorActive]="currentColor === 0"></span>
+             <span (click)="currentColor = 1" [class.colorActive]="currentColor === 1"></span>
+             <span (click)="currentColor = 2" [class.colorActive]="currentColor === 2"></span>
+             <span (click)="currentColor = 3" [class.colorActive]="currentColor === 3"></span>
+             <span (click)="currentColor = 4" [class.colorActive]="currentColor === 4"></span>
+             <span (click)="currentColor = 5" [class.colorActive]="currentColor === 5"></span>
+             <span (click)="currentColor = 6" [class.colorActive]="currentColor === 6"></span>
+             <span (click)="currentColor = 7" [class.colorActive]="currentColor === 7"></span>
+             <span (click)="currentColor = 8" [class.colorActive]="currentColor === 8"></span>
+             <span (click)="currentColor = 9" [class.colorActive]="currentColor === 9"></span>
+
+
+
+           </div>
+           <div class="inputBox">
+             <nz-input-group nzSearch nzSize="default" [nzAddOnAfter]="suffixButton">
+               <input type="text" nz-input  />
+             </nz-input-group>
+             <ng-template #suffixButton>
+               <button nz-button nzType="default" nzSize="default" nzSearch>添加</button>
+             </ng-template>
+           </div>
+         </div>
+         <div>
+           <div class="header">
+             <span>拖动事件到日期</span>
+           </div>
+           <div class="eventList">
+             <ul>
+               <li cdkDrag>
+                 <span>维护</span>
+               </li>
+               <li>
+                 <span>维护</span>
+               </li>
+               <li>
+                 <span>维护</span>
+               </li>
+               <li>
+                 <span>维护</span>
+               </li>
+               <li>
+                 <span>维护</span>
+               </li>
+               <li>
+                 <span>维护</span>
+               </li>
+               <li>
+                 <span>维护</span>
+               </li>
+               <li>
+                 <span>维护</span>
+               </li>
+
+
+             </ul>
+           </div>
+         </div>
+     </div>
+     <div class="calendarBox">
+       <nz-calendar>
+         <ul *nzDateCell="let date" class="events">
+           <ng-container [ngSwitch]="date.getDate()">
+             <ng-container *ngSwitchCase="8">
+               <li *ngFor="let item of listDataMap.eight">
+                 <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
+               </li>
+             </ng-container>
+             <ng-container *ngSwitchCase="10">
+               <li *ngFor="let item of listDataMap.ten">
+                 <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
+               </li>
+             </ng-container>
+             <ng-container *ngSwitchCase="11">
+               <li *ngFor="let item of listDataMap.eleven">
+                 <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
+               </li>
+             </ng-container>
+           </ng-container>
+         </ul>
+         <ng-container *nzMonthCell="let month">
+           <div *ngIf="getMonthData(month) as monthData" class="notes-month">
+             <section>{{ monthData }}</section>
+             <span>Backlog number</span>
+           </div>
+         </ng-container>
+       </nz-calendar>
+     </div>
+   </div>
+</div>

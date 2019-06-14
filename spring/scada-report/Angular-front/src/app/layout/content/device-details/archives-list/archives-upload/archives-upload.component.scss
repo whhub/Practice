@@ -1,0 +1,93 @@
+@mixin round($width){
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+  border: 1px solid #27B6AF;
+}
+:host{
+  flex: 1;
+  background-color: #FFFFFF;
+}
+.archives{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  header{
+    border-bottom: 1px solid #d9d9d9;
+    margin: 5px 0;
+    >div{
+      &:nth-child(1){
+        float: left;
+
+      }
+      &:nth-child(1){
+        margin-left: 15px;
+        margin-top: 5px;
+        >i{
+          font-size: 18px;
+        }
+        >span{
+          font-size: 16px;
+          margin-left: 10px;
+          font-weight: bolder;
+        }
+      }
+
+      &:nth-child(2){
+        float: right;
+        margin-top: 3px;
+        margin-bottom: 5px;
+        margin-right: 15px;
+      }
+
+    }
+  }
+  .uploadCon{
+    margin-top: 15px;
+    .tabBox{
+      width: 65%;
+      margin: 0 auto;
+      border-bottom: 1px dashed #d9d9d9;
+      >div{
+        float: left;
+        width: 50%;
+        .tabItem{
+          width: 100px;
+          margin: 0 auto;
+          &.active{
+            >div >div{
+              background-color: #27B6AF;
+              i{
+                color: #FFFFFF;
+              }
+            }
+          }
+          >div{
+            padding-top: 4px;
+             @include round(90px);
+            >div{
+              @include round(80px);
+              margin: 0 auto;
+
+              line-height: 90px;
+              text-align: center;
+
+              i{
+
+                font-size: 30px;
+              }
+            }
+          }
+          >p{
+            text-align: center;
+            font-size: 14px;
+            color: rgb(16,16,16);
+            margin-top: 5px;
+            margin-left: -13px;
+          }
+        }
+      }
+    }
+  }
+
+}

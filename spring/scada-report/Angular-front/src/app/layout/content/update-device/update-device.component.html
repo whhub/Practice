@@ -1,0 +1,143 @@
+<header>
+  <i nz-icon type="desktop" nzTheme="outline"></i>  <span>修改设备</span>
+</header>
+<div class="content">
+  <div class="up">
+    <div class="upHeader">
+      <i nz-icon type="copy" nzTheme="outline"></i>  <span>通用信息</span>
+    </div>
+    <div class="upBody">
+      <div nz-row nzGutter="16">
+        <div nz-col class="gutter-row" nzSpan="12">
+          <div class="gutter-box">
+            <div>
+              <span>设备名称</span>
+              <input nz-input disabled [(ngModel)]="equipName" />
+            </div>
+            <div>
+              <span>放置位置</span>
+              <input nz-input disabled [(ngModel)]="installSite" />
+            </div>
+          </div>
+        </div>
+        <div nz-col class="gutter-row" nzSpan="12">
+          <div class="gutter-box">
+            <div>
+              <span>设备编号</span>
+              <input nz-input disabled [(ngModel)]="equipNum" />
+            </div>
+            <div>
+              <span>设备模型</span>
+              <input nz-input disabled [(ngModel)]="equipSort" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="down">
+    <div class="downHeader">
+      <i nz-icon type="copy" nzTheme="outline"></i>  <span>特点信息</span>
+    </div>
+    <div class="downBody">
+      <div nz-row nzGutter="16">
+        <div nz-col class="gutter-row" nzSpan="12">
+          <div class="gutter-box">
+            <div class="item">
+              <span>自定义名称</span>
+              <input nz-input  [(ngModel)]="customName"  />
+            </div>
+            <div class="item">
+              <span>资产编号</span>
+              <input nz-input  [(ngModel)]="propertyNum" />
+            </div>
+            <div class="item">
+              <span>型号</span>
+              <input nz-input  [(ngModel)]="equipType" />
+            </div>
+            <div class="item">
+              <span>规格</span>
+              <input nz-input  [(ngModel)]="specification" />
+            </div>
+            <div class="item">
+              <span>制造厂</span>
+              <input nz-input  [(ngModel)]="manufacturer" />
+            </div>
+            <div class="item">
+              <span>使用日期</span>
+              <nz-date-picker [(ngModel)]="date" (ngModelChange)="onChange($event)"></nz-date-picker>
+            </div>
+            <div class="item">
+              <span>资产原值</span>
+              <input nz-input  [(ngModel)]="originalValue" />
+            </div>
+            <div class="item">
+              <span>放置位置</span>
+              <input nz-input  [(ngModel)]="installSite" />
+            </div>
+            <div class="item">
+              <span>资产净值</span>
+              <input nz-input  [(ngModel)]="netValue" />
+            </div>
+            <div class="item">
+              <span>使用单位</span>
+              <input nz-input  [(ngModel)]="user" />
+            </div>
+            <div class="item">
+              <span>当前状态</span>
+              <nz-select  [(ngModel)]="selectedValue"  nzPlaceHolder="设备状态">
+                <nz-option nzValue="在用" nzLabel="在用"></nz-option>
+                <nz-option nzValue="停用" nzLabel="停用"></nz-option>
+                <nz-option nzValue="闲置" nzLabel="闲置"></nz-option>
+                <nz-option nzValue="报废" nzLabel="报废"></nz-option>
+              </nz-select>
+            </div>
+          </div>
+        </div>
+        <div nz-col class="gutter-row" nzSpan="12">
+          <div class="gutter-box">
+            <div class="tipBox">
+              <div>
+                <i nz-icon type="question-circle" nzTheme="outline"></i>
+              </div>
+              <div>
+                <div>
+                  <span>编辑设备说明</span>
+                </div>
+                <div>
+                     <span>
+                       通用信息：底层IOT 接口获取的值
+                     </span>
+                </div>
+                <div>
+                     <span>
+                       1 该信息如果是从IOT-hub 上获取的那将不可修改
+                     </span>
+                </div>
+                <div>
+                  <span>设备本身：自定义导入设备信息</span>
+                </div>
+                <div>
+                  <p>
+                    设备特定属性 不同公司可自定义字段，该字段为所有设备通用
+                  </p>
+                </div>
+                <div>
+                     <span>
+                       详情咨询：123456
+                     </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="btnDiv">
+  <span nz-wave (click)="submit()">确定</span>
+  <span nz-wave>取消</span>
+</div>

@@ -1,0 +1,118 @@
+<div class="mainConHeader">
+
+  <div class="clearfix">
+
+    <div>
+      <button nz-button nzType="default">导出报表<i nz-icon type="export" nzTheme="outline"></i></button>
+      <nz-button-group>
+        <button nz-button nzType="default" >
+          <i nz-icon type="cloud-upload" nzTheme="outline"></i>
+        </button>
+        <button nz-button nzType="default" >
+          <i nz-icon >
+            <svg t="1556951347498" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2565" xmlns:xlink="http://www.w3.org/1999/xlink"  height="200"><defs><style type="text/css"></style></defs><path d="M0 512a512 512 0 1 0 1024 0A512 512 0 0 0 0 512z m320-192h384v384H320V320z" fill="#d81e06" p-id="2566"></path></svg>
+          </i>
+        </button>
+        <button nz-button nzType="default" >
+          <i nz-icon type="appstore" nzTheme="outline"></i>
+        </button>
+      </nz-button-group>
+    </div>
+
+    <div>
+      <button nz-button nzType="default" (click)="submit()">构建表<i nz-icon type="tool"></i></button>
+      <button nz-button nzType="default"><i nz-icon type="sync" nzTheme="outline"></i></button>
+    </div>
+    <div>
+      <nz-date-picker [nzFormat]="dateFormat"></nz-date-picker>
+    </div>
+  </div>
+  <div>
+
+
+
+
+  </div>
+</div>
+<div class="tableBox">
+  <div class="header">
+         <span >构建表</span>
+         <span (click)="addParam()">
+           <i nz-icon type="plus-circle" nzTheme="fill"></i>
+           <span>添加字段</span>
+         </span>
+  </div>
+  <div class="tableDiv">
+    <nz-table #basicTable [nzData]="listOfData" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th><span>名称</span><sup>*</sup></th>
+        <th>启用</th>
+        <th><span>key值</span><sup>*</sup></th>
+        <th>表格类型</th>
+        <th><span>关联数据</span><sup>*</sup></th>
+        <th>固定值</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>
+          <input nz-input  [(ngModel)]="data.name" />
+        </td>
+        <td>
+          <nz-select style="width: 100px;" [(ngModel)]="data.isUse"  nzPlaceHolder="Choose">
+            <nz-option nzValue="true" nzLabel="是"></nz-option>
+            <nz-option nzValue="false" nzLabel="否"></nz-option>
+
+          </nz-select>
+        </td>
+        <td>
+          <input nz-input  [(ngModel)]="data.key" />
+        </td>
+        <td>
+          <nz-select style="width: 160px;" [(ngModel)]="data.tableType" nzAllowClear nzPlaceHolder="Choose">
+            <nz-option nzValue="0" nzLabel="数字" ></nz-option>
+            <nz-option nzValue="1" nzLabel="图标" nzDisabled></nz-option>
+            <nz-option nzValue="2" nzLabel="进度条" nzDisabled></nz-option>
+            <nz-option nzValue="3" nzLabel="图表" nzDisabled></nz-option>
+          </nz-select>
+        </td>
+        <td>
+          <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+            <input type="text" nz-input placeholder="关联数据" [(ngModel)]="data.linkData" />
+          </nz-input-group>
+          <ng-template #suffixIconButton>
+            <button nz-button nzType="primary" nzSearch [attr.data-index]="data.index" (click)="showModal($event)"><i nz-icon type="search"></i></button>
+          </ng-template>
+          <nz-modal [(nzVisible)]="isVisible" nzTitle="关联数据" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+            <nz-tree
+              #nzTreeComponent
+              [nzData]="nodes"
+              nzCheckable
+              [nzCheckedKeys]="defaultCheckedKeys"
+              [nzExpandedKeys]="defaultExpandedKeys"
+              [nzSelectedKeys]="defaultSelectedKeys"
+              (nzClick)="nzClick($event)"
+              (nzCheckBoxChange)="nzCheck($event)"
+              (nzExpandChange)="nzCheck($event)"
+            >
+            </nz-tree>
+          </nz-modal>
+        </td>
+        <td class="deleteTd">
+          <input nz-input  [(ngModel)]="data.fixedValue" />
+          <button nz-button nzType="primary" (click)="deletePara()"><i nz-icon type="minus"></i></button>
+        </td>
+      </tr>
+      <tr >
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</div>

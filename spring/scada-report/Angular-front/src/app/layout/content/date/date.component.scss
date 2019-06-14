@@ -1,0 +1,230 @@
+$light-blue: #4bb7d5;
+$green: #219020;
+$orange: #ff8d05;
+$danger: #e21e25;
+$online: rgb(139, 195, 74);
+$wait: rgb(255, 152, 0);
+$offline: rgb(170, 170, 170);
+$error: rgb(229, 28, 35);
+$theme-color: #27b6af;
+:host{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+header{
+  line-height: 40px;
+  font-size: 16px;
+  //border-left: 1px solid #d9d9d9;
+  background-color: white;
+  i{
+    margin-left: 15px;
+    color: rgb(37, 155, 36);
+    font-size: 20px;
+  }
+  span{
+    margin-left: 5px;
+    line-height: 24px;
+    border-bottom: 1.5px solid rgb(37, 155, 36);
+    display: inline-block;
+    width: 80px;
+    font-size: 13px;
+    font-weight: bolder;
+  }
+}
+.content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  >.contentHeader{
+    padding: 8px 0;
+    margin-top: 15px;
+    background-color: #FFFFFF;
+    >div{
+      &:nth-child(1),&:nth-child(2){
+        float: left;
+      }
+      &:nth-child(1){
+        margin-left: 15px;
+        >button{
+          background-color: rgb(0, 117, 168);
+          color: #FFFFFF;
+          margin-right: 10px;
+        }
+      }
+      &:nth-child(2){
+        margin-left: 25px;
+        >button{
+          background-color: rgb(0, 117, 168);
+          color: #FFFFFF;
+          margin-right: 10px;
+        }
+      }
+      &:nth-child(3){
+        float: right;
+        margin-right: 25px;
+        >ul{
+          margin-bottom: 0;
+          li{
+            margin-top: 6px;
+            float: left;
+            margin-left: 10px;
+
+            padding: 0 10px;
+            cursor: pointer;
+            &.active{
+              background-color: #27B6AF;
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+  }
+  >.contentBody{
+    margin-left: 10px;
+    margin-top: 15px;
+    flex: 1;
+    display: flex;
+    .sider{
+      flex: 0 0 200px;
+      margin-right: 10px;
+      >div{
+        .header{
+          line-height: 30px;
+          >span{
+            margin-left: 15px;
+          }
+        }
+        &:nth-child(1){
+          background-color: #FFFFFF;
+          padding-bottom: 15px;
+          .colorList{
+            border-top: 1px dashed #d9d9d9;
+            padding: 5px 10px;
+            width: 142px;
+            margin: 0 auto;
+            //text-align: center;
+            >span{
+              &:hover{
+                transform: scale(1.1);
+              }
+              width: 20px;
+              border-radius: 2px;
+              height: 15px;
+              display: inline-block;
+              margin:  0 2px;
+              &.colorActive{
+                border: 1px solid darkgoldenrod;
+                box-shadow: 0 0 2px darkgoldenrod;
+              }
+              &:nth-child(1){
+                background-color: rgb(255,152,0);
+              }
+              &:nth-child(2){
+                background-color: rgb(139, 195, 74);
+              }
+              &:nth-child(3){
+                background-color: rgb(37, 155, 36);
+              }
+              &:nth-child(4){
+                background-color: rgb(0, 150, 136);
+              }
+              &:nth-child(5){
+                background-color: rgb(229, 28, 35);
+              }
+              &:nth-child(6){
+                background-color: rgb(255, 64, 129);
+              }
+              &:nth-child(7){
+                background-color: rgb(63, 81, 181);
+              }
+              &:nth-child(8){
+                background-color: #cc00cc;
+              }
+              &:nth-child(9){
+                background-color: #669966;
+              }
+              &:nth-child(10){
+                background-color: rgb(0, 0, 0);
+              }
+
+            }
+          }
+          .inputBox{
+            width: 180px;
+            margin: 0 auto;
+             nz-input-group{
+
+            :host ::ng-deep  &    .ant-input-group-addon{
+                  padding: 0;
+              border: none;
+              .ant-btn{
+                border-radius: 0 4px 4px 0;
+                background-color: #27B6AF;
+                border-color: #27B6AF;
+                color: #FFFFFF;
+              }
+              }
+               .ant-input:focus,.ant-input:hover{
+                 border-color: #27B6AF;
+               }
+            }
+
+          }
+        }
+        &:nth-child(2){
+          padding-bottom: 15px;
+         margin-top: 15px;
+          background-color: #FFFFFF;
+          >.eventList{
+            width: 142px;
+            margin: 0 auto;
+            >ul{
+              li{
+                margin: 10px 0;
+                border-left: 2px solid #5A6CD3;
+                line-height: 26px;
+
+                >span{
+                  color: #FFFFFF;
+                  margin-left: 15px;
+                }
+                &:nth-child(1){
+                  background-color: rgba(37, 155, 36, 0.72);
+                }
+                &:nth-child(2){
+                  background-color: rgba(255, 152, 0, 0.78);
+                }
+                &:nth-child(3){
+                  background-color: rgba(229, 28, 35, 0.63);
+                }
+                &:nth-child(4){
+                  background-color: rgba(36, 117, 155, 0.57);
+                }
+                &:nth-child(5){
+                  background-color: rgba(145, 36, 155, 0.61);
+                }
+                &:nth-child(6){
+                  background-color: rgba(59, 117, 58, 0.54);
+                }
+                &:nth-child(7){
+                  background-color: rgba(116, 213, 217, 0.72);
+                }
+                &:nth-child(8){
+                  background-color: rgba(193, 185, 126, 0.65);
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+    .calendarBox{
+      flex: auto;
+      background-color: #FFFFFF;
+    }
+  }
+}

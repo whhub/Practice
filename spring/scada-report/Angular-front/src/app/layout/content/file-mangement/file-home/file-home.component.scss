@@ -1,0 +1,83 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  //background-color: #FFFFFF;
+  nz-table{
+    background-color: #FFFFFF;
+    flex: auto;
+    td{
+      font-size: 12px;
+    }
+  }
+}
+.nameTd{
+  >i{
+    font-size: 18px;
+  }
+  .word{
+    color: #1890ff;
+  }
+  .excel{
+    color: rgba(37, 155, 36, 1);
+  }
+  >span{
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+.operationTd{
+  >span{
+    margin: 0 3px;
+    cursor: pointer;
+    color: #00c1de;
+    &:focus{
+      outline: none;
+    }
+  }
+}
+.contentHeader{
+  margin-bottom: 10px;
+  line-height: 45px;
+  background-color: #FFFFFF;
+
+  >span{
+    float: left;
+    &:nth-child(1){
+      margin-left: 15px;
+      >i{
+        font-size: 16px;
+        margin-right: 5px;
+      }
+    }
+    &:nth-child(2){
+      &:focus{
+        outline: none;
+      }
+      margin-top: 7px;
+      margin-left: 210px;
+      line-height: 30px;
+      background-color: #27B6AF;
+      cursor: pointer;
+      color: #FFFFFF;
+      padding: 1px 10px;
+      >i{
+        margin-right: 10px;
+      }
+    }
+  }
+  >div{
+    float: right;
+    margin-right: 15px;
+    >nz-input-group{
+      input{
+        :host  ::ng-deep &{
+          border-radius: 30px;
+          width: 300px;
+        }
+      }
+
+
+    }
+  }
+}

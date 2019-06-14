@@ -1,0 +1,113 @@
+
+<div class="body">
+   <div class="header">
+      <span>{{currentBrandName}}</span>
+     <i nz-icon type="edit" theme="outline"></i>
+   </div>
+  <div class="group">
+    <div class="item">
+        <span>
+          <span>所属类别:</span>
+          <span>{{typeName}}</span>
+        </span>
+      <span>
+        <span>排序号:</span>
+        <span>{{sortNum}}</span>
+      </span>
+      <span>
+        <span>故障代码数:</span>
+        <span>{{faultCodeNum}}</span>
+      </span>
+    </div>
+    <div class="item">
+        <span>
+          <span>更新日期:</span>
+          <span>{{updateDate}}</span>
+        </span>
+      <span>
+        <span>状态:</span>
+        <span>{{status}}</span>
+      </span>
+      <span>
+        <span>文档数:</span>
+        <span>{{docNum}}</span>
+      </span>
+    </div>
+    <div class="item">
+        <span>
+          <span>创建日期:</span>
+          <span>{{createDate}}</span>
+        </span>
+    </div>
+    <div class="remarks">
+      <span>备注信息:</span> <span>这是备注信息</span>
+    </div>
+  </div>
+</div>
+<div class="foot">
+  <div>
+    <div nz-row nzGutter="2">
+      <div nz-col class="gutter-row" nzSpan="6">
+        <div class="gutter-box">
+          <span [routerLink]="['/layout/fileMangement/fileDetails']">
+           <i nz-icon type="file-word" nzTheme="outline"></i>
+            <span>{{docNum}} 个文档</span>
+          </span>
+          <p>文档数量</p>
+        </div>
+      </div>
+      <div nz-col class="gutter-row" nzSpan="6">
+        <div class="gutter-box">
+         <span [routerLink]="['/layout/fileMangement/error', {brandId: currentBrandId, typeId: currentTypeId}]">
+            <i nz-icon type="code" nzTheme="outline"></i>
+            <span>{{faultCodeNum}} 种故障代码</span>
+          </span>
+          <p>故障代码数量</p>
+        </div>
+      </div>
+      <div nz-col class="gutter-row" nzSpan="6">
+        <div class="gutter-box">
+         <span>
+            <i nz-icon type="calendar" nzTheme="outline"></i>
+            <span>7条动态</span>
+          </span>
+          <p>24小时内动态</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div>
+    <div nz-row nzGutter="2">
+      <div nz-col class="gutter-row" nzSpan="6">
+        <div class="gutter-box">
+          <span>
+            <i nz-icon type="upload" nzTheme="outline"></i>
+            <span>导出配置</span>
+          </span>
+          <p>导出算法模型配置</p>
+        </div>
+      </div>
+      <div nz-col class="gutter-row" nzSpan="6">
+        <div class="gutter-box">
+          <span>
+            <i nz-icon type="cloud-upload" nzTheme="outline"></i>
+            <span>备份配置</span>
+          </span>
+          <p>备份模型到明匠云平台</p>
+        </div>
+      </div>
+      <div nz-col class="gutter-row" nzSpan="6">
+        <div class="gutter-box">
+         <span [attr.brandId]="currentBrandId" (click)="deleteBrand($event)">
+            <i nz-icon type="delete" nzTheme="outline"></i>
+            <span>删除品牌</span>
+          </span>
+          <p>删除算法模型</p>
+          <i nz-icon type="warning" theme="fill" class="flag"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

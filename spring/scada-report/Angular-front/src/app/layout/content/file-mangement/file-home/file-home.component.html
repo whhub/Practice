@@ -1,0 +1,60 @@
+<div class="contentHeader clearfix" >
+    <span>
+      <i nz-icon type="file-word" nzTheme="outline"></i>
+      <span>文档上传</span>
+    </span>
+  <span nz-wave [routerLink]="['/layout/fileUpload']">
+      <i nz-icon type="cloud-upload" nzTheme="outline"></i>
+      <span>上传文档</span>
+    </span>
+  <div>
+    <nz-input-group  [nzPrefix]="prefixTemplate">
+      <input type="text" nz-input placeholder="搜索文档" />
+    </nz-input-group>
+    <ng-template #prefixTemplate><i nz-icon type="search"></i></ng-template>
+
+  </div>
+</div>
+<nz-table #basicTable [nzData]="listOfData">
+  <thead>
+  <tr>
+    <th>文档名称</th>
+    <th>设备类型</th>
+    <th>品牌</th>
+    <th>最近更新</th>
+    <th>下载量</th>
+    <th>添加日期</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of basicTable.data">
+    <td [ngSwitch]="data.index %2" class="nameTd ">
+      <i nz-icon type="file-word" theme="outline" *ngSwitchCase="0" class="word"></i>
+      <i nz-icon type="file-excel" theme="outline" *ngSwitchCase="1" class="excel"></i>
+      <span>{{data.docName}}</span>
+    </td>
+    <td>{{data.type}}</td>
+    <td>{{data.classify}}</td>
+    <td>
+     {{data.author}}
+    </td>
+    <td>
+     {{data.downloadNum}}
+    </td>
+    <td>
+      {{data.createTime}}
+    </td>
+    <td class="operationTd">
+      <span [routerLink]="['/layout/fileEdit',{id: data.id}]">
+        <i nz-icon type="form" theme="outline" ></i>
+        <span>修改</span>
+      </span>
+      <span (click)="deleteDoc($event)" [attr.data-id]="data.id">
+         <i nz-icon type="delete" theme="outline" ></i>
+        <span>删除</span>
+      </span>
+    </td>
+  </tr>
+  </tbody>
+</nz-table>

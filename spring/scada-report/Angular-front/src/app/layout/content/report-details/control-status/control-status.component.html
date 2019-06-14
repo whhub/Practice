@@ -1,0 +1,149 @@
+<div class="toolBox" >
+    <span>
+      <span>设备种类</span>
+        <nz-select  nzShowSearch  nzPlaceHolder="选择设备类别" [(ngModel)]="selectedValue">
+          <nz-option nzLabel="PLC" nzValue="PLC"></nz-option>
+          <nz-option nzLabel="注塑机" nzValue="注塑机"></nz-option>
+          <nz-option nzLabel="打印机" nzValue="打印机"></nz-option>
+        </nz-select>
+    </span>
+  <span>
+      <span>状态</span>
+       <nz-checkbox-group [(ngModel)]="checkOptions" (ngModelChange)="log($event)"></nz-checkbox-group>
+    </span>
+  <span>
+      <span>设备名称</span>
+      <input nz-input placeholder="设备名称" >
+    </span>
+  <span>
+       <button nz-button nzType="default">
+         <i nz-icon type="search" theme="outline"></i>
+         <span>
+           查询
+         </span>
+       </button>
+       <button nz-button nzType="default">
+           <i nz-icon type="sync" theme="outline"></i>
+            <span>重置</span>
+       </button>
+    </span>
+</div>
+<div class="tableBox">
+  <nz-table #basicTable [nzData]="dataSet" >
+    <thead>
+    <tr>
+      <th>S</th>
+      <th>设备描述</th>
+      <th>设备ID</th>
+      <th colspan="2">availability</th>
+      <th >Emergency Stop</th>
+      <th >Execution Mode</th>
+      <th colspan="5">Mode</th>
+      <th >Program</th>
+      <th >System Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td ngSwitch="{{data.status}}">
+        <span class="run" *ngSwitchCase="0">
+          <i nz-icon type="sync" theme="outline"></i>
+        </span>
+        <span class="off" *ngSwitchCase="1">
+           <i nz-icon type="hourglass" theme="outline"></i>
+        </span>
+        <span class="err" *ngSwitchCase="2">
+          <i nz-icon type="alert" theme="outline"></i>
+        </span>
+        <span class="offline" *ngSwitchCase="3">
+          <i nz-icon type="desktop" theme="outline"></i>
+        </span>
+      </td>
+      <td>
+        <div class="ip">
+          <span>192.168.1.1</span>
+        </div>
+        <div class="deviceName">
+          <span>
+             沈阳机床 SY-900
+          </span>
+        </div>
+        <div>
+          <span>
+          10010001
+          </span>
+        </div>
+      </td>
+      <td>{{data.diviceId}}</td>
+      <td>
+        <span class="line" [class.active]="data.availability"></span>
+      </td>
+      <td  >
+        <span class="round" [class.active]="!data.availability"></span>
+      </td>
+      <td>
+        ARMED
+      </td>
+      <td  ngSwitch="{{data.execution}}">
+        <ng-container *ngSwitchCase="0">
+          <i nz-icon type="caret-right" theme="outline" class="green"></i> <span>ACTIVE</span>
+        </ng-container>
+        <ng-container *ngSwitchCase="1">
+          <i nz-icon type="pause" theme="outline" class="yellow"></i> <span>READY</span>
+        </ng-container>
+
+      </td>
+      <td [class.active]="data.mode === 0">
+        <i nz-icon type="reconciliation" theme="outline"></i>
+        <div><span>自动</span></div>
+      </td>
+      <td  [class.active]="data.mode === 1">
+        <i nz-icon type="pushpin" theme="outline"></i>
+        <div>
+          <span>点动</span>
+        </div>
+      </td>
+      <td [class.active]="data.mode === 2">
+        <i nz-icon type="edit" theme="outline"></i>
+        <div>
+          <span>编辑</span>
+        </div>
+      </td>
+      <td  [class.active]="data.mode === 3">
+        <i nz-icon type="tool" theme="outline"></i>
+        <div>
+          <span>手动</span>
+        </div>
+      </td>
+      <td>
+        <i nz-icon type="euro" theme="outline"></i>
+        <div>
+          <span>单段</span>
+        </div>
+      </td>
+      <td  >
+        <div>
+          <span>test1001.nc</span>
+        </div>
+        <div>
+          <span>START</span>
+        </div>
+        <div>
+          <span>G1X89.539 ZZ-1.793</span>
+        </div>
+      </td>
+      <td ngSwitch="{{data.sysStatus}}">
+        <ng-container *ngSwitchCase="0">
+          <i nz-icon type="check" theme="outline" class="normal"></i> <span>NORMAL</span>
+        </ng-container>
+        <ng-container *ngSwitchCase="1">
+          <i nz-icon type="warning" theme="outline" class="warning"></i> <span>WARNING</span>
+          <span>2031</span>
+        </ng-container>
+
+      </td>
+    </tr>
+    </tbody>
+  </nz-table>
+
+</div>

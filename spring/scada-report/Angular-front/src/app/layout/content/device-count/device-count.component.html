@@ -1,0 +1,125 @@
+<header>
+  <i nz-icon type="file-text" theme="outline"></i>  <span>设备台账</span>
+</header>
+<div class="content">
+  <div class="up">
+    <div nz-row nzGutter="16">
+      <div nz-col class="gutter-row" nzSpan="8">
+        <div class="gutter-box">
+          <div class="item">
+            <div class="header">
+              <span>最近5年设备数量统计</span>
+            </div>
+            <div class="body">
+              <app-device-count-chart></app-device-count-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div nz-col class="gutter-row" nzSpan="8">
+        <div class="gutter-box">
+          <div class="item">
+            <div class="header">
+              <span>当前设备状态统计分析</span>
+            </div>
+            <div class="body">
+              <app-device-status-chart></app-device-status-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div nz-col class="gutter-row" nzSpan="8">
+        <div class="gutter-box">
+          <div class="item">
+            <div class="header">
+              <span>当前设备状态统计分析</span>
+            </div>
+            <div class="body">
+              <app-device-status-chart></app-device-status-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="down">
+    <div class="toolbox">
+      <button nz-button nzType="default" (click)="syncDevice()"><i nz-icon type="sync"></i>同步设备</button>
+      <nz-input-group [nzSuffix]="suffixIconSearch">
+        <input type="text" nz-input placeholder="请输入资产名称" [(ngModel)]="propertyName" />
+      </nz-input-group>
+      <ng-template #suffixIconSearch>
+        <i nz-icon type="search"></i>
+      </ng-template>
+      <button nz-button nzType="default" (click)="fuzzyQuery()">查询</button>
+      <nz-select style="width: 120px;" [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="状态">
+        <nz-option nzValue="在用" nzLabel="在用"></nz-option>
+        <nz-option nzValue="停用" nzLabel="停用"></nz-option>
+        <nz-option nzValue="故障" nzLabel="故障" ></nz-option>
+      </nz-select>
+    </div>
+    <div class="tableBox">
+      <nz-table #filterTable [nzData]="listOfDisplayData">
+        <thead (nzSortChange)="sort($event)" nzSingleSort>
+        <tr>
+          <th
+            nzShowSort
+            nzSortKey="number"
+          >
+            编号
+          </th>
+          <th >资产名称</th>
+          <th>
+            资产编号
+          </th>
+          <th >设备编号</th>
+          <th >设备分类</th>
+          <th >规格</th>
+          <th >设备型号</th>
+          <th >制造厂</th>
+          <th
+            nzShowSort
+            nzSortKey="date"
+          >使用日期</th>
+          <th >资产原值</th>
+          <th >资产净值</th>
+          <th >安装地点</th>
+          <th >使用单位</th>
+          <th >设备状态</th>
+          <th >操作</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of filterTable.data">
+          <td><span>{{ data.number }}</span></td>
+          <td><span>{{ data.name }}</span></td>
+          <td><span>{{ data.propertyNumber }}</span></td>
+          <td><span>{{ data.deviceNumber }}</span></td>
+          <td><span>{{ data.category }}</span></td>
+          <td><span>{{ data.size }}</span></td>
+          <td><span>{{ data.deviceModel }}</span></td>
+          <td><span>{{ data.factory }}</span></td>
+          <td><span>{{ data.date }}</span></td>
+          <td><span>{{ data.propertyOrigin }}</span></td>
+          <td><span>{{ data.propertyNow }}</span></td>
+          <td><span>{{ data.place }}</span></td>
+          <td><span>{{ data.workshop }}</span></td>
+          <td ngSwitch="{{ data.deviceStatus }}" class="statusTd">
+            <span *ngSwitchCase="'在用'" class="using">在用</span>
+            <span *ngSwitchCase="'报废'" class="waste">报废</span>
+            <span *ngSwitchCase="'停用'" class="stop">停用</span>
+            <span *ngSwitchCase="'闲置'" class="free">闲置</span>
+          </td>
+          <td class="toolsTd">
+            <i nz-icon type="edit" nzTheme="outline" [routerLink]="['/layout/updateDevice',{id: data.id}]"></i>
+            <i nz-icon type="delete" nzTheme="outline" ></i>
+            <i nz-icon type="bars" nzTheme="outline"></i>
+          </td>
+        </tr>
+        </tbody>
+      </nz-table>
+    </div>
+  </div>
+</div>

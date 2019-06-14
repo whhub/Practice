@@ -1,0 +1,179 @@
+$green: #219020;
+$light-blue: #4bb7d5;
+$orange: #ff8d05;
+$danger: #e21e25;
+$border: 1px solid #d9d9d9;
+.toolBox{
+  margin-bottom: 10px;
+  border: 1px dashed #d9d9d9;
+  line-height: 60px;
+  >span{
+    &:nth-child(1),  &:nth-child(2),  &:nth-child(3) , &:nth-child(4){
+      margin-left: 25px;
+    }
+    &:nth-child(1){
+      >span{
+        margin-right: 5px;
+      }
+      nz-select{
+        width: 150px;
+      }
+    }
+    &:nth-child(2){
+      >span{
+        margin-right: 10px;
+      }
+    }
+    &:nth-child(3){
+      >span{
+        margin-right: 5px;
+      }
+      .ant-input{
+        width: 200px;
+      }
+    }
+    &:nth-child(4){
+      button{
+        margin: 0 3px;
+      }
+    }
+  }
+}
+.tableBox{
+  tbody{
+    .run ,.off, .err, .offline{
+      >i{
+        font-size: 16px;
+      }
+    }
+    .run{
+      i{
+        color: $green;
+      }
+    }
+    .off{
+      i{
+        color: $orange;
+      }
+    }
+    .err{
+      i{
+        color: $danger;
+      }
+    }
+    .deviceName{
+      >span{
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+    .line{
+      display: inline-block;
+      width: 3px;
+      height: 35px;
+      background-color: #a9a9a9;
+      border-radius: 3px;
+    }
+    .line.active{
+      background-color: #219020;
+    }
+    .round{
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #a9a9a9;
+      border-radius: 17px;
+    }
+    .round.active{
+      border: 2px solid #219020;
+    }
+    tr{
+      td{
+        &:nth-child(6){
+          font-size: 14px;
+          color: $green;
+        }
+        &:nth-child(7){
+          font-size: 16px;
+          color: #a9a9a9;
+          i{
+            font-size: 16px;
+            font-weight: bolder;
+            &.green{
+              color: $green;
+              &.green+span{
+                color: $green;
+              }
+            }
+            &.yellow{
+              color: $orange;
+              &.yellow+span{
+                color: $orange;
+              }
+            }
+          }
+
+        }
+        &:nth-child(8),&:nth-child(9),&:nth-child(10),&:nth-child(11),&:nth-child(12) {
+          color: #a9a9a9;
+          >i{
+            font-size: 16px;
+
+          }
+          >div{
+            >span{
+              font-size: 12px;
+            }
+          }
+          &.active{
+            color: $green;
+          }
+        }
+        &:nth-child(13){
+          >div{
+            &:nth-child(1){
+              >span{
+                font-weight: bolder;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+        &:nth-child(14){
+          color: $green;
+          >i{
+            font-size: 20px;
+            font-weight: bolder;
+            margin-right: 10px;
+            &.normal{
+              color: $green;
+              +span{
+                color: $green;
+              }
+            }
+            &.warning{
+              color: orange;
+              +span{
+                color: orange;
+                &+span{
+                  display: block;
+                  color: #a9a9a9;
+                }
+              }
+            }
+          }
+          >span{
+            font-weight: bolder;
+            font-size: 12px;
+          }
+        }
+
+      }
+    }
+  }
+  .ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+    padding: 16px 0;
+    text-align: center;
+    background-color: #FFFFFF;
+  }
+}

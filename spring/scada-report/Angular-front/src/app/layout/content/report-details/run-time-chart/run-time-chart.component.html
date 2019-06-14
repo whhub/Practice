@@ -1,0 +1,97 @@
+<div class="tableBox">
+  <nz-table #basicTable [nzData]="dataSet" >
+    <thead>
+    <tr>
+      <th>S</th>
+      <th>设备描述</th>
+      <th>设备ID</th>
+
+      <th >运行时间</th>
+
+      <th >待机时间</th>
+      <th >故障时间</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td ngSwitch="{{data.status}}">
+        <span class="run" *ngSwitchCase="0">
+          <i nz-icon type="sync" theme="outline"></i>
+        </span>
+        <span class="off" *ngSwitchCase="1">
+           <i nz-icon type="hourglass" theme="outline"></i>
+        </span>
+        <span class="err" *ngSwitchCase="2">
+          <i nz-icon type="alert" theme="outline"></i>
+        </span>
+        <span class="offline" *ngSwitchCase="3">
+          <i nz-icon type="desktop" theme="outline"></i>
+        </span>
+      </td>
+      <td>
+        <div class="ip">
+          <span>192.168.1.1</span>
+        </div>
+        <div class="deviceName">
+          <span>
+             沈阳机床 SY-900
+          </span>
+        </div>
+        <div>
+          <span>
+          10010001
+          </span>
+        </div>
+      </td>
+      <td>
+        010002
+      </td>
+      <td>
+        <div class="up clearfix">
+          <span>运行时间</span>
+          <span>07:12:02</span>
+        </div>
+        <div class="down clearfix">
+          <div class="downLeft">
+            <span>62.0%</span>
+          </div>
+          <div class="downRight">
+            <nz-progress [nzPercent]="62" nzStatus="active" [nzStrokeColor]="' rgb(37, 155, 36)'" [nzShowInfo]="false"></nz-progress>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="up clearfix">
+          <span>待机时间</span>
+          <span>07:12:02</span>
+        </div>
+        <div class="down">
+          <div class="downLeft">
+            <span>22.0%</span>
+          </div>
+          <div class="downRight">
+            <nz-progress [nzPercent]="22" nzStatus="active" [nzStrokeColor]="' rgb(255, 152, 0)'" [nzShowInfo]="false"></nz-progress>
+          </div>
+        </div>
+      </td>
+      <td  >
+        <div class="up clearfix">
+          <span>故障时间</span>
+          <span>07:12:02</span>
+        </div>
+        <div class="down">
+          <div class="downLeft">
+            <span>62.0%</span>
+          </div>
+          <div class="downRight">
+            <nz-progress [nzPercent]="16" nzStatus="active" [nzStrokeColor]="'  rgb(229, 28, 35)'" [nzShowInfo]="false"></nz-progress>
+
+          </div>
+        </div>
+      </td>
+
+    </tr>
+    </tbody>
+  </nz-table>
+
+</div>

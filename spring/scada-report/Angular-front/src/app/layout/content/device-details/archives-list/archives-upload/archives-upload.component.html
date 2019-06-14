@@ -1,0 +1,42 @@
+<div class="archives">
+  <header class="clearfix">
+    <div>
+      <i nz-icon type="file-word" nzTheme="outline"></i>
+      <span>Docker简介</span>
+    </div>
+    <div>
+      <nz-button-group>
+        <button nz-button ><i nz-icon type="upload" nzTheme="outline"></i> 上传文档</button>
+        <button nz-button nzType="primary" (click)="showList()"><i nz-icon type="file" nzTheme="outline"></i> 所有文档</button>
+      </nz-button-group>
+    </div>
+  </header>
+  <div class="uploadCon">
+    <div class="tabBox clearfix">
+      <div>
+        <div class="tabItem" (click)="currentTab = 'upload'" [class.active]="currentTab === 'upload'">
+          <div>
+            <div>
+              <i nz-icon type="upload" nzTheme="outline"></i>
+            </div>
+          </div>
+          <p>上传文档</p>
+        </div>
+      </div>
+      <div>
+        <div class="tabItem" (click)="currentTab = 'link'" [class.active]="currentTab === 'link'" >
+          <div>
+            <div>
+              <i nz-icon type="paper-clip" nzTheme="outline"></i>
+            </div>
+          </div>
+          <p>关联</p>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <app-upload-part *ngIf="currentTab === 'upload'"></app-upload-part>
+      <app-link-part *ngIf="currentTab === 'link'"></app-link-part>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+
+<header>
+  <i nz-icon type="dot-chart" nzTheme="outline"></i>  <span>统计分析</span>
+</header>
+<div class="content">
+  <div class="toolBox">
+    <div class="main clearfix">
+      <div>
+        <button nz-button nzType="default" (click)="showModal()"><i nz-icon type="plus-circle" nzTheme="outline"></i>添加报表</button>
+        <button nz-button nzType="default"><i nz-icon type="shopping-cart" nzTheme="outline"></i>从商城添加</button>
+
+      </div>
+      <nz-modal [(nzVisible)]="isVisible" nzWidth="400" class="addTable" nzTitle="添加报表" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+        <div class="group">
+          <div class="clearfix item">
+            <div >
+              <i nz-icon type="tag" nzTheme="outline"></i>
+            </div>
+            <div>
+              <span>名称</span> <sup>*</sup>
+              <p>报表名称</p>
+            </div>
+            <div>
+              <input nz-input placeholder="应用名称" [(ngModel)]="tableName" />
+              <p>
+                整体应用名称 例：OEE
+              </p>
+            </div>
+          </div>
+          <div class="clearfix item">
+            <div >
+              <i nz-icon type="file-text" nzTheme="outline"></i>
+            </div>
+            <div>
+              <span>备注</span>
+
+            </div>
+            <div>
+
+              <textarea rows="2" nz-input [(ngModel)]="textValue"></textarea>
+            </div>
+          </div>
+        </div>
+
+      </nz-modal>
+      <div>
+        <button nz-button nzType="default" (click)="isShowTool = !isShowTool">搜索<i nz-icon type="search"></i></button>
+        <button nz-button nzType="default"><i nz-icon type="sync" nzTheme="outline"></i></button>
+      </div>
+    </div>
+    <div class="real" [@collapseMotion]="isShowTool? 'expanded':'hidden'">
+     <span>
+       <span>报表名称</span>
+       <input nz-input placeholder="Basic usage" [(ngModel)]="value" />
+     </span>
+      <span>
+        <button nz-button nzType="default"><i nz-icon type="search"></i>查询</button>
+        <button nz-button nzType="default"><i nz-icon type="sync" nzTheme="outline"></i>重置</button>
+      </span>
+    </div>
+  </div>
+  <div class="list">
+    <div class="item clearfix" *ngFor="let item of source">
+        <div class="clearfix">
+          <div>
+            <i nz-icon>
+              <svg t="1557551313979" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1139" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><style type="text/css"></style></defs><path d="M512.042535 88.300308c16.856615 0 29.459692 3.308308 35.209847 6.222769l339.968 170.062769-339.968 169.905231c-5.750154 2.914462-18.353231 6.222769-35.209847 6.222769s-29.459692-3.308308-35.209846-6.222769L136.78592 264.507077 476.832689 94.523077c5.750154-2.914462 18.353231-6.222769 35.209846-6.222769m0-78.769231c-25.521231 0-51.042462 4.804923-70.419692 14.493538L31.077612 229.297231c-38.754462 19.377231-38.754462 51.042462 0 70.419692l410.466462 205.272615c19.456 9.688615 44.977231 14.493538 70.498461 14.493539s51.042462-4.804923 70.419693-14.493539l410.466461-205.272615c38.754462-19.377231 38.754462-51.042462 0-70.419692L582.462228 24.024615C563.084997 14.336 537.563766 9.531077 512.042535 9.531077z" fill="#27b6af" p-id="1140"></path><path d="M512.042535 770.284308c-31.507692 0-62.936615-6.301538-88.064-18.825846L21.782843 550.439385a39.384615 39.384615 0 1 1 35.288615-70.498462l402.116924 201.097846c27.726769 13.863385 77.981538 13.863385 105.708307 0l402.116923-201.097846a39.384615 39.384615 0 0 1 35.209846 70.498462L600.106535 751.458462a201.412923 201.412923 0 0 1-88.064 18.825846z" fill="#27b6af" p-id="1141"></path><path d="M512.042535 1014.468923c-31.507692 0-62.936615-6.301538-88.064-18.825846L21.861612 794.545231c-19.534769-9.688615-27.411692-33.319385-17.644307-52.775385s33.319385-27.254154 52.854153-17.644308l402.116924 201.097847c27.726769 13.863385 77.981538 13.863385 105.708307 0l402.116923-201.097847a39.384615 39.384615 0 1 1 35.209846 70.498462L600.106535 995.643077c-25.127385 12.603077-56.556308 18.825846-88.064 18.825846z" fill="#27b6af" p-id="1142"></path></svg>
+            </i>
+          </div>
+          <div>
+            <span>
+              {{item.tableName}}
+            </span>
+            <p>
+              {{item.remarks}}
+            </p>
+          </div>
+        </div>
+        <div>
+          <button nz-button nzType="dashed" [attr.data-id]="item.id" (click)="details($event)">详情</button>
+        </div>
+        <div>
+          <span>{{item.dataNum}}</span>
+          <p>统计项</p>
+        </div>
+        <div>
+          <i nz-icon type="clock-circle" nzTheme="outline"></i> <span>{{item.createTime}}</span>
+        </div>
+    </div>
+
+  </div>
+</div>

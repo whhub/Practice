@@ -1,0 +1,149 @@
+
+<header>
+  <i nz-icon type="code-sandbox" nzTheme="outline"></i>  <span>算法模型</span>
+</header>
+<div class="content">
+  <div class="header">
+    <i nz-icon>
+      <svg t="1558255173660" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2112" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><style type="text/css"></style></defs><path d="M861.696 62.976H168.448c-33.28 0-60.416 27.136-60.416 59.904v776.192c0 32.768 27.136 59.904 60.416 59.904h693.248c33.28 0 60.416-27.136 60.416-59.904V122.88c0-32.768-27.136-59.904-60.416-59.904z m-690.688 87.04c0-15.36 12.288-27.648 28.16-27.648H834.56c15.36 0 28.16 12.288 28.16 27.648v132.608c0 15.36-12.8 27.648-28.16 27.648H198.656c-15.36 0-28.16-12.288-28.16-27.648V150.016z m70.144 737.28c-36.864 0-67.072-30.208-67.072-67.072 0-36.864 30.208-67.072 67.072-67.072 36.864 0 67.072 30.208 67.072 67.072-0.512 36.864-30.208 67.072-67.072 67.072z m0-187.392c-36.864 0-67.072-30.208-67.072-67.072 0-36.864 30.208-67.072 67.072-67.072 36.864 0 67.072 30.208 67.072 67.072-0.512 36.864-30.208 67.072-67.072 67.072z m0-187.392C204.288 512.512 174.08 482.304 174.08 445.44s30.208-66.56 67.072-66.56c36.864 0 67.072 30.208 67.072 67.072s-30.208 66.56-67.072 66.56zM424.96 887.296c-36.864 0-67.072-30.208-67.072-67.072 0-36.864 30.208-67.072 67.072-67.072s67.072 30.208 67.072 67.072c0 36.864-30.208 67.072-67.072 67.072z m0-187.392c-36.864 0-67.072-30.208-67.072-67.072 0-36.864 30.208-67.072 67.072-67.072s67.072 30.208 67.072 67.072c0 36.864-30.208 67.072-67.072 67.072z m0-187.392c-36.864 0-67.072-30.208-67.072-67.072S388.096 378.88 424.96 378.88s67.072 30.208 67.072 67.072-30.208 66.56-67.072 66.56z m183.808 374.784c-36.864 0-67.072-30.208-67.072-67.072 0-36.864 30.208-67.072 67.072-67.072 36.864 0 67.072 30.208 67.072 67.072 0 36.864-30.208 67.072-67.072 67.072z m0-187.392c-36.864 0-67.072-30.208-67.072-67.072 0-36.864 30.208-67.072 67.072-67.072 36.864 0 67.072 30.208 67.072 67.072 0 36.864-30.208 67.072-67.072 67.072z m0-187.392c-36.864 0-67.072-30.208-67.072-67.072s30.208-66.56 67.072-66.56c36.864 0 67.072 30.208 67.072 67.072s-30.208 66.56-67.072 66.56z m184.32-133.632c36.864 0 67.072 30.208 67.072 67.072s-30.208 67.072-67.072 67.072c-36.864 0-67.072-30.208-67.072-67.072S756.224 378.88 793.088 378.88z m70.144 453.12c0 29.696-24.064 53.76-53.76 53.76H783.36c-29.696 0-53.76-24.064-53.76-53.76v-209.92c0-29.696 24.064-53.76 53.76-53.76h26.112c29.696 0 53.76 24.064 53.76 53.76v209.92z" p-id="2113"></path></svg>    </i>
+    <span>添加计算规则</span>
+  </div>
+  <div class="group">
+    <div class="item clearfix">
+      <div class="left">
+        <span>变量名称</span>
+        <sup>*</sup>
+      </div>
+      <div class="right">
+        <input nz-input placeholder="Basic usage" [(ngModel)]="value" />
+      </div>
+    </div>
+    <div class="item clearfix">
+      <div class="left">
+        <span>参数</span>
+        <sup>*</sup>
+      </div>
+      <div class="right">
+       <div class="rightHeader">
+         <i nz-icon type="plus-circle" theme="fill"></i>
+         <span>关联</span>
+       </div>
+        <div class="tableBox">
+          <nz-table #nzTable [nzData]="listOfData" nzShowPagination="false">
+
+            <tbody>
+            <ng-template ngFor let-data [ngForOf]="nzTable.data">
+              <tr>
+
+                <td nzShowExpand [(nzExpand)]="mapOfExpandData[data.id]" class="expandTd clearfix" >
+                  <i nz-icon type="tag" theme="fill"></i>
+                  <span>可使用总工时</span>
+                </td>
+
+                <td class="btnTd clearfix">
+                  <span>
+                    <span>变量</span>
+                     <input nz-input  [(ngModel)]="value" />
+                  </span>
+                  <span>
+                    <i nz-icon type="edit" nzTheme="outline"></i>
+                    <i nz-icon type="delete" nzTheme="outline"></i>
+                  </span>
+                  <span nz-wave><i nz-icon type="minus" nzTheme="outline"></i></span>
+                </td>
+
+
+              </tr>
+              <tr [nzExpand]="mapOfExpandData[data.id]">
+                <td>
+                  关联数据
+                </td>
+                <td >时间0：time0</td>
+
+              </tr>
+              <tr [nzExpand]="mapOfExpandData[data.id]">
+                <td>
+                  关联数据
+                </td>
+                <td >时间0：time0</td>
+
+              </tr>
+
+            </ng-template>
+            </tbody>
+          </nz-table>
+          <nz-table #nzTable [nzData]="listOfData2" nzShowPagination="false">
+
+            <tbody>
+            <ng-template ngFor let-data [ngForOf]="nzTable.data">
+              <tr>
+
+                <td nzShowExpand [(nzExpand)]="mapOfExpandData1[data.id]" class="expandTd clearfix" >
+                  <i nz-icon type="tag" theme="fill"></i>
+                  <span>损失时间</span>
+                </td>
+
+                <td class="btnTd clearfix">
+                  <span>
+                    <span>变量</span>
+                     <input nz-input  [(ngModel)]="value" />
+                  </span>
+                  <span>
+                    <i nz-icon type="edit" nzTheme="outline"></i>
+                    <i nz-icon type="delete" nzTheme="outline"></i>
+                  </span>
+                  <span nz-wave><i nz-icon type="minus" nzTheme="outline"></i></span>
+                </td>
+
+
+              </tr>
+              <tr [nzExpand]="mapOfExpandData1[data.id]">
+                <td>
+                  关联数据
+                </td>
+                <td >时间0：time0</td>
+
+              </tr>
+              <tr [nzExpand]="mapOfExpandData1[data.id]">
+                <td>
+                  关联数据
+                </td>
+                <td >时间0：time0</td>
+
+              </tr>
+
+            </ng-template>
+            </tbody>
+          </nz-table>
+        </div>
+      </div>
+    </div>
+    <div class="item clearfix">
+      <div class="left">
+        <span>计算规则</span>
+
+      </div>
+      <div class="right">
+        <div class="up">
+           <span class="active">
+             普通计算
+           </span>
+           <span>
+             高级计算
+           </span>
+        </div>
+        <div class="mid">
+          <textarea rows="4" nz-input [(ngModel)]="inputValue"></textarea>
+        </div>
+        <div class="foot">
+          <i nz-icon type="info-circle" nzTheme="outline"></i>
+          <span>仅支持js脚本</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="simple">
+    <span>普通计算</span>
+    <input nz-input placeholder="Basic usage" [(ngModel)]="value" />
+  </div>
+</div>

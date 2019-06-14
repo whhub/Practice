@@ -1,0 +1,162 @@
+$side-width: 200px;
+$green: #219020;
+$light-blue: #4bb7d5;
+$orange: #ff8d05;
+$danger: #e21e25;
+$border: 1px solid #d9d9d9;
+
+header{
+  line-height: 40px;
+  font-size: 16px;
+  //border-left: 1px solid #d9d9d9;
+  background-color: white;
+  i{
+    margin-left: 15px;
+    color: rgb(37, 155, 36);
+    font-size: 20px;
+  }
+  span{
+    margin-left: 5px;
+    line-height: 24px;
+    border-bottom: 1.5px solid rgb(37, 155, 36);
+    display: inline-block;
+    width: 80px;
+    font-size: 13px;
+    font-weight: bolder;
+  }
+}
+.content{
+  .header{
+    background-color: #FFFFFF;
+    margin: 10px 5px 5px 5px;
+    padding: 10px 0;
+    >i{
+      margin-left: 20px;
+      font-size: 16px;
+    }
+    >span{
+      width: 96px;
+      display: inline-block;
+      border-bottom: 2px solid #27B6AF;
+      margin-left: 5px;
+      font-size: 13px;
+    }
+  }
+  .group{
+    >.item{
+      background-color: #FFFFFF;
+
+      margin: 10px 5px 5px 5px;
+      padding: 10px 0;
+      >.left{
+        width: 90px;
+        float: left;
+        sup{
+          color: rgb(229, 28, 35);
+          margin-left: 5px;
+        }
+        >span{
+          margin-left: 20px;
+        }
+      }
+      .right{
+        float: left;
+        width: 75%;
+        margin-left: 30px;
+        .rightHeader{
+          >i{
+            margin-right: 10px;
+          }
+        }
+        :host ::ng-deep  & .expandTd{
+          width: 155px;
+          >span{
+            float: left;
+          }
+          >i{
+            float: left;
+            margin-left: 8px;
+            margin-right: 8px;
+            color: #00c1de;
+            &+span{
+              font-size: 12px;
+            }
+          }
+        }
+        .btnTd{
+          position: relative;
+          >span{
+            &:nth-child(1){
+              margin-left: 25%;
+              float: left;
+              >input{
+                width: 60px;
+                margin-left: 10px;
+              }
+            }
+            &:nth-child(2){
+              float: right;
+              >i{
+                cursor: pointer;
+                margin: 0 3px;
+                font-size: 16px;
+              }
+            }
+            &:nth-child(3){
+              position: absolute;
+              right: -24px;
+              display: inline-block;
+              padding:2px 5px;
+              background-color: #00c1de;
+              color: #FFFFFF;
+            }
+          }
+        }
+        >.up{
+          >span{
+            display: inline-block;
+            border: 1px solid #d9d9d9;
+            padding: 2px 10px;
+            cursor: pointer;
+            &:nth-child(2){
+              margin-left: 10px;
+            }
+            &.active{
+              background-color: #00c1de;
+              color: #FFFFFF;
+              border-color: #00c1de;
+
+            }
+          }
+        }
+        .mid{
+          margin-top: 10px;
+        }
+        .foot{
+          margin-top: 10px;
+          >i{
+            margin-right: 5px;
+          }
+          >span{
+            color: rgb(229, 28, 35);
+          }
+        }
+      }
+    }
+  }
+  .simple{
+    padding: 10px 0;
+    width: 80%;
+    margin: 10px auto;
+    background-color: #FFFFFF;
+    >span{
+      margin-left: 20px;
+      color: rgb(229, 28, 35);
+    }
+    >input{
+      width: 500px;
+      margin-left: 20px;
+      border: 1px dashed #d9d9d9;
+    }
+  }
+}

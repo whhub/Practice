@@ -1,0 +1,114 @@
+
+<div class="survey">
+  <header>
+    <i nz-icon type="pie-chart" theme="outline"></i> <span>设备概况</span>
+  </header>
+  <div class="toolGroup clearfix">
+   <span>设备概况</span>
+    <span>
+      <button nz-button nzType="default" (click)="isShowtoolBox = !isShowtoolBox">
+          <i nz-icon type="search" theme="outline"></i>
+      </button>
+      <button nz-button nzType="default">
+          <i nz-icon type="sync" theme="outline"></i>
+      </button>
+      <button nz-button nzType="default">
+        <i nz-icon type="file-excel" theme="outline"></i> <span>导出</span>
+      </button>
+    </span>
+  </div>
+  <div class="toolBox" [@showState]="isShowtoolBox?'show':'hidden'">
+    <span>
+      <span>设备种类</span>
+        <nz-select style="width: 200px;" nzShowSearch nzAllowClear nzPlaceHolder="选择设备类别" [(ngModel)]="selectedValue">
+          <nz-option nzLabel="PLC" nzValue="PLC"></nz-option>
+          <nz-option nzLabel="注塑机" nzValue="注塑机"></nz-option>
+          <nz-option nzLabel="打印机" nzValue="打印机"></nz-option>
+        </nz-select>
+    </span>
+    <span>
+      <span>状态</span>
+       <nz-checkbox-group [(ngModel)]="checkOptions" (ngModelChange)="log($event)"></nz-checkbox-group>
+    </span>
+    <span>
+      <span>设备名称</span>
+      <input nz-input placeholder="设备名称" >
+    </span>
+    <span>
+       <button nz-button nzType="default">
+         <i nz-icon type="search" theme="outline"></i>
+         <span>
+           查询
+         </span>
+       </button>
+       <button nz-button nzType="default">
+           <i nz-icon type="sync" theme="outline"></i>
+            <span>重置</span>
+       </button>
+    </span>
+  </div>
+  <nz-table #basicTable [nzData]="dataSet">
+    <thead>
+    <tr>
+      <th [rowSpan]="2">设备</th>
+      <th [rowSpan]="2">OEE(%)</th>
+      <th [rowSpan]="2">可利用率（%）</th>
+      <th [rowSpan]="2">性能稼动率（%）</th>
+      <th [rowSpan]="2">加工件数</th>
+      <th [colSpan]="3">
+        设备状态（分）
+      </th>
+      <th [colSpan]="4" >
+        生产状态
+      </th>
+      <th [rowSpan]="2">当前程序</th>
+      <th [rowSpan]="2">操作</th>
+    </tr>
+    <tr>
+      <th >
+        开机
+      </th>
+      <th >
+        待机
+      </th>
+      <th >
+        故障
+      </th>
+      <th>
+       production
+      </th>
+      <th>
+        setup
+      </th>
+      <th>
+        teardown
+      </th>
+      <th>
+        维护
+      </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{data.name}}</td>
+      <td>{{data.oee}}</td>
+      <td>{{data.use}}</td>
+      <td>{{data.ablity}}</td>
+      <td>{{data.count}}</td>
+      <td>{{data.onTime}}</td>
+      <td>{{data.offTime}}</td>
+      <td>{{data.errTime}}</td>
+      <td>{{data.product}}</td>
+      <td>{{data.setUp}}</td>
+      <td>{{data.tearDown}}</td>
+      <td>{{data.maintenance}}</td>
+      <td>{{data.currentProgram}}</td>
+      <td>
+        <a >查看</a>
+      </td>
+
+    </tr>
+    </tbody>
+  </nz-table>
+</div>

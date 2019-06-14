@@ -1,0 +1,83 @@
+$border: 1px solid #d9d9d9;
+:host{
+   flex: 1;
+   display: flex;
+
+ }
+  :host ::ng-deep .trigger {
+    font-size: 18px;
+    //line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color .3s;
+  }
+
+    :host ::ng-deep .trigger:hover {
+      color: #1890ff;
+  }
+
+    :host ::ng-deep .logo {
+      height: 32px;
+      background: rgba(255, 255, 255, .2);
+      margin: 16px;
+  }
+.ant-menu-item:focus{
+  outline: none;
+}
+
+
+
+:host ::ng-deep .mySider{
+  //background-color: #f0f2f5;
+  background-color: #fff;
+  border-right: $border;
+  .ant-menu-dark{
+    //background-color: #f0f2f5;
+    background-color: #fff;
+    color: black;
+    border-right: $border;
+  }
+  .ant-menu-dark .ant-menu-item{
+    color: rgba(0,0,0,0.65);
+  }
+  .ant-menu.ant-menu-dark .ant-menu-item-selected{
+    color: white;
+  }
+  .ant-menu-inline .ant-menu-item{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  ul{
+    &.ant-menu-inline{
+      border-right: none;
+    }
+    li{
+      border-bottom: $border;
+      &.ant-menu-item-selected{
+        &:hover{
+          color: white!important;
+        }
+      }
+      &:hover{
+        color: #1890ff!important;
+      }
+    }
+  }
+}
+//:host ::ng-deep .mySider{
+//  flex: 0 0 70px!important;
+//  max-width: 70px!important;
+//  min-width: 70px!important;
+//  width: 70px!important;
+//  .ant-menu-inline-collapsed{
+//    width: 70px;
+//    > .ant-menu-item{
+//      padding: 0 27px!important;
+//    }
+//  }
+//}
+.collaspeBtn{
+  text-align: center;
+  line-height: 46px;
+  border-bottom: $border;
+}

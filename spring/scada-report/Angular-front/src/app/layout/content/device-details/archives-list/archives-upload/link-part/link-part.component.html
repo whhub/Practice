@@ -1,0 +1,123 @@
+<div class="linkPart">
+  <div class="header">
+    <span>关联文档</span>
+    <span>
+      <i nz-icon type="plus-circle" nzTheme="fill"></i>
+      <span>添加文档关联</span>
+    </span>
+    <span>
+      <i nz-icon type="link" nzTheme="outline"></i>
+      <span>一键关联同品牌文档</span>
+    </span>
+  </div>
+  <div class="tableBox">
+    <nz-table [nzData]="[1]" [nzShowPagination] = "false">
+      <thead>
+      <tr>
+        <th>
+          <span>类别</span>
+          <sup>*</sup>
+        </th>
+        <th>
+          <span>品牌</span>
+          <sup>*</sup>
+        </th>
+        <th>
+          <span>
+            选择文档
+          </span>
+        </th>
+        <th>
+          <span>
+            类别
+          </span>
+        </th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr >
+        <td>
+          <nz-select style="width: 120px;" [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="Choose">
+            <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+            <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+            <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+          </nz-select>
+        </td>
+        <td>
+          <nz-select style="width: 120px;" [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="Choose">
+            <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+            <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+            <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+          </nz-select>
+        </td>
+        <td class="inputTd">
+          <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+            <input type="text" disabled [(ngModel)]="prefixName"  nz-input placeholder="input search text" />
+          </nz-input-group>
+          <ng-template #suffixIconButton>
+            <button nz-button nzType="primary" nzSearch><i nz-icon type="search"></i></button>
+          </ng-template>
+        </td>
+        <td class="typeTd">
+          <span>
+            {{suffixName | uppercase}}
+          </span>
+        </td>
+        <td class="deleteTd">
+         <span nz-wave>
+            <i nz-icon type="minus" nzTheme="outline"></i>
+          </span>
+        </td>
+      </tr>
+      <tr >
+        <td>
+          <nz-select style="width: 120px;" [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="Choose">
+            <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+            <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+            <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+          </nz-select>
+        </td>
+        <td>
+          <nz-select style="width: 120px;" [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="Choose">
+            <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+            <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+            <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+          </nz-select>
+        </td>
+        <td class="inputTd">
+          <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+            <input type="text" nz-input disabled [(ngModel)]="prefixName" placeholder="input search text" />
+          </nz-input-group>
+          <ng-template #suffixIconButton>
+            <nz-upload  [nzShowUploadList]="false" [nzBeforeUpload]="BeforeUpload">
+              <button nz-button nzType="primary" nzSearch><i nz-icon type="search"></i></button>
+            </nz-upload>
+
+          </ng-template>
+        </td>
+        <td class="typeTd">
+          <span>
+            {{suffixName | uppercase}}
+          </span>
+        </td>
+        <td class="deleteTd">
+          <span nz-wave>
+            <i nz-icon type="minus" nzTheme="outline"></i>
+          </span>
+        </td>
+      </tr>
+      <tr >
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </div>
+  <div class="footer">
+    <span nz-wave>确定</span>
+    <span nz-wave>取消</span>
+  </div>
+</div>

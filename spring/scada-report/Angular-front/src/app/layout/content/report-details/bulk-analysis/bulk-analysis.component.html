@@ -1,0 +1,233 @@
+<!--<div class="header">-->
+  <!--<span>-->
+    <!--<span>设备种类</span>-->
+    <!--<nz-select style="width: 120px;" [(ngModel)]="selectedValue"  nzPlaceHolder="Choose">-->
+        <!--<nz-option nzValue="all" nzLabel="全部"></nz-option>-->
+        <!--<nz-option nzValue="zsj" nzLabel="注塑机"></nz-option>-->
+        <!--<nz-option nzValue="jc" nzLabel="机床" ></nz-option>-->
+    <!--</nz-select>-->
+  <!--</span>-->
+  <!--<span>-->
+    <!--<span>状态</span>-->
+    <!--<span>-->
+      <!--<span>-->
+        <!--<i nz-icon type="check-circle" nzTheme="outline"></i>-->
+        <!--运行-->
+      <!--</span>-->
+      <!--<span>-->
+        <!--<i nz-icon type="check-circle" nzTheme="outline"></i>-->
+        <!--待机-->
+      <!--</span>-->
+      <!--<span>-->
+        <!--<i nz-icon type="check-circle" nzTheme="outline"></i>-->
+        <!--报警-->
+      <!--</span>-->
+    <!--</span>-->
+  <!--</span>-->
+  <!--<span>-->
+    <!--<span>设备名称</span>-->
+    <!--<input nz-input  [(ngModel)]="value" style="width: 220px"/>-->
+  <!--</span>-->
+  <!--<span>-->
+    <!--<button nz-button nzType="default"><i nz-icon type="search"></i>查询</button>-->
+    <!--<button nz-button nzType="default"><i nz-icon type="sync"></i>重置</button>-->
+  <!--</span>-->
+<!--</div>-->
+<!--<div class="tableBox">-->
+
+<!--</div>-->
+<div class="mainConHeader">
+
+  <div class="clearfix">
+
+    <div>
+      <button nz-button nzType="default">导出报表<i nz-icon type="export" nzTheme="outline"></i></button>
+      <nz-button-group>
+        <button nz-button nzType="default" >
+          <i nz-icon type="cloud-upload" nzTheme="outline"></i>
+        </button>
+        <button nz-button nzType="default" >
+          <i nz-icon >
+            <svg t="1556951347498" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2565" xmlns:xlink="http://www.w3.org/1999/xlink"  height="200"><defs><style type="text/css"></style></defs><path d="M0 512a512 512 0 1 0 1024 0A512 512 0 0 0 0 512z m320-192h384v384H320V320z" fill="#d81e06" p-id="2566"></path></svg>
+          </i>
+        </button>
+        <button nz-button nzType="default" >
+          <i nz-icon type="appstore" nzTheme="outline"></i>
+        </button>
+      </nz-button-group>
+    </div>
+
+    <div>
+      <button nz-button nzType="default">构建表<i nz-icon type="tool"></i></button>
+      <button nz-button nzType="default"><i nz-icon type="sync" nzTheme="outline"></i></button>
+    </div>
+    <div>
+      <nz-date-picker [nzFormat]="dateFormat"></nz-date-picker>
+    </div>
+  </div>
+  <div>
+
+
+
+
+  </div>
+</div>
+<div class="toolBox" >
+    <span>
+      <span>设备种类</span>
+        <nz-select style="width: 200px;" nzShowSearch nzAllowClear nzPlaceHolder="选择设备类别" [(ngModel)]="selectedValue">
+          <nz-option nzLabel="PLC" nzValue="PLC"></nz-option>
+          <nz-option nzLabel="注塑机" nzValue="注塑机"></nz-option>
+          <nz-option nzLabel="打印机" nzValue="打印机"></nz-option>
+        </nz-select>
+    </span>
+  <span>
+      <span>状态</span>
+       <nz-checkbox-group [(ngModel)]="checkOptions" (ngModelChange)="log($event)"></nz-checkbox-group>
+    </span>
+  <span>
+      <span>设备名称</span>
+      <input nz-input placeholder="设备名称" >
+    </span>
+  <span>
+       <button nz-button nzType="default">
+         <i nz-icon type="search" theme="outline"></i>
+         <span>
+           查询
+         </span>
+       </button>
+       <button nz-button nzType="default">
+           <i nz-icon type="sync" theme="outline"></i>
+            <span>重置</span>
+       </button>
+    </span>
+</div>
+<nz-table #basicTable [nzData]="dataSet">
+  <thead>
+  <tr>
+    <th *ngFor="let item of tableHeaderList;index as i" class="myTh">
+      <div>
+        {{item}}
+      </div>
+      <div >
+        <i nz-icon type="edit" theme="outline" [attr.data-index]="i" (click)="editPara($event)"></i>
+        <i nz-icon type="delete" theme="outline" [attr.data-index]="i" (click)="deletePara($event)"></i>
+
+      </div>
+    </th>
+    <!--<th >OEE(%)</th>-->
+    <!--<th >可利用率（%）</th>-->
+    <!--<th >性能稼动率（%）</th>-->
+    <!--<th >加工件数</th>-->
+    <!--&lt;!&ndash;<th [colSpan]="3">&ndash;&gt;-->
+      <!--&lt;!&ndash;设备状态（分）&ndash;&gt;-->
+    <!--&lt;!&ndash;</th>&ndash;&gt;-->
+    <!--&lt;!&ndash;<th [colSpan]="4" >&ndash;&gt;-->
+      <!--&lt;!&ndash;生产状态&ndash;&gt;-->
+    <!--&lt;!&ndash;</th>&ndash;&gt;-->
+    <!--<th >-->
+      <!--开机-->
+    <!--</th>-->
+    <!--<th >-->
+      <!--待机-->
+    <!--</th>-->
+    <!--<th >-->
+      <!--故障-->
+    <!--</th>-->
+    <!--<th>-->
+      <!--production-->
+    <!--</th>-->
+    <!--<th>-->
+      <!--setup-->
+    <!--</th>-->
+    <!--<th>-->
+      <!--teardown-->
+    <!--</th>-->
+    <!--<th>-->
+      <!--维护-->
+    <!--</th>-->
+
+    <!--<th >操作</th>-->
+  </tr>
+
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of basicTable.data">
+    <td *ngFor="let td of data.tdValue">
+      {{td}}
+    </td>
+    <!--<td>{{data.name}}</td>-->
+    <!--<td>{{data.oee}}</td>-->
+    <!--<td>{{data.use}}</td>-->
+    <!--<td>{{data.ablity}}</td>-->
+    <!--<td>{{data.count}}</td>-->
+    <!--<td>{{data.onTime}}</td>-->
+    <!--<td>{{data.offTime}}</td>-->
+    <!--<td>{{data.errTime}}</td>-->
+    <!--<td>{{data.product}}</td>-->
+    <!--<td>{{data.setUp}}</td>-->
+    <!--<td>{{data.tearDown}}</td>-->
+    <!--<td>{{data.maintenance}}</td>-->
+
+    <!--<td>-->
+      <!--<a >查看</a>-->
+    <!--</td>-->
+
+  </tr>
+  </tbody>
+</nz-table>
+<nz-modal [(nzVisible)]="isVisible" [nzWidth]="500"  nzTitle="修改参数" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+ <div class="updateBox">
+   <div class="item clearfix">
+     <div>
+       <span>名称 <sup>*</sup></span>
+       <input nz-input  [(ngModel)]="paramName" />
+      </div>
+     <div>
+       <span>是否启用</span>
+       <nz-select style="width: 100px;" [(ngModel)]="isUse"  nzPlaceHolder="请选择">
+         <nz-option nzValue="true" nzLabel="是"></nz-option>
+         <nz-option nzValue="false" nzLabel="否"></nz-option>
+       </nz-select>
+     </div>
+   </div>
+   <div class="item clearfix">
+     <div>
+       <span>key值 <sup>*</sup></span>
+       <input nz-input  [(ngModel)]="keyValue" />
+
+     </div>
+     <div>
+       <span>参数类型</span>
+       <nz-select style="width: 100px;" [(ngModel)]="paraType"  nzPlaceHolder="请选择">
+         <nz-option nzValue="0" nzLabel="数字" ></nz-option>
+         <nz-option nzValue="1" nzLabel="图标" nzDisabled></nz-option>
+         <nz-option nzValue="2" nzLabel="进度条" nzDisabled></nz-option>
+         <nz-option nzValue="3" nzLabel="图表" nzDisabled></nz-option>
+
+       </nz-select>
+     </div>
+   </div>
+   <div class="item clearfix">
+    <div>
+      <span>固定值</span>
+      <input nz-input  [(ngModel)]="fixedValue" />
+    </div>
+   </div>
+   <div class="item clearfix">
+     <nz-tree
+         #nzTreeComponent
+         [nzData]="nodes"
+         nzCheckable
+         [nzCheckedKeys]="defaultCheckedKeys"
+         [nzExpandedKeys]="defaultExpandedKeys"
+         [nzSelectedKeys]="defaultSelectedKeys"
+         (nzClick)="nzClick($event)"
+         (nzCheckBoxChange)="nzCheck($event)"
+         (nzExpandChange)="nzCheck($event)"
+       >
+       </nz-tree>
+   </div>
+ </div>
+</nz-modal>
+

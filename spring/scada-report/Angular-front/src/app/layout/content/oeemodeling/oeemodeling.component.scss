@@ -1,0 +1,246 @@
+$side-width: 200px;
+$green: #219020;
+$light-blue: #4bb7d5;
+$orange: #ff8d05;
+$danger: #e21e25;
+$border: 1px solid #d9d9d9;
+:host{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+header{
+  line-height: 40px;
+  font-size: 16px;
+  //border-left: 1px solid #d9d9d9;
+  background-color: white;
+  i{
+    margin-left: 15px;
+    color: rgb(37, 155, 36);
+    font-size: 20px;
+  }
+  span{
+    margin-left: 5px;
+    line-height: 24px;
+    border-bottom: 1.5px solid rgb(37, 155, 36);
+    display: inline-block;
+    width: 80px;
+    font-size: 13px;
+    font-weight: bolder;
+  }
+}
+.toolBox{
+  padding: 10px 0;
+  background-color: #FFFFFF;
+  margin: 15px 10px 0 10px;
+  >span{
+    &:nth-child(1){
+      float: left;
+      margin-left: 20px;
+      color: rgba(16,16,16,.76);
+      margin-top: 7px;
+    }
+    &:nth-child(2){
+      float: right;
+      margin-right: 20px;
+      margin-top: 7px;
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #27B6AF;
+      color: #FFFFFF;
+    }
+    &:nth-child(4){
+      float: right;
+      margin-right: 20px;
+      margin-top: 7px;
+      >span{
+        display: inline-block;
+        padding: 4px 10px;
+        background-color: rgb(0, 117, 168);
+        color: #FFFFFF;
+        margin-right: 10px;
+        cursor: pointer;
+        >i{
+          margin-left: 5px;
+          font-size: 18px;
+        }
+
+      }
+    }
+
+  }
+  >nz-radio-group{
+    float: right;
+    margin-right: 20px;
+    margin-top: 7px;
+  }
+
+
+}
+.formulaBox{
+  padding: 10px 0;
+  >span{
+    margin: 0 5px;
+    &:nth-child(1){
+      background-color: #FFFFFF;
+      display: inline-block;
+      margin-left: 30px;
+      padding: 5px 15px;
+    }
+  }
+  >nz-select{
+    margin: 0 5px;
+    .ant-select-selection{
+      :host ::ng-deep & {
+        border: none;
+        border-radius: 0;
+      }
+    }
+  }
+}
+.content{
+  margin: 0 10px;
+  flex: 1;
+  display: flex;
+  .sider{
+    font-size: 12px;
+    flex: 0 0 200px;
+    background-color: #FFFFFF;
+    margin-right: 2px;
+    .header{
+      margin-bottom: 10px;
+      line-height: 40px;
+      >span{
+        &:nth-child(1){
+          float: left;
+          margin-left: 15px;
+          >i{
+            margin-right: 5px;
+          }
+        }
+        &:nth-child(2){
+          float: right;
+          margin-right: 15px;
+        }
+      }
+    }
+    .list{
+      .item{
+        cursor: pointer;
+
+        background-color: rgb(247, 247, 247);
+        margin: 5px auto;
+        width: 190px;
+        >div{
+          &:nth-child(1),&:nth-child(2){
+            float: left;
+            margin-top: 9px;
+          }
+          &:nth-child(1){
+            margin-left: 15px;
+          }
+          &:nth-child(2){
+            margin-left: 20px;
+          }
+
+          &:nth-child(3){
+            float: right;
+            margin-right: 15px;
+            >p{
+              margin-bottom: 0;
+              line-height: 16px;
+              color: rgb(170, 170,170);
+            }
+            >span{
+              display: inline-block;
+              width: 24px;
+              text-align: center;
+              line-height: 14px;
+            }
+          }
+        }
+        &.active{
+          border: 1px solid rgba(39, 182, 175, 0.51);
+        }
+      }
+
+    }
+  }
+  .main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+   .header{
+     line-height: 40px;
+     background-color: #FFFFFF;
+     >span{
+       &:nth-child(1){
+         float: left;
+         margin-left: 20px;
+       }
+       &:nth-child(2){
+         float: right;
+         margin-right: 20px;
+         cursor: pointer;
+         &:focus{
+           outline: none;
+         }
+         >span{
+           margin-left: 5px;
+         }
+       }
+     }
+   }
+    .mainBody{
+      flex: 1;
+      background-color: #FFFFFF;
+      margin-top: 2px;
+      nz-table{
+      :host ::ng-deep & .ant-table{
+        font-size: 13px;
+      }
+        .expandTd{
+          width: 100px;
+          >i{
+            float: right;
+            margin-right: 10px;
+            margin-top: 1px;
+          }
+      :host  ::ng-deep  &    >span{
+            float: right;
+          }
+        }
+        .nameTd,.nameTd+td{
+          >span{
+            color: #27B6AF;
+          }
+          >p{
+            margin-bottom: 0;
+          }
+        }
+        .btnTd{
+          >i{
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 3px;
+            &:nth-child(1){
+              color: #27B6AF;
+              &:focus{
+                outline: none;
+              }
+            }
+            &:nth-child(2){
+              color: $danger;
+            }
+            &:nth-child(3){
+              color: rgb(63, 81, 181);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

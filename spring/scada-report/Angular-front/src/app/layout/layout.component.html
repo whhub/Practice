@@ -1,0 +1,78 @@
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate" class="mySider">
+    <!--<div class="logo">-->
+    <!--</div>-->
+    <div class="collaspeBtn">
+      <span>
+        <i
+          class="trigger"
+          nz-icon
+          [type]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+          (click)="isCollapsed = !isCollapsed"
+        ></i>
+      </span>
+    </div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+      <li nz-menu-item [routerLink]="['/layout/index']"><span><i nz-icon type="home" theme="outline"></i><span class="nav-text">首页</span></span></li>
+      <li nz-menu-item [routerLink]="['/layout/deviceCount']"><span><i nz-icon type="file-text" nzTheme="outline"></i><span class="nav-text">设备台账</span></span></li>
+      <li nz-menu-item [routerLink]="['/layout/deviceDetails']"><span><i nz-icon type="desktop" nzTheme="outline"></i><span class="nav-text">设备详情</span></span></li>
+      <li nz-menu-item [routerLink]="['/layout/fileMangement']"><span><i nz-icon type="folder-open" nzTheme="outline"></i><span class="nav-text">档案管理</span></span></li>
+      <!--<li nz-menu-item [routerLink]="['/layout/date']"><span><i nz-icon type="calendar" nzTheme="outline"></i><span class="nav-text">维护保养</span></span></li>-->
+      <!--<li nz-menu-item [routerLink]="['/layout/myTask']"><span><i nz-icon type="flag" nzTheme="outline"></i><span class="nav-text">我的任务</span></span></li>-->
+      <!--<li nz-menu-item [routerLink]="['/layout/deviceCate']"><span><i nz-icon type="scan" nzTheme="outline"></i><span class="nav-text">设备类别</span></span></li>-->
+      <li nz-menu-item [routerLink]="['/layout/statisticalAnalysis']"><span><i nz-icon type="dot-chart" theme="outline"></i><span class="nav-text">统计分析</span></span></li>
+      <li nz-menu-item [routerLink]="['/layout/algorithmModel']"><span><i nz-icon type="radar-chart" nzTheme="outline"></i><span class="nav-text">算法模型</span></span></li>
+      <!--<li nz-menu-item [routerLink]="['/layout/deviceSurvey']"><span><i nz-icon type="pie-chart" theme="outline"></i><span class="nav-text">设备概况</span></span></li>-->
+      <!--<li nz-menu-item [routerLink]="['/layout/statusTime']"><span><i nz-icon type="clock-circle" theme="outline"></i><span class="nav-text">状态时间</span></span></li>-->
+      <!--<li nz-menu-item [routerLink]="['/layout/deviceControlStatus']"><span><i nz-icon type="cluster" theme="outline"></i><span class="nav-text">设备控制状态</span></span></li>-->
+      <!--<li nz-submenu>-->
+        <!--<span title><i nz-icon type="home" theme="outline"></i><span class="nav-text">首页</span></span>-->
+        <!--<ul>-->
+          <!--<li nz-menu-item>Tom</li>-->
+          <!--<li nz-menu-item>Bill</li>-->
+          <!--<li nz-menu-item>Alex</li>-->
+        <!--</ul>-->
+      <!--</li>-->
+      <!--<li nz-submenu>-->
+        <!--<span title><i nz-icon type="database" theme="outline"></i><span class="nav-text">数据</span></span>-->
+        <!--<ul>-->
+          <!--<li nz-menu-item>Team 1</li>-->
+          <!--<li nz-menu-item>Team 2</li>-->
+        <!--</ul>-->
+      <!--</li>-->
+      <!--<li nz-submenu>-->
+        <!--<span title><i nz-icon type="api" theme="outline"></i><span class="nav-text">接口</span></span>-->
+        <!--<ul>-->
+          <!--<li nz-menu-item>Team 1</li>-->
+          <!--<li nz-menu-item>Team 2</li>-->
+        <!--</ul>-->
+      <!--</li>-->
+      <!--<li nz-submenu>-->
+        <!--<span title><i nz-icon type="pie-chart" theme="outline"></i><span class="nav-text">饼图</span></span>-->
+        <!--<ul>-->
+          <!--<li nz-menu-item>Team 1</li>-->
+          <!--<li nz-menu-item>Team 2</li>-->
+        <!--</ul>-->
+      <!--</li>-->
+      <!--<li nz-submenu>-->
+        <!--<span title><i nz-icon type="dashboard" theme="outline"></i><span class="nav-text">仪表</span></span>-->
+        <!--<ul>-->
+          <!--<li nz-menu-item>Team 1</li>-->
+          <!--<li nz-menu-item>Team 2</li>-->
+        <!--</ul>-->
+      <!--</li>-->
+      <!--<li nz-menu-item><span><i nz-icon type="file"></i><span class="nav-text">File</span></span></li>-->
+    </ul>
+  </nz-sider>
+  <nz-layout>
+
+    <nz-content style="margin:0 1px;flex-direction: row;min-height: 100%">
+       <router-outlet></router-outlet>
+    </nz-content>
+    <!--<nz-footer style="text-align: center;">MDC ©2019 Implement By ShangHai ShuRui</nz-footer>-->
+  </nz-layout>
+</nz-layout>
+<ng-template #trigger>
+  <i nz-icon type="up"></i>
+</ng-template>
+

@@ -1,0 +1,113 @@
+<header>
+  <i nz-icon type="folder-open" nzTheme="outline"></i>  <span>修改文档</span>
+</header>
+<div class="content">
+  <div class="contentHeader clearfix">
+    <span>
+      <i nz-icon type="file-word" nzTheme="outline"></i>
+      <span>文档修改</span>
+    </span>
+
+    <nz-button-group>
+      <button nz-button nzType="default" ><i nz-icon type="cloud-upload" nzTheme="outline"></i>上传文档</button>
+      <button nz-button nzType="default" ><i nz-icon type="file" nzTheme="outline"></i> 所有文档</button>
+
+    </nz-button-group>
+  </div>
+  <div class="contentBody">
+    <div class="sider">
+
+      <div class="item">
+        <span>文档名称 <sup>*</sup></span>
+        <input nz-input  [(ngModel)]="fileName" />
+      </div>
+      <div class="item">
+        <span>文档类型 <sup>*</sup></span>
+        <nz-select  [(ngModel)]="fileType" (ngModelChange)="fileTypeChange($event)" nzPlaceHolder="选择文档对应设备类别">
+          <nz-option nzValue="{{item.value}}" nzLabel="{{item.label}}" *ngFor="let item of selectSource"></nz-option>
+          <!--<nz-option nzValue="冲压机" nzLabel="冲压机"></nz-option>-->
+          <!--<nz-option nzValue="焊接机" nzLabel="焊接机" ></nz-option>-->
+        </nz-select>
+      </div>
+      <div class="item">
+        <span>文档分类 <sup>*</sup></span>
+        <nz-select  [(ngModel)]="fileClass"  nzPlaceHolder="文档对应设备品牌" [nzDisabled]="!!!fileType">
+          <nz-option nzValue="{{item.value}}" nzLabel="{{item.label}}" *ngFor="let item of brandSource"></nz-option>
+          <!--<nz-option nzValue="台达" nzLabel="台达"></nz-option>-->
+          <!--<nz-option nzValue="明匠" nzLabel="明匠" ></nz-option>-->
+        </nz-select>
+      </div>
+      <div class="item">
+        <span>文档标签 </span>
+        <input nz-input  [(ngModel)]="value" />
+        <p>多个标签 , 请用逗号分隔</p>
+      </div>
+      <div class="item" style="line-height: 93px">
+        <span>文档简介 </span>
+        <textarea rows="4" nz-input [(ngModel)]="textValue"></textarea>
+      </div>
+      <div class="btnBox">
+        <span nz-wave (click)="edit()">
+          修改
+        </span>
+        <span nz-wave>
+          取消
+        </span>
+      </div>
+    </div>
+    <div class="right">
+
+      <div class="rightBody">
+        <div class="header">
+          <span>温馨提示</span>
+        </div>
+        <div class="tip">
+          <div class="tipItem clearfix">
+            <span>1.</span>
+            <p>带有 <sup>*</sup> 为必填项,同时 <span>建议填写文档标签和文档简介，方便自己和他人更快更准确地找到需求文档。</span></p>
+          </div>
+          <div class="tipItem clearfix">
+            <span>2.</span>
+            <span>允许上传的最大文档为: <span>50.00MB</span></span>
+          </div>
+          <div class="tipItem">
+            <span>3.</span>
+            <span>目前支持的文档类型：</span>
+            <p>
+              <i nz-icon type="file-word" nzTheme="outline"></i>
+              <span>doc，docx，rtf，wps，odt</span>
+            </p>
+            <p>
+              <i nz-icon type="file-ppt" nzTheme="outline"></i>
+              <span>ppt，pptx，pps，ppsx，dps，odp，pot</span>
+            </p>
+            <p>
+              <i nz-icon type="file-excel" nzTheme="outline"></i>
+              <span>xls，xlsx，et，ods</span>
+            </p>
+            <p>
+              <i nz-icon type="file-markdown" nzTheme="outline"></i>
+              <span>epub，umd，chm，mobi</span>
+            </p>
+            <p>
+              <i nz-icon type="file-text" nzTheme="outline"></i>
+              <span>txt</span>
+            </p>
+            <p>
+              <i nz-icon type="file-pdf" nzTheme="outline"></i>
+              <span>pdf</span>
+            </p>
+          </div>
+          <div class="tipItem clearfix">
+            <span>4.</span>
+            <span>上传涉嫌侵权或违法的文档将会被移除</span>
+          </div>
+          <div class="tipItem clearfix">
+            <span>5.</span>
+            <span>上传有问题需要帮助？请查看 帮助 和 意见反馈</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

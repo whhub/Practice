@@ -1,0 +1,81 @@
+$green: #219020;
+$light-blue: #4bb7d5;
+$orange: #ff8d05;
+$danger: #e21e25;
+$border: 1px solid #d9d9d9;
+:host{
+  flex: 1;
+  background-color: white;
+}
+.survey{
+  header{
+    border-bottom: $border;
+    line-height: 40px;
+    font-size: 16px;
+    i{
+      margin-left: 15px;
+      color: $green;
+      margin-right: 5px;
+    }
+  }
+  .toolGroup{
+    line-height: 45px;
+    >span{
+      &:nth-child(1) {
+        float: left;
+        margin-left: 20px;
+      }
+      &:nth-child(2) {
+        float: right;
+        margin-right: 20px;
+        button{
+          margin: 0 3px;
+          color: white;
+          background-color: $green;
+        }
+      }
+    }
+  }
+  .toolBox{
+    margin-bottom: 10px;
+    border: 1px dashed #d9d9d9;
+    line-height: 60px;
+    >span{
+      &:nth-child(1),  &:nth-child(2),  &:nth-child(3) , &:nth-child(4){
+       margin-left: 25px;
+      }
+      &:nth-child(1){
+        >span{
+          margin-right: 5px;
+        }
+      }
+      &:nth-child(2){
+      >span{
+        margin-right: 10px;
+      }
+      }
+      &:nth-child(3){
+        >span{
+          margin-right: 5px;
+        }
+        .ant-input{
+          width: 250px;
+        }
+      }
+      &:nth-child(4){
+        button{
+          margin: 0 3px;
+        }
+      }
+    }
+  }
+}
+:host ::ng-deep  .ant-checkbox + span{
+  padding-left: 2px;
+  padding-right: 2px;
+}
+:host ::ng-deep .ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+  padding: 8px 16px;
+  text-align: center;
+  border: 1px dashed #d9d9d9;
+}

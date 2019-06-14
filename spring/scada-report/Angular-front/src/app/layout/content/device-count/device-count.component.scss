@@ -1,0 +1,123 @@
+$light-blue: #4bb7d5;
+$green: #219020;
+$orange: #ff8d05;
+$danger: #e21e25;
+$online: rgb(139, 195, 74);
+$wait: rgb(255, 152, 0);
+$offline: rgb(170, 170, 170);
+$error: rgb(229, 28, 35);
+:host{
+  flex: 1;
+}
+header{
+  line-height: 40px;
+  font-size: 16px;
+  //border-left: 1px solid #d9d9d9;
+  background-color: white;
+  i{
+    margin-left: 15px;
+    color: rgb(37, 155, 36);
+    font-size: 20px;
+  }
+  span{
+    margin-left: 5px;
+    line-height: 24px;
+    border-bottom: 1.5px solid rgb(37, 155, 36);
+    display: inline-block;
+    width: 80px;
+    font-size: 13px;
+    font-weight: bolder;
+  }
+}
+.content{
+  >.up{
+    margin: 20px 20px;
+    .gutter-box{
+      background-color: white;
+      .item{
+        .header{
+          line-height: 35px;
+          border-bottom: 1px solid #d9d9d9;
+          >span{
+             margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+  >.down{
+    margin: 20px 20px;
+    background-color: white;
+    >.toolbox{
+      padding: 10px 0;
+      >nz-input-group{
+        width: 200px;
+        margin-left: 15px;
+      }
+      >button{
+        margin-left: 15px;
+        &:nth-child(1){
+          background-color: rgb(37, 155, 36);
+          border-color: rgb(37, 155, 36);
+          color: white;
+        }
+        &:nth-child(3){
+          border-color: rgb(15, 142, 233);
+          background-color: rgb(15, 142, 233);
+          color: white;
+        }
+      }
+      >nz-select{
+        margin-left: 15px;
+      }
+    }
+    >.tableBox{
+    :host ::ng-deep &  .ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+        font-size: 12px;
+      padding: 16px 0;
+      text-align: center;
+      }
+    :host ::ng-deep &  .toolsTd{
+        >i{
+          font-size: 16px;
+          margin: 0 2px;
+          cursor: pointer;
+          &:focus{
+            outline: none;
+          }
+          &:nth-child(1){
+            color: $green;
+          }
+          &:nth-child(2){
+            color: $danger;
+            cursor: not-allowed;
+          }
+          &:nth-child(3){
+            color: #1890ff;
+          }
+        }
+      }
+      .statusTd{
+        >span{
+          display: inline-block;
+          padding: 2px 14px;
+          color: white;
+          border-radius: 2px;
+          &.using{
+            background-color: $green;
+          }
+          &.waste{
+            background-color: $danger;
+          }
+          &.stop{
+            background-color: rgb(89, 80, 80);
+          }
+          &.free{
+            color: black;
+            border: 1px solid #d9d9d9;
+          }
+        }
+      }
+    }
+  }
+}

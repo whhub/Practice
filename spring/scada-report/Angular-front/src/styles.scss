@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.clearfix:after {
+  display:block;
+  clear:both;
+  content:"";
+  visibility:hidden;
+  height:0
+}
+.clearfix {
+  zoom:1
+}
+*{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body{
+  min-width: 1300px;
+}

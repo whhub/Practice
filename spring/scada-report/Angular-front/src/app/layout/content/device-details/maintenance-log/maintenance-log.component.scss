@@ -1,0 +1,212 @@
+:host{
+  flex: 1;
+
+}
+.log{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  .header{
+    border-bottom: 1px solid #d9d9d9;
+    background-color: white;
+    padding: 8px 0;
+    >div{
+      float: left;
+      &:nth-child(1),&:nth-child(2){
+        margin-top: 5px;
+        margin-left: 15px;
+      }
+      &:nth-child(1){
+        >i{
+          font-size: 18px;
+          margin-right: 5px;
+        }
+        >span{
+          font-size: 14px;
+        }
+      }
+      &:nth-child(2){
+        >span{
+          font-size: 13px;
+           &.active{
+             background-color: #27B6AF;
+             color: #FFFFFF;
+           }
+          cursor: pointer;
+          display: inline-block;
+          padding: 2px 14px;
+          margin: 0 3px;
+        }
+      }
+      &:nth-child(3){
+        float: right;
+      }
+    }
+  }
+  .body{
+    flex: 1;
+    background-color: white;
+    padding-top: 20px;
+    .item{
+      padding: 40px 0 0 0 ;
+      position: relative;
+      .line{
+        top: 18px;
+        height: 210px;
+        position: absolute;
+        left: 50%;
+        width: 2px;
+        border-left: 1px solid #d9d9d9;
+      }
+      >i{
+        margin-left: -14px;
+        position: absolute;
+        left: 50%;
+        font-size: 30px;
+        top: 105px;
+        svg{
+          background-color: whitesmoke;
+        }
+      }
+      &.odd{
+        .left{
+          position: relative;
+          right:-60px;
+          width: 450px;
+          top: 28px;
+          >div{
+            width: 400px;
+
+            box-shadow: 0 0 2px rgba(0,0,0,.25);
+            background-color: rgb(240,240,240);
+            >.header{
+              background-color: rgb(240,240,240);
+              >span {
+                &:nth-child(1){
+                  float: left;
+                  margin-left: 15px;
+                }
+                &:nth-child(2){
+                  float: right;
+                  margin-right: 15px;
+                  font-size: 12px;
+                 >span{
+                   color: #27B6AF;
+                   font-weight: bolder;
+                   font-size: 13px;
+                 }
+                }
+              }
+            }
+            >.body{
+              background-color: rgb(240,240,240);
+              >p{
+                margin-bottom: 0;
+                margin-left: 15px;
+                font-size: 13px;
+              }
+            }
+            >.foot{
+              text-align: center;
+              margin: 10px 0 10px 5px;
+              padding-bottom: 8px;
+              >span{
+                margin: 0 10px;
+                font-size: 12px;
+              }
+            }
+          }
+
+        }
+        .right{
+          position: relative;
+          left: 50%;
+          width: 300px;
+          margin-left: 30px;
+          top: -67px;
+          >p{
+            margin-bottom: 0;
+            &:nth-child(1){
+              font-size: 16px;
+              font-weight: bolder;
+            }
+            &:nth-child(2){
+              font-size: 13px;
+            }
+          }
+        }
+      }
+      &.even{
+        .left{
+          position: relative;
+          left: 50%;
+          width: 300px;
+          margin-left: -115px;
+          top: 54px;
+          >p{
+            margin-bottom: 0;
+            &:nth-child(1){
+              font-size: 16px;
+              font-weight: bolder;
+            }
+            &:nth-child(2){
+              font-size: 13px;
+            }
+          }
+        }
+        .right{
+          position: relative;
+          left:50%;
+          width: 450px;
+          top: -5px;
+          margin-left: 60px;
+          >div{
+            width: 400px;
+
+            box-shadow: 0 0 2px rgba(0,0,0,.25);
+            background-color: #FFFFFF;
+            >.header{
+              background-color: rgb(240,240,240);
+              >span {
+                &:nth-child(1){
+                  float: left;
+                  margin-left: 15px;
+                }
+                &:nth-child(2){
+                  float: right;
+                  margin-right: 15px;
+                  font-size: 12px;
+                  >span{
+                    color: #27B6AF;
+                    font-weight: bolder;
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+            >.body{
+              background-color: rgb(240,240,240);
+              >p{
+                margin-bottom: 0;
+                margin-left: 15px;
+                font-size: 13px;
+              }
+            }
+            >.foot{
+              text-align: center;
+              background-color: rgb(240,240,240);
+              padding: 10px 0 10px 5px;
+
+              >span{
+                margin: 0 10px;
+                font-size: 12px;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+}

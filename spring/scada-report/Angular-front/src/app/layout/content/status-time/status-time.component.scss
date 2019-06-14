@@ -1,0 +1,96 @@
+$green: #219020;
+$light-blue: #4bb7d5;
+$orange: #ff8d05;
+$danger: #e21e25;
+$border: 1px solid #d9d9d9;
+:host{
+  flex: 1;
+  background-color: white;
+}
+header{
+  line-height: 60px;
+  font-size: 16px;
+  >span{
+    &:nth-child(1) {
+      float: left;
+      margin-left: 15px;
+      i{
+        margin-right: 5px;
+      }
+    }
+    &:nth-child(2) {
+      float: right;
+      margin-right: 15px;
+      i{
+        font-size: 25px;
+      }
+    }
+  }
+}
+.tableBox{
+  tbody{
+    .run ,.off, .err, .offline{
+      >i{
+        font-size: 25px;
+      }
+    }
+    .run{
+      i{
+        color: $green;
+      }
+    }
+    .off{
+      i{
+        color: $orange;
+      }
+    }
+    .err{
+      i{
+        color: $danger;
+      }
+    }
+    .deviceName{
+      >span{
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+    >tr{
+      td{
+        &:nth-child(5),&:nth-child(7),&:nth-child(9){
+          font-size: 25px;
+        }
+      }
+    }
+    .active{
+      font-weight: bolder;
+    }
+    .runTimePercent.active{
+      color: $green;
+    }
+    .offTimePercent.active{
+      color: orange;
+    }
+    .errTimePercent.active{
+      color: $danger;
+    }
+  }
+}
+:host  ::ng-deep .ant-table-pagination.ant-pagination{
+  margin: 16px 10px;
+}
+:host  ::ng-deep{
+  .ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+    padding: 5px 16px;
+    text-align: center;
+
+  }
+  .ant-table-thead > tr > th{
+    background-color: #001529;
+    color: white;
+    border-left: 1px solid #d9d9d9;
+  }
+  .ant-table-tbody > tr > td{
+    border-left: 1px dashed #d9d9d9;
+  }
+}

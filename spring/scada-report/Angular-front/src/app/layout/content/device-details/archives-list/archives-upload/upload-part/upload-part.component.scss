@@ -1,0 +1,63 @@
+.uploadPart{
+  width: 65%;
+  margin: 0 auto;
+  .header{
+    line-height: 40px;
+    >span{
+
+      color: #27B6AF;
+      font-size: 16px;
+    }
+  }
+  .Content{
+   >div{
+     margin: 10px 0;
+     >input{
+       width: 350px;
+       margin-left: 45px;
+     }
+     >nz-upload{
+       margin-left: 45px;
+       .ant-upload-list-item{
+         :host ::ng-deep &{
+           margin-right: 60px;
+         }
+       }
+     }
+     >span{
+       &:nth-child(1){
+         color: #27B6AF;
+       }
+       &:nth-child(2){
+         margin-left: 40px;
+         >span{
+           cursor: pointer;
+           margin: 0 5px;
+           padding: 0 10px;
+           display: inline-block;
+           &.active{
+             background-color: #27B6AF;
+             color: #FFFFFF;
+           }
+         }
+       }
+     }
+   }
+  }
+  .footer{
+    margin-bottom: 20px;
+    >span{
+      padding: 3px 14px;
+      cursor: pointer;
+      &:nth-child(1){
+        background-color: #27B6AF;
+        color: #FFFFFF;
+        margin-left: 101px;
+
+      }
+      &:nth-child(2){
+        margin-left: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+<div class="contentHeader clearfix" >
+    <span>
+      <i nz-icon type="code" theme="outline"></i>
+      <span>故障代码管理</span>
+    </span>
+     <span nz-wave (click)="addErrorCode()">
+      <i nz-icon type="plus-circle" theme="outline"></i>
+      <span>故障代码</span>
+    </span>
+  <div>
+    <nz-input-group  [nzPrefix]="prefixTemplate">
+      <input type="text" nz-input placeholder="搜索文档" />
+    </nz-input-group>
+    <ng-template #prefixTemplate><i nz-icon type="search"></i></ng-template>
+
+  </div>
+</div>
+<div class="tableDiv">
+  <div class="header">
+    <span>故障码列表</span>
+  </div>
+  <nz-table #basicTable [nzData]="listOfData" [nzShowPagination]="false">
+    <thead>
+    <tr>
+      <th><span>故障代码</span><sup>*</sup></th>
+      <th><span>是否启用</span><sup>*</sup></th>
+      <th><span>故障说明</span><sup>*</sup></th>
+      <th>备注</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td *ngIf="data.editAble">
+        <input nz-input  [(ngModel)]="data.errorCode" />
+      </td>
+      <td *ngIf="!data.editAble">
+       {{data.errorCode}}
+      </td>
+      <td *ngIf="data.editAble">
+        <nz-select style="width: 100px;" [(ngModel)]="data.isUse"  nzPlaceHolder="Choose">
+          <nz-option nzValue="true" nzLabel="是"></nz-option>
+          <nz-option nzValue="false" nzLabel="否"></nz-option>
+
+        </nz-select>
+      </td>
+      <td *ngIf="!data.editAble">
+        {{data.isUse? '是':'否'}}
+      </td>
+      <td *ngIf="data.editAble">
+        <input nz-input  [(ngModel)]="data.errMarks" />
+      </td>
+      <td *ngIf="!data.editAble">
+        {{data.errMarks}}
+      </td>
+      <td *ngIf="data.editAble">
+        <input nz-input  [(ngModel)]="data.description" />
+      </td>
+      <td *ngIf="!data.editAble">
+        {{data.description}}
+      </td>
+      <td class="deleteTd" *ngIf="data.editAble">
+
+        <button nz-button nzType="primary" [attr.data-id]="data.id" [attr.data-index]="data.index" (click)="submit($event)"><i nz-icon type="check"></i></button>
+        <button nz-button nzType="primary" [attr.data-id]="data.id"  [attr.data-index]="data.index" (click)="cancel($event)"><i nz-icon type="close"></i></button>
+      </td>
+      <td class="deleteTd" *ngIf="!data.editAble">
+
+        <button nz-button nzType="primary" (click)="data.editAble = true"><i nz-icon type="edit"></i></button>
+        <button nz-button nzType="primary" [attr.data-id]="data.id" (click)="deleteErrorCode($event)"><i nz-icon type="minus"></i></button>
+      </td>
+    </tr>
+    <tr >
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    </tbody>
+  </nz-table>
+</div>

@@ -1,0 +1,292 @@
+:host{
+  flex: 1;
+}
+header{
+  line-height: 40px;
+  font-size: 16px;
+  //border-left: 1px solid #d9d9d9;
+  background-color: white;
+  i{
+    margin-left: 15px;
+    color: rgb(37, 155, 36);
+    font-size: 20px;
+  }
+  span{
+    margin-left: 5px;
+    line-height: 24px;
+    border-bottom: 1.5px solid rgb(37, 155, 36);
+    display: inline-block;
+    width: 80px;
+    font-size: 13px;
+    font-weight: bolder;
+  }
+}
+.content{
+  >div{
+    padding: 15px 0;
+    background-color: #FFFFFF;
+    margin: 10px 0;
+    &:nth-child(1),&:nth-child(5),&:nth-child(6){
+      >div{
+        &:nth-child(3){
+          >div{
+            >span{
+              width: 120px;
+              background-color: #FFFFFF;
+              border: 1px solid #e8e8e8;
+              display: inline-block;
+              text-align: center;
+              line-height: 30px;
+              margin-right: 35px;
+              cursor: pointer;
+              &.active{
+                background-color: #00c1de;
+                color: #FFFFFF;
+                border-color: #00c1de;
+              }
+            }
+          }
+
+        }
+      }
+      &~div{
+        >div{
+          float: left;
+          &:nth-child(1){
+            margin-left: 30px;
+            i{
+              font-size: 24px;
+            }
+          }
+          &:nth-child(2){
+            margin-left: 35px;
+            >span{
+              display: inline-block;
+              width: 90px;
+              font-size: 18px;
+              color: rgba(0,0,0,0.65);
+            }
+          }
+          &:nth-child(3){
+            margin-left: 93px;
+          }
+        }
+      }
+    }
+    &:nth-child(2), &:nth-child(3), &:nth-child(4){
+      >div{
+        &:nth-child(3){
+          >input{
+
+
+            width: 700px;
+          }
+          >p{
+            margin-bottom: 0;
+            font-size: 13px;
+            color: rgb(182,182,182);
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+    &:nth-child(3){
+      >div{
+        &:nth-child(2){
+          sup{
+            font-size: 18px;
+            color: #E32C32;
+          }
+
+          p{
+            margin-bottom: 0;
+            font-size: 13px;
+            color: rgb(182,182,182);
+          };
+        }
+        &:nth-child(3){
+          >div{
+            &:nth-child(1){
+              >span{
+                width: 138px;
+                background-color: #FFFFFF;
+                border: 1px solid #e8e8e8;
+                display: inline-block;
+                text-align: center;
+                line-height: 30px;
+                margin-right: 35px;
+                cursor: pointer;
+                &.active{
+                  background-color: #00c1de;
+                  color: #FFFFFF;
+                  border-color: #00c1de;
+                }
+              }
+            }
+            &:nth-child(2){
+              margin: 10px 0;
+            }
+            &:nth-child(3){
+              >p{
+                margin-bottom: 0;
+                font-size: 13px;
+
+                margin-top: 15px;
+                color: rgba(98, 215, 234, 1);
+                >span{
+                  margin: 5px 0;
+                  display: inline-block;
+                  background-color: rgb(252, 242, 233);
+                  width: 120px;
+                  text-align: center;
+                  line-height: 20px;
+                  color: rgb(182,182,182);
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+    &:nth-child(7){
+      >div{
+        &:nth-child(3){
+          >div{
+            width: 700px;
+          }
+        }
+      }
+    }
+    &:nth-child(1){
+      >div{
+        &:nth-child(3){
+          width: 700px;
+          nz-select{
+            width: 100%;
+          }
+          nz-input-group{
+        :host ::ng-deep  &    .ant-input-group-addon{
+              padding: 0;
+              border: none;
+          .ant-btn{
+            border-radius: 0 4px 4px 0;
+          }
+            }
+          }
+        }
+      }
+    }
+    >div{
+      float: left;
+      &:nth-child(1){
+        margin-left: 30px;
+        i{
+          font-size: 24px;
+        }
+      }
+      &:nth-child(2){
+        width: 98px;
+        margin-left: 35px;
+        >span{
+          display: inline-block;
+          width: 90px;
+          font-size: 18px;
+          color: rgba(0, 0, 0, 0.65);
+        }
+        >sup{
+          font-size: 18px;
+          color: #E32C32;
+        }
+        >p{
+          margin-bottom: 0;
+          font-size: 13px;
+          color: #b6b6b6;
+        }
+      }
+      &:nth-child(3){
+        margin-left: 93px;
+      }
+    }
+  }
+}
+.saveBtn{
+  margin-top: 15px;
+  text-align: center;
+  >span{
+
+    display: inline-block;
+    padding: 4px 15px;
+
+    cursor: pointer;
+    &:nth-child(1){
+      background-color: #00c1de;
+      color: #FFFFFF;
+      &:active,&:focus,&:hover{
+        background-color: rgb(0, 192, 200);
+      }
+    }
+
+
+  }
+}
+.brandModal{
+  .searchBox{
+    >input{
+      width: 200px;
+      margin-left: 15px;
+    }
+    >button{
+      background-color: rgba(170,170,170,0.57);
+      margin-left: 15px;
+      &:hover,&:focus{
+        color: black;
+        border-color: rgba(170,170,170,0.57);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+:host ::ng-deep .ant-tree {
+  overflow: hidden;
+  margin: 0 -24px;
+  padding: 0 24px;
+}
+
+:host ::ng-deep .ant-tree li {
+  padding: 4px 0 0 0;
+}
+
+.custom-node {
+  cursor: pointer;
+  line-height: 24px;
+  margin-left: 4px;
+  display: inline-block;
+  margin: 0 -1000px;
+  padding: 0 1000px;
+}
+
+.active {
+  //background: #1890ff;
+  //color: #fff;
+}
+
+.file-name,
+.folder-name {
+  margin-left: 4px;
+}
+
+.file-desc,
+.folder-desc {
+  padding: 0 8px;
+  display: inline-block;
+  background: #87ceff;
+  color: #ffffff;
+  position: relative;
+  left: 12px;
+}

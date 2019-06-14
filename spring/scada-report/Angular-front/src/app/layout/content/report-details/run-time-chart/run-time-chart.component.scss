@@ -1,0 +1,209 @@
+$green: #219020;
+$light-blue: #4bb7d5;
+$orange: #ff8d05;
+$danger: #e21e25;
+$border: 1px solid #d9d9d9;
+.tableBox{
+  tbody{
+    .run ,.off, .err, .offline{
+      >i{
+        font-size: 25px;
+      }
+    }
+    .run{
+      i{
+        color: $green;
+      }
+    }
+    .off{
+      i{
+        color: $orange;
+      }
+    }
+    .err{
+      i{
+        color: $danger;
+      }
+    }
+    .deviceName{
+      >span{
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+    .line{
+      display: inline-block;
+      width: 6px;
+      height: 35px;
+      background-color: #a9a9a9;
+      border-radius: 3px;
+    }
+    .line.active{
+      background-color: #219020;
+    }
+    .round{
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      border: 6px solid #a9a9a9;
+      border-radius: 17px;
+    }
+    .round.active{
+      border: 6px solid #219020;
+    }
+    tr{
+      td{
+        //&:nth-child(6){
+        //  font-size: 20px;
+        //  color: $green;
+        //}
+        //&:nth-child(7){
+        //  font-size: 20px;
+        //  color: #a9a9a9;
+        //  i{
+        //    font-size: 24px;
+        //    font-weight: bolder;
+        //    &.green{
+        //      color: $green;
+        //      &.green+span{
+        //        color: $green;
+        //      }
+        //    }
+        //    &.yellow{
+        //      color: $orange;
+        //      &.yellow+span{
+        //        color: $orange;
+        //      }
+        //    }
+        //  }
+        //
+        //}
+        //&:nth-child(8),&:nth-child(9),&:nth-child(10),&:nth-child(11),&:nth-child(12) {
+        //  color: #a9a9a9;
+        //  >i{
+        //    font-size: 20px;
+        //
+        //  }
+        //  >div{
+        //    >span{
+        //      font-size: 12px;
+        //    }
+        //  }
+        //  &.active{
+        //    color: $green;
+        //  }
+        //}
+        //&:nth-child(13){
+        //  >div{
+        //    &:nth-child(1){
+        //      >span{
+        //        font-weight: bolder;
+        //        font-size: 15px;
+        //      }
+        //    }
+        //  }
+        //}
+        //&:nth-child(14){
+        //  color: $green;
+        //  >i{
+        //    font-size: 24px;
+        //    font-weight: bolder;
+        //    margin-right: 10px;
+        //    &.normal{
+        //      color: $green;
+        //      +span{
+        //        color: $green;
+        //      }
+        //    }
+        //    &.warning{
+        //      color: orange;
+        //      +span{
+        //        color: orange;
+        //        &+span{
+        //          display: block;
+        //          color: #a9a9a9;
+        //        }
+        //      }
+        //    }
+        //  }
+        //  >span{
+        //    font-weight: bolder;
+        //    font-size: 15px;
+        //  }
+        //}
+
+      }
+    }
+  }
+}
+:host  ::ng-deep{
+  .ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+    padding: 0 16px;
+    text-align: center;
+
+  }
+  .ant-table-thead > tr > th{
+    background-color: #001529;
+    color: white;
+    border-left: 1px solid #d9d9d9;
+  }
+  .ant-table-tbody > tr > td{
+    border-left: 1px dashed #d9d9d9;
+    >.up{
+      line-height: 30px;
+      >span{
+        &:nth-child(1){
+          float: left;
+        }
+        &:nth-child(2){
+          float: right;
+        }
+      }
+    }
+    >.down{
+      >div{
+        float: left;
+        &:nth-child(1){
+          width: 30%;
+          text-align: center;
+        }
+        &:nth-child(2){
+          width: 60%;
+          margin-left: 8%;
+
+        }
+      }
+    }
+    &:nth-child(4){
+      >.down{
+        >.downRight{
+             .ant-progress-inner{
+               background-color: rgb(205, 232, 205);
+          }
+
+        }
+      }
+    }
+    &:nth-child(5){
+      >.down{
+        >.downRight{
+          .ant-progress-inner{
+            background-color: rgb(253, 233, 205);
+          }
+
+        }
+      }
+    }
+    &:nth-child(6){
+      >.down{
+        >.downRight{
+          .ant-progress-inner{
+            background-color: rgb(240, 201, 203);
+          }
+
+        }
+      }
+    }
+  }
+
+}

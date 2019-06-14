@@ -1,0 +1,501 @@
+$light-blue: #4bb7d5;
+$green: #219020;
+$orange: #ff8d05;
+$danger: #e21e25;
+$online: rgb(139, 195, 74);
+$wait: rgb(255, 152, 0);
+$offline: rgb(170, 170, 170);
+$error: rgb(229, 28, 35);
+:host{
+  flex: 1;
+
+}
+header{
+  line-height: 40px;
+  font-size: 16px;
+  //border-left: 1px solid #d9d9d9;
+  background-color: white;
+  i{
+    margin-left: 15px;
+    color: rgb(37, 155, 36);
+    font-size: 20px;
+  }
+  span{
+    margin-left: 5px;
+    line-height: 24px;
+    border-bottom: 1.5px solid rgb(37, 155, 36);
+    display: inline-block;
+    width: 80px;
+    font-size: 13px;
+    font-weight: bolder;
+  }
+}
+.up{
+
+  //background-color: white;
+  margin: 10px 10px;
+  .upHeader{
+    background-color: white;
+    line-height: 56px;
+    >div{
+      float: right;
+      margin-right: 15px;
+      nz-switch{
+        .ant-switch-checked{
+        :host ::ng-deep &{
+          background-color: #5677fc
+        }  ;
+        }
+      }
+      >span{
+        margin-right: 10px;
+
+      }
+    }
+    >span{
+      float: left;
+      font-size: 16px;
+      margin-left: 15px;
+    }
+  }
+  .upbody{
+    background-color: white;
+    .run{
+      >div{
+        >div{
+          &:nth-child(1){
+            float: left;
+            width: 50px;
+            margin-left: 22px;
+            >img{
+              width: 100%;
+            }
+          }
+          &:nth-child(2){
+            float: right;
+            margin-top: 5px;
+            margin-right: 118px;
+            >p{
+              margin-bottom: 0;
+              color: rgb(170,170,170);
+              font-size: 13px;
+            }
+            >span{
+              color: #101010;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .upFoot{
+    background-color: white;
+    padding: 0 10px;
+  }
+}
+//.allView{
+//  background-color: black;
+//  height: 87px;
+//  .viewHeader{
+//    >span{
+//      color: white;
+//      line-height: 30px;
+//      &:nth-child(1){
+//        float: left;
+//        margin-left: 40px;
+//      }
+//      &:nth-child(2){
+//        float: right;
+//        margin-right: 40px;
+//      }
+//    }
+//  }
+//  .allViewData{
+//    .item{
+//      padding-bottom: 27px;
+//      width: 260px;
+//      margin: 5px auto;
+//      border-radius: 5px;
+//      background-color: white;
+//      .itemHeader{
+//        text-align: right;
+//        >span{
+//          color: white;
+//          background-color: $light-blue;
+//          display: inline-block;
+//          padding: 0 5px;
+//          border-radius: 3px;
+//          margin-right: 5px;
+//          margin-top: 5px;
+//        }
+//      }
+//      .itemCon{
+//        >i{
+//          font-size: 50px;
+//          color: $green;
+//          margin-left: 20px;
+//          float: left;
+//        }
+//        >span{
+//          float: left;
+//          margin-left: 15px;
+//          >span{
+//            display: block;
+//            &:nth-child(1){
+//              font-size: 16px;
+//            }
+//            &:nth-child(2){
+//              font-size: 14px;
+//              color: #4bb7d5;
+//            }
+//          }
+//
+//        }
+//      }
+//      .itemCon.pause{
+//        >i{
+//          color: $orange;
+//        }
+//      }
+//      .itemCon.warning{
+//       >i{
+//         color: $danger;
+//       }
+//      }
+//      .itemCon.offline{
+//        >i{
+//          color: gray;
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//
+//
+//:host ::ng-deep .demo-chart {
+//  height: 400px;
+//}
+//.chartBox{
+//  margin-top: 60px;
+//  .ant-row{
+//    &:nth-child(1){
+//      background-color: white;
+//    }
+//    &:nth-child(2){
+//      margin-top: 5px;
+//    }
+//  }
+//  .header{
+//    background-color: white;
+//    line-height: 65px;
+//    font-size: 16px;
+//    >span{
+//      margin-left: 30px;
+//      i{
+//        font-size: 30px;
+//        margin-left: 5px;
+//      }
+//    }
+//
+//  }
+//  .logGroup{
+//    height: 398px;
+//    background-color: white;
+//    margin-top: 2px;
+//    >ul{
+//      >li{
+//        line-height: 26px;
+//        border-bottom: 1px dashed $light-blue;
+//        span{
+//          &:nth-child(1){
+//            float: left;
+//            margin-left: 15px;
+//          }
+//          &:nth-child(2){
+//            float: left;
+//            margin-left: 30px;
+//            color: $green;
+//          }
+//          &:nth-child(3){
+//            float: right;
+//            margin-right: 15px;
+//          }
+//        }
+//      }
+//    }
+//  }
+//  .realtime{
+//    >span{
+//      &:nth-child(1){
+//        float: left;
+//      }
+//      &:nth-child(2){
+//        float: right;
+//        color: $green;
+//        margin-right: 30px;
+//        font-weight: bolder;
+//        font-size: 18px;
+//      }
+//    }
+//  }
+//  .progressDiv{
+//    .progressDivItem{
+//      margin: 35px 0;
+//    }
+//  }
+//  .pieDiv{
+//    background-color: white;
+//    margin-top: 2px;
+//  }
+//}
+.percent{
+  background-color: white;
+  .header{
+    line-height: 40px;
+    border-bottom: 1px solid #d9d9d9;
+    >span{
+      margin-left: 15px;
+    }
+  }
+  .pieDiv{
+
+  }
+}
+.analyse{
+  background-color: white;
+  margin-top: 10px;
+  .header{
+    line-height: 40px;
+    border-bottom: 1px solid #d9d9d9;
+    >span{
+      margin-left: 15px;
+    }
+  }
+  .body{
+    padding-top: 13px;
+    .body_left{
+      float: left;
+      margin-left: 25px;
+    }
+    .body_right{
+      float: right;
+      font-size: 13px;
+      margin-top: 12px;
+      margin-right: 25px;
+      >p{
+        margin-bottom: 0;
+        >span{
+          &:nth-child(1){
+            font-weight: bolder;
+            font-size: 14px;
+          }
+          &:nth-child(3){
+            font-size: 12px;
+          }
+        }
+        >i{
+          font-size: 12px;
+          margin: 0 4px;
+        }
+        &:nth-child(2){
+          >span{
+            &:nth-child(1){
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              border-radius: 5px;
+              border: 2px solid;
+            }
+            &:nth-child(2){
+              margin-top: 2px;
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+      &.upPart{
+        >p{
+          &:nth-child(1){
+            >i{
+              color: $green;
+            }
+            >span{
+              &:nth-child(3){
+                color: $green;
+              }
+            }
+          }
+          &:nth-child(2){
+            >span{
+              &:nth-child(1){
+                border-color: $green;
+              }
+            }
+          }
+        }
+      }
+      &.downPart{
+        >p{
+          &:nth-child(1){
+            >i{
+              color: $orange;
+            }
+            >span{
+              &:nth-child(3){
+                color: $orange;
+              }
+            }
+          }
+          &:nth-child(2){
+            >span{
+              &:nth-child(1){
+                border-color: $orange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.down{
+  background-color: white;
+
+  margin: 15px 10px 0 10px;
+  .deviceMonitor{
+    .header{
+      line-height: 46px;
+      >span{
+        &:nth-child(1){
+          float: left;
+          margin-left: 20px;
+        }
+      &:nth-child(2), &:nth-child(3){
+          float: right;
+          margin-right: 20px;
+        }
+      }
+    }
+    nz-table{
+      .statusTd{
+        >div{
+          float: left;
+          &:nth-child(1){
+            margin-top: 5px;
+            >span{
+              &:nth-child(1){
+                text-align: center;
+                line-height: 29px;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                border-radius: 15px;
+                color: white;
+                border: 1px solid;
+                &.online{
+                  background-color: $online;
+                  border-color: $online;
+                }
+                &.wait{
+                  background-color: $wait;
+                  border-color: $wait;
+                }
+                &.offline{
+                  background-color: $offline;
+                  border-color: $offline;
+                }
+                &.error{
+                  background-color: $error;
+                  border-color: $error;
+                }
+              }
+
+            }
+          }
+          &:nth-child(2){
+            margin-left: 10px;
+           >span{
+             font-size: 13px;
+           }
+            >p{
+              font-size: 12px;
+              margin-bottom: 0;
+              i{
+                &.online{
+                  color: $online
+                }
+                &.wait{
+                  color: $wait;
+                }
+                &.offline{
+                  color: $offline;
+                }
+                &.error{
+                  color: $error;
+                }
+                margin-right: 5px;
+              }
+              >span{
+                 color:rgba(170, 170, 170, 1)
+              }
+
+            }
+          }
+        }
+
+
+      }
+      .tagTd{
+        >span{
+          display: inline-block;
+          width: 85px;
+          line-height: 27px;
+          text-align: center;
+          color: white;
+          &.online{
+            background-color: $online;
+          }
+          &.offline{
+            background-color: $offline;
+          }
+          &.wait{
+            background-color: $wait;
+          }
+          &.error{
+            background-color: $error;
+          }
+        }
+      }
+      .listTd{
+        i{
+          font-size: 24px;
+          cursor: pointer;
+        }
+      }
+      .dashboardTd{
+        >i{
+          font-size: 24px;
+          margin-right: 10px;
+        }
+        >span{
+
+        }
+      }
+      .changeTd{
+        >span{
+          &:nth-child(2){
+            &.up{
+              color: green;
+            }
+            &.down{
+              color: $danger;
+              margin-left: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

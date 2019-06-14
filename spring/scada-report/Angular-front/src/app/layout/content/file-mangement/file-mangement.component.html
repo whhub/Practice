@@ -1,0 +1,65 @@
+<header>
+  <i nz-icon type="folder-open" nzTheme="outline"></i>  <span>档案管理</span>
+</header>
+<div class="content">
+
+  <div class="contentBody">
+    <div class="sider">
+      <div class="siderInfo">
+        <div>
+          <span>设备类别</span>
+        </div>
+        <div class="clearfix">
+          <div class="addBtn">
+            <span class="title" nz-wave (click)="isDropBoxOpen = !isDropBoxOpen" >
+              <i nz-icon type="plus" theme="outline"></i>
+              <span>新增</span>
+              <span>
+                <i nz-icon type="down" theme="outline"></i>
+              </span>
+            </span>
+            <div class="dropBox" [@collapseMotion] = "isDropBoxOpen ? 'expanded': 'hidden'">
+              <ul>
+                <li [routerLink]="['/layout/addCate']">
+                  类别
+                </li>
+                <li [routerLink]="['/layout/addBrand']">
+                  品牌
+                </li>
+              </ul>
+            </div>
+          </div>
+          <span nz-wave> <i nz-icon type="cloud-upload" theme="outline"></i> 导入</span>
+        </div>
+        <div>
+          <span>
+            <span>种类 :</span> <span>{{siderSource.length}}</span>
+          </span>
+          <span>
+            <span>品牌 :</span> <span>{{brandCount}}</span>
+          </span>
+        </div>
+      </div>
+      <ul nz-menu [nzMode]="'inline'" style="width: 200px;">
+        <li nz-menu-item [routerLink]="['/layout/fileMangement/home']">
+          <span title><i nz-icon type="appstore"></i> 所有文档</span>
+        </li>
+        <li nz-menu-item>
+          <span title><i nz-icon type="delete"></i> 文档回收站</span>
+        </li>
+        <li nz-submenu *ngFor="let item of siderSource">
+          <span title ><i nz-icon type="appstore"></i> {{item.typeName}}</span>
+          <ul class="brandUl">
+            <li nz-menu-item  *ngFor="let child of item.children" [attr.brandId]="child.id" [attr.brandName]="child.brandName"  [attr.typeId]="item.id" (click)="goSingleBrandDetails($event)">{{child.brandFullName}}</li>
+            <!--<li nz-menu-item [routerLink]="['/layout/fileMangement/fileDetails']">B品牌</li>-->
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+    <div class="right">
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
+</div>

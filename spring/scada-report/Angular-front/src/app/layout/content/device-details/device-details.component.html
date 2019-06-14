@@ -1,0 +1,97 @@
+<header>
+  <i nz-icon type="desktop" nzTheme="outline"></i>  <span>设备详情</span>
+</header>
+<div class="content">
+  <div class="sider">
+    <a class="clearfix" >
+      <div class="imgBox">
+        <img src="../../../../assets/image/back.png" alt="">
+      </div>
+      <span>返回应用列表</span>
+    </a>
+    <div class="itemGroup">
+
+      <div class="item" *ngFor="let item of source">
+        <div class="itemHeader clearfix"  >
+          <i nz-icon type="switcher" theme="outline"></i>
+          <i nz-icon type="plus" theme="outline"  (click)="switch($event)" [attr.data-index]="item.index" *ngIf="!item.isOpen"></i>
+          <i nz-icon type="minus" theme="outline" (click)="switch($event)" [attr.data-index]="item.index" *ngIf="item.isOpen"></i>
+          <span>{{item.name}}</span>
+          <div class="service">
+            <p>{{item.count}}</p>
+            <p>数量</p>
+          </div>
+        </div>
+        <div class="itemCon" [@collapseMotion]="item.isOpen ? 'expanded': 'hidden'">
+          <ul>
+            <li *ngFor="let child of item.children" [attr.data-deviceNum]="child.deviceNum"  [attr.data-cate]="item.name" [attr.data-name]="child.service_name" (click)="goDetails($event)"  appGetActive>
+              <i nz-icon type="laptop" theme="outline"></i>
+              <span>Run</span>
+              <span>
+              {{child.service_name}}
+            </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="mainCon">
+    <div class="mainConHeader">
+      <div>
+        <span>设备 / {{currentDevicecate}} / {{currentDeviceName}}</span>
+      </div>
+      <div class="clearfix">
+        <div>
+          <span>{{currentDeviceName}}</span>
+          <i nz-icon type="edit" nzTheme="outline"></i>
+        </div>
+        <div>
+          <span>
+            <i nz-icon type="rocket" nzTheme="outline"></i>
+            <span>Run</span>
+          </span>
+          <nz-button-group>
+            <button nz-button nzType="default" >
+              <i nz-icon type="cloud-upload" nzTheme="outline"></i>
+            </button>
+            <button nz-button nzType="default" >
+              <i nz-icon >
+                <svg t="1556951347498" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2565" xmlns:xlink="http://www.w3.org/1999/xlink"  height="200"><defs><style type="text/css"></style></defs><path d="M0 512a512 512 0 1 0 1024 0A512 512 0 0 0 0 512z m320-192h384v384H320V320z" fill="#d81e06" p-id="2566"></path></svg>
+              </i>
+            </button>
+            <button nz-button nzType="default" >
+              <i nz-icon type="appstore" nzTheme="outline"></i>
+            </button>
+          </nz-button-group>
+        </div>
+      </div>
+      <div>
+        <nz-tabset>
+          <nz-tab nzTitle="总览">
+            <app-device-info [deviceNum]="currentDeviceNum"></app-device-info>
+          </nz-tab>
+          <nz-tab nzTitle="档案">
+            <app-archives-list *ngIf="isShowPageList" [deviceNum]="currentDeviceNum"></app-archives-list>
+            <app-archives-upload *ngIf="!isShowPageList" [deviceNum]="currentDeviceNum"></app-archives-upload>
+          </nz-tab>
+          <!--<nz-tab nzTitle="维修保养">-->
+            <!--<app-maintenance-log></app-maintenance-log>-->
+          <!--</nz-tab>-->
+          <nz-tab nzTitle="实时数据">
+            <app-real-time></app-real-time>
+          </nz-tab>
+          <!--<nz-tab nzTitle="OEE">-->
+            <!--<app-oee></app-oee>-->
+          <!--</nz-tab>-->
+          <nz-tab nzTitle="事件管理">
+            <app-event-mangement></app-event-mangement>
+          </nz-tab>
+        </nz-tabset>
+      </div>
+    </div>
+
+  </div>
+
+</div>

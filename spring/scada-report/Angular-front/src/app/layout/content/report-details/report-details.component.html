@@ -1,0 +1,41 @@
+
+<header>
+  <i nz-icon type="dot-chart" nzTheme="outline"></i>  <span>详情分析</span>
+</header>
+<div class="content">
+  <div class="sider">
+    <div class="siderHeader clearfix">
+      <span>报表</span>
+      <span>
+        <i nz-icon type="edit" nzTheme="outline"></i>
+          <a nz-popconfirm nzTitle="确定删除该报表吗?" (nzOnConfirm)="confirm()" (nzOnCancel)="cancel()"
+          >
+             <i nz-icon type="minus-circle" nzTheme="outline" ></i>
+          </a
+          >
+
+        <i nz-icon type="plus-circle" nzTheme="outline"></i>
+      </span>
+    </div>
+    <div class="itemGroup">
+
+      <div class="item" *ngFor="let item of source" >
+        <div class="itemHeader clearfix" [attr.data-index]="item.index" [attr.data-id]="item.id" [class.active]="currentItem === item.index" (click)="goDetails($event)">
+          <i nz-icon type="table" nzTheme="outline"></i>
+
+          <span>{{item.name}}</span>
+          <div class="service">
+            <p>{{item.count}}</p>
+            <p>参数</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="mainCon">
+
+    <router-outlet></router-outlet>
+  </div>
+</div>

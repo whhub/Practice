@@ -1,0 +1,161 @@
+<div class="realTime">
+  <div class="header clearfix">
+    <div>
+      <i nz-icon type="area-chart" nzTheme="outline"></i>
+      <span>实时数据</span>
+    </div>
+    <div>
+      <span>2019-01-03 19:23:23</span>
+    </div>
+    <div>
+      <nz-radio-group [(ngModel)]="radioValue" [nzButtonStyle]="'solid'">
+        <label nz-radio-button nzValue="A">实时</label>
+        <label nz-radio-button nzValue="B">last 5min</label>
+        <label nz-radio-button nzValue="C">20min</label>
+        <label nz-radio-button nzValue="D">1h</label>
+        <label nz-radio-button nzValue="E">3h</label>
+        <label nz-radio-button nzValue="F">6h</label>
+        <label nz-radio-button nzValue="G">12h</label>
+      </nz-radio-group>
+    </div>
+  </div>
+  <div class="content">
+    <div nz-row nzGutter="16">
+      <div nz-col class="gutter-row" nzSpan="6">
+        <div class="gutter-box">
+          <div class="technology">
+            <span>
+            工艺类
+            </span>
+            <div>
+              <span>设备名称：</span>
+              <span>SR001</span>
+             </div>
+            <div>
+              <span>状态：</span>
+              <span>运行</span>
+            </div>
+            <div>
+              <span>程序名：</span>
+              <span>1234.nc</span>
+            </div>
+            <div>
+              <span>产品计数器：</span>
+              <span>3412</span>
+            </div>
+            <div>
+              <span>主轴转速：</span>
+              <span>0</span>
+            </div>
+            <div>
+              <span>主轴倍率：</span>
+              <span>40</span>
+            </div>
+            <div>
+              <span>报警信息：</span>
+              <span>无</span>
+            </div>
+            <div>
+              <span>状态开始时间：</span>
+              <span>2019-05-06 22:08</span>
+            </div>
+            <div>
+              <span>X坐标：</span>
+              <span>无</span>
+            </div>
+            <div>
+              <span>Y坐标：</span>
+              <span>无</span>
+            </div>
+            <div>
+              <span>Z坐标：</span>
+              <span>无</span>
+            </div>
+            <div>
+              <span>主轴负载：</span>
+              <span>无</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div nz-col class="gutter-row" nzSpan="6">
+        <div class="gutter-box">
+          <div class="energy">
+            <span>能耗类</span>
+            <div>
+              <span>功率：</span>
+              <span>50kw</span>
+            </div>
+            <div>
+              <span>累计能耗：</span>
+              <span>1200</span>
+            </div>
+            <div>
+              <span>A相电压：</span>
+              <span>123</span>
+            </div>
+            <div>
+              <span>B相电压：</span>
+              <span>3412</span>
+            </div>
+            <div>
+              <span>C相电压：</span>
+              <span>0</span>
+            </div>
+            <div>
+              <span>A相电流：</span>
+              <span>4</span>
+            </div>
+            <div>
+              <span>B相电流：</span>
+              <span>6</span>
+            </div>
+            <div>
+              <span>C相电流：</span>
+              <span>8</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div nz-col class="gutter-row" nzSpan="6">
+        <div class="gutter-box">
+          <div class="state">
+            <span>状态类</span>
+            <div>
+              <span>状态：</span>
+              <span>运行</span>
+            </div>
+            <div>
+              <span>故障状态：</span>
+              <span>无</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div nz-col class="gutter-row" nzSpan="6">
+        <div class="gutter-box">
+
+          <div class="self">
+            <span>自定义类</span>
+            <div>
+              <span>自定义1：</span>
+              <span>SR001</span>
+            </div>
+            <div>
+              <span>自定义2：</span>
+              <span>运行</span>
+            </div>
+            <div>
+              <span>自定义3：</span>
+              <span>1234.nc</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
